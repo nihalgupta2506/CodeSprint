@@ -3,29 +3,31 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Tracks from "./components/Tracks";
+import Overview from "./components/Overview";
+import Themes from "./components/Themes";
 import Timeline from "./components/Timeline";
 import Prizes from "./components/Prizes";
-import Team from "./components/Team";
-import Countdown from "./components/Countdown";
-import Registration from "./components/Registration";
+import Guidelines from "./components/Guidelines";
+import Organizers from "./components/Organizers";
+import Sponsors from "./components/Sponsors";
+import PastGlimpses from "./components/PastGlimpses";
 import Footer from "./components/Footer";
-import Cursor from "./components/Cursor";
 
 function App() {
   return (
-    <div className="bg-dark-bg min-h-screen text-white selection:bg-neon-green/30 selection:text-neon-green">
-      <Cursor />
+    <div className="bg-off-white min-h-screen text-gray-800 selection:bg-accent-blue/30 selection:text-neon-blue">
       <Navbar />
       <Hero />
-      <div className="bg-dark-bg relative z-10">
-        <Countdown />
+      <div className="relative z-10">
         <About />
-        <Tracks />
+        <PastGlimpses />
+        <Overview />
+        <Themes />
         <Timeline />
         <Prizes />
-        <Team />
-        <Registration />
+        <Guidelines />
+        <Organizers />
+        <Sponsors />
       </div>
       <Footer />
     </div>

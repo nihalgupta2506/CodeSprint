@@ -1,64 +1,119 @@
-// React import removed
-
-import { motion, type Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { useSectionInView } from "../hooks/useSectionInView";
-import { FaMicrochip, FaRocket, FaUserSecret } from "react-icons/fa";
+import { FaUserTie, FaChalkboardTeacher, FaBalanceScale, FaMicrophoneAlt } from "react-icons/fa";
 
 const About = () => {
     const { ref, isInView } = useSectionInView();
 
-    const variants: Variants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-    };
+    const features = [
+        { icon: <FaMicrophoneAlt />, text: "Renowned technical speakers" },
+        { icon: <FaUserTie />, text: "Industry experts" },
+        { icon: <FaChalkboardTeacher />, text: "Experienced mentors" },
+        { icon: <FaBalanceScale />, text: "Jury members" },
+    ];
 
     return (
-        <section id="about" className="relative py-20 bg-dark-bg text-white overflow-hidden">
-            {/* Background Glow */}
-            <div className="absolute top-0 left-0 w-full h-full bg-neon-green/5 radial-gradient(circle at 50% 50%, rgba(0,255,136,0.1) 0%, transparent 50%) pointer-events-none" />
+        <section id="about" className="relative py-20 bg-beige overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-neon-blue/5 rounded-full filter blur-3xl -z-10 animate-float" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     ref={ref}
-                    initial="hidden"
-                    animate={isInView ? "visible" : "hidden"}
-                    variants={variants}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-orbitron font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-cyber-blue drop-shadow-[0_0_10px_rgba(0,255,136,0.5)]">
-                        MISSION: FUTURE PROTOCOL ACTIVATED
+                    <h2 className="text-4xl md:text-5xl font-exo font-bold mb-4 text-neon-blue">
+                        About CodeSprint
                     </h2>
-                    <p className="text-lg md:text-xl font-exo text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        In 2026, we build ideas. By 2050, innovation powers civilization.
-                        <span className="text-neon-green font-bold"> CodeSprint 2050</span> invites developers, innovators, and creators to engineer the future using advanced technology.
-                    </p>
+                    <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full" />
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {[
-                        { icon: <FaMicrochip />, title: "Advanced Tech", desc: "Push the boundaries of AI and Quantum Computing." },
-                        { icon: <FaUserSecret />, title: "Cyber Security", desc: "Protect the digital infrastructure of tomorrow." },
-                        { icon: <FaRocket />, title: "Space Exploration", desc: "Code for the final frontier and beyond." },
-                    ].map((item, index) => (
+                <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
+                        className="space-y-6 text-lg text-gray-700 font-montserrat leading-relaxed text-justify"
+                    >
+                        <p>
+                            <span className="font-bold text-secondary-blue">CodeSprint</span> builds upon the remarkable legacy of its previous editions and is envisioned to be an even more impactful <span className="font-semibold text-neon-blue">National Level Hackathon</span> in the technology ecosystem.
+                        </p>
+                        <p>
+                            With participation expected from students across the country, the event aims to attract registrations from <span className="font-bold text-accent-blue">50+ colleges nationwide</span>, fostering a diverse and competitive environment. Leveraging strong digital outreach, CodeSprint is projected to achieve extensive online engagement through professional platforms such as LinkedIn and other social media channels.
+                        </p>
+                        <p>
+                            CodeSprint is designed as a dynamic innovation platform where participants work intensively to develop creative and practical solutions.
+                        </p>
+                    </motion.div>
+
+                    <div className="space-y-8">
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                            transition={{ delay: 0.2 + index * 0.2, duration: 0.5 }}
-                            className="bg-glass-white backdrop-blur-lg border border-neon-green/20 p-8 rounded-xl hover:border-neon-green hover:shadow-[0_0_20px_rgba(0,255,136,0.3)] transition-all duration-300 group"
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+                            transition={{ delay: 0.4, duration: 0.8 }}
+                            className="glass-card p-8 rounded-2xl relative overflow-hidden group"
                         >
-                            <div className="text-5xl text-neon-green mb-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(0,255,136,0.8)]">
-                                {item.icon}
+                            <div className="absolute top-0 left-0 w-2 h-full bg-neon-blue" />
+                            <h4 className="text-xl font-bold text-neon-blue mb-6 font-exo">The event will be enriched by:</h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {features.map((feature, idx) => (
+                                    <div key={idx} className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-50 transition-colors">
+                                        <div className="text-accent-blue text-xl">{feature.icon}</div>
+                                        <span className="font-medium text-gray-800">{feature.text}</span>
+                                    </div>
+                                ))}
                             </div>
-                            <h3 className="text-2xl font-orbitron font-bold mb-4 group-hover:text-neon-green transition-colors">
-                                {item.title}
-                            </h3>
-                            <p className="font-exo text-gray-400 group-hover:text-gray-200 transition-colors">
-                                {item.desc}
-                            </p>
                         </motion.div>
-                    ))}
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                            transition={{ delay: 0.6, duration: 0.8 }}
+                            className="glass p-6 rounded-xl border-l-4 border-accent-blue shadow-lg"
+                        >
+                            <h4 className="text-lg font-bold text-gray-800 mb-4 font-exo uppercase tracking-wide">We Anticipate</h4>
+                            <div className="flex justify-between items-center text-center">
+                                <div>
+                                    <span className="block text-3xl md:text-4xl font-bold text-secondary-blue">100+</span>
+                                    <span className="text-sm text-gray-600 font-medium">Innovative Projects</span>
+                                </div>
+                                <div className="w-px h-12 bg-gray-300" />
+                                <div>
+                                    <span className="block text-3xl md:text-4xl font-bold text-secondary-blue">125+</span>
+                                    <span className="text-sm text-gray-600 font-medium">Teams</span>
+                                </div>
+                                <div className="w-px h-12 bg-gray-300" />
+                                <div>
+                                    <span className="block text-3xl md:text-4xl font-bold text-secondary-blue">550</span>
+                                    <span className="text-sm text-gray-600 font-medium">Students</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ delay: 0.8, duration: 0.8 }}
+                    className="mt-16 text-center max-w-4xl mx-auto"
+                >
+                    <p className="text-gray-700 mb-8 italic">
+                        Attractive prize opportunities and recognition will motivate teams to push their limits and deliver impactful outcomes. Through this edition, CodeSprint aims to strengthen collaboration, technical proficiency, and entrepreneurial thinking while creating a vibrant national community of innovators.
+                    </p>
+
+                    <div className="inline-block bg-blue-50 px-8 py-4 rounded-full border border-blue-100">
+                        <p className="font-exo font-bold text-neon-blue text-sm uppercase tracking-wide mb-2">Jointly Organized By</p>
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-8 font-semibold text-gray-800">
+                            <span>Department of Computer Engineering</span>
+                            <span className="hidden md:block text-accent-blue">•</span>
+                            <span>Department of Information Technology</span>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

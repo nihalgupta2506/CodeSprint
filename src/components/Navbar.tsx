@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
+import codeSprintLogo from "../assets/codesprint-logo.png";
+import pceLogo from "../assets/pce-logo.png";
+
+const NAVBAR_HEIGHT = 120; // px offset for fixed navbar
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -17,52 +21,69 @@ const Navbar = () => {
     const navLinks = [
         { name: "Home", href: "#hero" },
         { name: "About", href: "#about" },
-        { name: "Tracks", href: "#tracks" },
+        { name: "Overview", href: "#overview" },
+        { name: "Themes", href: "#themes" },
         { name: "Timeline", href: "#timeline" },
         { name: "Prizes", href: "#prizes" },
-        { name: "Contact", href: "#footer" },
+        { name: "Sponsors", href: "#sponsors" },
     ];
+
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        const id = href.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+            const top = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+            window.scrollTo({ top, behavior: "smooth" });
+        }
+        setIsOpen(false);
+    };
 
     return (
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-dark-bg/80 backdrop-blur-md shadow-neon border-b border-neon-green/20" : "bg-transparent"
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-off-white/95 backdrop-blur-md shadow-md" : "bg-transparent"
                 }`}
         >
-            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                {/* Logo */}
-                <a href="#" className="text-2xl font-orbitron font-bold text-white tracking-wider flex items-center gap-2 group">
-                    <span className="text-neon-green group-hover:animate-pulse">&lt;</span>
-                    CODESPRINT
-                    <span className="text-neon-green group-hover:animate-pulse">/&gt;</span>
-                    <span className="text-sm ml-2 text-gray-400">2050</span>
-                </a>
+            <div className="container mx-auto px-6 py-3 flex justify-between items-center">
 
-                {/* Desktop Menu */}
-                <div className="hidden md:flex items-center gap-8">
+                {/* Left: Logo + Event Name & Date */}
+                <div className="flex items-center gap-3">
+                    <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-24 w-auto object-contain" />
+                    <div className="flex flex-col items-start">
+                        <a href="#" className="text-2xl font-exo font-bold text-neon-blue tracking-wide">
+                            CodeSprint
+                        </a>
+                        <span className="text-xs font-montserrat text-accent-blue font-medium">13–14 March 2026</span>
+                    </div>
+                </div>
+
+                {/* Center: Nav Links */}
+                <div className="hidden md:flex items-center gap-6">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className="font-exo text-gray-300 hover:text-neon-green transition-colors text-sm uppercase tracking-wide relative group"
+                            onClick={(e) => scrollToSection(e, link.href)}
+                            className="font-montserrat text-gray-600 hover:text-neon-blue transition-colors text-sm font-semibold uppercase tracking-wide relative group"
                         >
                             {link.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-neon-green transition-all duration-300 group-hover:w-full"></span>
+                            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-neon-blue transition-all duration-300 group-hover:w-full"></span>
                         </a>
                     ))}
-                    <a
-                        href="#register"
-                        className="px-6 py-2 bg-neon-green/10 border border-neon-green text-neon-green font-orbitron font-bold rounded hover:bg-neon-green hover:text-dark-bg transition-all duration-300 shadow-[0_0_10px_theme('colors.neon-green')] hover:shadow-[0_0_20px_theme('colors.neon-green')]"
-                    >
-                        REGISTER
-                    </a>
+                </div>
+
+                {/* Right: College Logo + Name */}
+                <div className="hidden lg:flex items-center gap-3">
+                    <img src={pceLogo} alt="PCE Logo" className="h-12 w-auto object-contain" />
+                    <span className="text-sm font-bold text-gray-800 tracking-tight whitespace-nowrap">Poornima College of Engineering</span>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-white text-2xl"
+                    className="md:hidden text-neon-blue text-2xl z-20"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <FaTimes /> : <FaBars />}
@@ -76,26 +97,24 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-dark-bg/95 backdrop-blur-xl border-b border-neon-green/20 overflow-hidden"
+                        className="md:hidden bg-off-white/95 backdrop-blur-xl border-b border-neon-blue/10 overflow-hidden absolute w-full top-full left-0 shadow-xl"
                     >
                         <div className="flex flex-col items-center py-8 gap-6">
+                            {/* Mobile College Logo */}
+                            <div className="flex items-center gap-2 mb-2">
+                                <img src={pceLogo} alt="PCE Logo" className="h-10 w-auto object-contain" />
+                                <span className="text-sm font-bold text-gray-800">Poornima College of Engineering</span>
+                            </div>
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="font-orbitron text-xl text-white hover:text-neon-green transition-colors"
+                                    onClick={(e) => scrollToSection(e, link.href)}
+                                    className="font-exo text-xl text-gray-800 hover:text-neon-blue transition-colors font-medium"
                                 >
                                     {link.name}
                                 </a>
                             ))}
-                            <a
-                                href="#register"
-                                onClick={() => setIsOpen(false)}
-                                className="px-8 py-3 bg-neon-green/20 border border-neon-green text-neon-green font-bold rounded hover:bg-neon-green hover:text-dark-bg transition-all shadow-neon"
-                            >
-                                DEPLOY
-                            </a>
                         </div>
                     </motion.div>
                 )}

@@ -7,32 +7,23 @@ export default {
   theme: {
     extend: {
       colors: {
-        'neon-green': '#00FF88',
-        'dark-bg': '#071A12',
-        'cyber-blue': '#00C2FF', // Secondary neon color
-        'glass-white': 'rgba(255, 255, 255, 0.05)',
+        'primary-blue': '#0A3D91',
+        'secondary-blue': '#1565C0',
+        'accent-blue': '#1E88E5',
+        'glass-white': 'rgba(255, 255, 255, 0.9)',
+        'off-white': '#FDF5E6',
+        'cream': '#FAEBD7',
+        'beige': '#F5F0E8',
+        'neon-blue': '#1B3FAB',
       },
       fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
+        exo: ['"Exo 2"', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
-        exo: ['Exo 2', 'sans-serif'],
       },
-      boxShadow: {
-        'neon': '0 0 10px rgba(0, 255, 136, 0.5), 0 0 20px rgba(0, 255, 136, 0.3)',
-        'neon-blue': '0 0 10px rgba(0, 194, 255, 0.5), 0 0 20px rgba(0, 194, 255, 0.3)',
-      },
-      animation: {
-        'spin-slow': 'spin 8s linear infinite',
-        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'glitch': 'glitch 1s linear infinite',
-      },
-      keyframes: {
-        glitch: {
-          '2%, 64%': { transform: 'translate(2px,0) skew(0deg)' },
-          '4%, 60%': { transform: 'translate(-2px,0) skew(0deg)' },
-          '62%': { transform: 'translate(0,0) skew(5deg)' },
-        },
-      },
+      backgroundImage: {
+        'blue-gradient': 'linear-gradient(135deg, #0A3D91 0%, #1565C0 100%)',
+        'white-gradient': 'linear-gradient(180deg, #FFFFFF 0%, #F0F4F8 100%)',
+      }
     },
   },
   plugins: [],
