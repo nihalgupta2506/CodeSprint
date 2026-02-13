@@ -39,7 +39,7 @@ const Guidelines = () => {
                     className="max-w-5xl mx-auto bg-white border border-blue-100 rounded-2xl p-5 md:p-12 shadow-lg"
                 >
                     <div className="mb-8 p-4 bg-blue-50 border-l-4 border-neon-blue rounded-r-lg">
-                        <p className="text-lg text-gray-800 font-bold font-montserrat">Entry Fee: ₹1,000 per team</p>
+                        <p className="text-lg text-gray-800 font-bold font-montserrat">Entry Fee: ₹800 per team</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">

@@ -18,7 +18,7 @@ const Sponsors = () => {
         },
         {
             question: "Is there any registration fee?",
-            answer: "Yes, the registration fee is ₹1,000 per team. Visit our official registration page for more details and to complete your registration.",
+            answer: "Yes, the registration fee is ₹800 per team. Visit our official registration page for more details and to complete your registration.",
         },
         {
             question: "What are the themes for the hackathon?",

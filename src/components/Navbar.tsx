@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes } from "react-icons/fa";
 import codeSprintLogo from "../assets/codesprint-logo.png";
 import pceLogo from "../assets/pce-logo.png";
+import h2sLogo from "../assets/Hack2skills_logo.jpeg";
 
 const NAVBAR_HEIGHT_MOBILE = 70;
 const NAVBAR_HEIGHT_DESKTOP = 120;
@@ -85,8 +86,18 @@ const Navbar = () => {
                     ))}
                 </div>
 
-
-
+                {/* Right: Platform Partner — hack2skill (desktop) */}
+                <a
+                    href="https://hack2skill.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden md:flex flex-col items-end hover:opacity-80 transition-opacity"
+                >
+                    <span className="text-[10px] sm:text-xs font-montserrat text-gray-500 font-medium uppercase tracking-wider leading-tight mb-1">
+                        Platform Partner
+                    </span>
+                    <img src={h2sLogo} alt="hack2skill" className="h-6 lg:h-8 w-auto object-contain" />
+                </a>
                 {/* Mobile Menu Button */}
                 <button
                     className="md:hidden text-neon-blue text-2xl z-20"

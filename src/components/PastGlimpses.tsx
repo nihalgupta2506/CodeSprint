@@ -59,14 +59,14 @@ const PastGlimpses = () => {
                         >
                             <img
                                 src={photo}
-                                alt={`CodeSprint Glimpse ${(index % 5) + 1}`}
+                                alt={`Hackathon 2.0 Glimpse ${(index % 5) + 1}`}
                                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                             />
                             {/* Hover glow overlay */}
                             <div className="absolute inset-0 bg-neon-blue/0 group-hover:bg-neon-blue/10 transition-colors duration-500" />
                             {/* CodeSprint watermark */}
                             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm px-4 py-1.5 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                                <span className="text-white text-xs font-bold font-exo tracking-wider">CODESPRINT</span>
+                                <span className="text-white text-xs font-bold font-exo tracking-wider">HACKATHON 2.0</span>
                             </div>
                         </motion.div>
                     ))}
