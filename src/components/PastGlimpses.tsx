@@ -15,16 +15,16 @@ const PastGlimpses = () => {
     const allPhotos = [...photos, ...photos];
 
     return (
-        <section id="past-glimpses" className="py-20 bg-off-white relative overflow-hidden">
+        <section id="past-glimpses" className="py-12 md:py-20 bg-off-white relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-14"
+                    className="text-center mb-8 md:mb-14"
                 >
-                    <h2 className="text-4xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
+                    <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
                         Past Glimpses
                     </h2>
                     <p className="text-gray-600 font-montserrat max-w-2xl mx-auto text-justify">

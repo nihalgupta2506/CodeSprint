@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Exo+2:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Exo+2:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-off-white text-gray-800 font-montserrat overflow-x-hidden;
+    @apply bg-off-white text-gray-800 font-montserrat font-medium overflow-x-hidden;
   }
 
   h1,
@@ -15,7 +15,7 @@
   h4,
   h5,
   h6 {
-    @apply font-exo uppercase tracking-wide text-neon-blue;
+    @apply font-exo font-bold uppercase tracking-wide text-neon-blue;
   }
 }
 
@@ -50,7 +50,8 @@
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid #1E88E5;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    width: 0;
+    animation: typing 1.5s steps(10, end) forwards, blink-caret .75s step-end infinite;
   }
 
   /* Custom Scrollbar */
@@ -64,6 +65,14 @@
 
   ::-webkit-scrollbar-thumb {
     @apply bg-primary-blue/60 rounded-full hover:bg-primary-blue;
+  }
+
+  .tech-bg {
+    background-image:
+      radial-gradient(circle, rgba(30, 136, 229, 0.06) 1px, transparent 1px),
+      radial-gradient(circle, rgba(30, 136, 229, 0.04) 1px, transparent 1px);
+    background-size: 30px 30px, 60px 60px;
+    background-position: 0 0, 15px 15px;
   }
 }
 
@@ -87,7 +96,7 @@
   }
 
   to {
-    width: 100%
+    width: 10ch
   }
 }
 

@@ -20,15 +20,15 @@ const Guidelines = () => {
     ];
 
     return (
-        <section id="guidelines" className="py-20 bg-beige relative">
+        <section id="guidelines" className="py-12 md:py-20 bg-beige relative">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
+                    <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
                         Guidelines of CodeSprint
                     </h2>
                     <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full" />
@@ -36,7 +36,7 @@ const Guidelines = () => {
 
                 <div
                     ref={ref}
-                    className="max-w-5xl mx-auto bg-white border border-blue-100 rounded-2xl p-8 md:p-12 shadow-lg"
+                    className="max-w-5xl mx-auto bg-white border border-blue-100 rounded-2xl p-5 md:p-12 shadow-lg"
                 >
                     <div className="mb-8 p-4 bg-blue-50 border-l-4 border-neon-blue rounded-r-lg">
                         <p className="text-lg text-gray-800 font-bold font-montserrat">Entry Fee: ₹1,000 per team</p>

@@ -11,15 +11,15 @@ const Timeline = () => {
     ];
 
     return (
-        <section id="timeline" className="py-20 bg-beige relative overflow-hidden">
+        <section id="timeline" className="py-12 md:py-20 bg-beige relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
+                    <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
                         Event Timeline
                     </h2>
                     <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full" />

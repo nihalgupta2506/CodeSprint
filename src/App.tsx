@@ -11,6 +11,7 @@ import Guidelines from "./components/Guidelines";
 import Organizers from "./components/Organizers";
 import Sponsors from "./components/Sponsors";
 import PastGlimpses from "./components/PastGlimpses";
+import MentorsJury from "./components/MentorsJury";
 import Footer from "./components/Footer";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Prizes />
         <Guidelines />
         <Organizers />
+        <MentorsJury />
         <Sponsors />
       </div>
       <Footer />

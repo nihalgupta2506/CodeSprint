@@ -12,7 +12,7 @@ const Prizes = () => {
     ];
 
     return (
-        <section id="prizes" className="py-24 bg-off-white relative overflow-hidden">
+        <section id="prizes" className="py-12 md:py-24 bg-off-white relative overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-neon-blue/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent-blue/5 rounded-full blur-3xl" />
@@ -28,7 +28,7 @@ const Prizes = () => {
                     <div className="inline-block p-4 rounded-full bg-neon-blue/10 mb-6 border border-neon-blue/20">
                         <FaTrophy className="text-4xl text-neon-blue" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
+                    <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
                         Prizes & Rewards
                     </h2>
                     <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full mb-6" />
@@ -39,15 +39,15 @@ const Prizes = () => {
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
                         transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
-                        className="inline-block bg-gradient-to-r from-neon-blue to-accent-blue rounded-2xl px-10 py-6 shadow-xl"
+                        className="inline-block bg-gradient-to-r from-neon-blue to-accent-blue rounded-2xl px-6 py-4 md:px-10 md:py-6 shadow-xl"
                     >
                         <p className="text-blue-100 font-montserrat text-sm uppercase tracking-widest mb-1 font-semibold">Total Prize Pool Worth</p>
-                        <span className="text-5xl md:text-7xl font-black font-exo text-white tracking-tight drop-shadow-lg">
+                        <span className="text-4xl sm:text-5xl md:text-7xl font-black font-exo text-white tracking-tight drop-shadow-lg">
                             ₹4,00,000
                         </span>
                     </motion.div>
 
-                    <p className="mt-4 text-gray-600 font-montserrat text-lg max-w-2xl mx-auto text-justify">
+                    <p className="mt-4 text-gray-600 font-montserrat text-base md:text-lg max-w-2xl mx-auto text-justify">
                         Compete for exciting prizes, goodies, and industry recognition. Every participant goes home with something special!
                     </p>
                 </motion.div>

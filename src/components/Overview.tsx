@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Overview = () => {
     return (
-        <section id="overview" className="py-20 bg-beige">
+        <section id="overview" className="py-12 md:py-20 bg-beige">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -10,11 +10,11 @@ const Overview = () => {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl mx-auto"
                 >
-                    <h2 className="text-4xl md:text-5xl font-exo font-bold text-center text-neon-blue mb-12">
+                    <h2 className="text-3xl md:text-5xl font-exo font-bold text-center text-neon-blue mb-8 md:mb-12">
                         Overview
                     </h2>
 
-                    <div className="glass-card p-8 md:p-12 rounded-2xl">
+                    <div className="glass-card p-5 md:p-12 rounded-2xl">
                         <p className="text-lg text-gray-700 leading-relaxed mb-6 font-montserrat text-justify">
                             <span className="font-bold text-secondary-blue">CodeSprint</span>, a premier National Level Hackathon, is jointly organized by the Department of Computer Engineering and the Department of Information Technology, with the support of the Students’ Council of PCE.
                         </p>
