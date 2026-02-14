@@ -5,7 +5,7 @@ import codeSprintLogo from "../assets/codesprint-logo.png";
 import pceLogo from "../assets/pce-logo.png";
 import h2sLogo from "../assets/Hack2skills_logo.jpeg";
 
-const NAVBAR_HEIGHT_MOBILE = 80;
+const NAVBAR_HEIGHT_MOBILE = 60;
 const NAVBAR_HEIGHT_DESKTOP = 80;
 
 const Navbar = () => {
