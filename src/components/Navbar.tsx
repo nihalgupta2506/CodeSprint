@@ -59,9 +59,9 @@ const Navbar = () => {
                         onClick={(e) => scrollToSection(e, "#hero")}
                         className="flex items-center gap-2 sm:gap-3 cursor-pointer"
                     >
-                        <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-16 sm:h-16 md:h-16 w-auto object-contain" />
+                        <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-10 sm:h-14 md:h-16 w-auto object-contain" />
                         <div className="w-px h-8 sm:h-10 md:h-14 bg-gray-300" />
-                        <img src={pceLogo} alt="PCE Logo" className="h-16 sm:h-10 md:h-16 w-auto object-contain" />
+                        <img src={pceLogo} alt="PCE Logo" className="h-10 sm:h-14 md:h-16 w-auto object-contain" />
                         <div className="hidden sm:flex flex-col items-start">
                             <span className="text-xs sm:text-sm md:text-base font-exo font-bold text-gray-800 leading-tight">
                                 Poornima College

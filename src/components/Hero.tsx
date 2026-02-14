@@ -133,7 +133,7 @@ const Hero = () => {
                     <motion.h1
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="text-6xl sm:text-8xl md:text-9xl font-exo font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-accent-blue tracking-tight animate-typing overflow-hidden whitespace-nowrap border-r-4 border-accent-blue pr-2"
+                        className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-exo font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-accent-blue tracking-tight animate-typing overflow-hidden whitespace-nowrap border-r-4 border-accent-blue pr-2"
                     >
                         CodeSprint
                     </motion.h1>
