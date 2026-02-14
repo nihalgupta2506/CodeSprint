@@ -34,13 +34,18 @@ const Organizers = () => {
                             <li className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-accent-blue font-montserrat font-semibold text-gray-800">
                                 Department of Computer Engineering
                             </li>
-                            <li className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-accent-blue font-montserrat font-semibold text-gray-800">
-                                Department of Information Technology
+                            <li className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-neon-blue font-montserrat font-semibold text-gray-800">
+                                Department of Advance Computing
                             </li>
                         </ul>
-                        <p className="mt-6 text-gray-600 font-montserrat italic">
-                            By Poornima College of Engineering
-                        </p>
+                        <div className="mt-6">
+                            <p className="text-gray-800 font-montserrat font-bold text-lg mb-1">
+                                In Association with PIIC
+                            </p>
+                            <p className="text-gray-600 font-montserrat italic">
+                                By Poornima College of Engineering
+                            </p>
+                        </div>
                     </motion.div>
 
                     <div className="space-y-8">

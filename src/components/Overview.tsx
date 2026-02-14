@@ -16,7 +16,7 @@ const Overview = () => {
 
                     <div className="glass-card p-5 md:p-12 rounded-2xl">
                         <p className="text-lg text-gray-700 leading-relaxed mb-6 font-montserrat text-justify">
-                            <span className="font-bold text-secondary-blue">CodeSprint</span>, a premier National Level Hackathon, is jointly organized by the Department of Computer Engineering and the Department of Information Technology, with the support of the Students’ Council of PCE.
+                            <span className="font-bold text-secondary-blue">CodeSprint</span>, a premier National Level Hackathon, is organized by the Department of Computer Engineering and the Department of Advance Computing, in association with PIIC, with the support of the Students’ Council of PCE.
                         </p>
                         <p className="text-lg text-gray-700 leading-relaxed mb-6 font-montserrat text-justify">
                             This 24-hour intensive programming challenge allows participants to demonstrate problem-solving skills under pressure.

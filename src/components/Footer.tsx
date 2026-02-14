@@ -25,7 +25,7 @@ const Footer = () => {
                     {/* Branding */}
                     <div>
                         <h2 className="text-2xl md:text-3xl font-exo font-bold text-white mb-2">
-                            Code<span className="text-accent-blue">Sprint</span> <span className="text-neon-blue/80 text-xl">2026</span>
+                            Code<span className="text-accent-blue">Sprint</span> <span className="text-neon-blue/80 text-sm font-medium ml-2">hackathon 3.0</span>
                         </h2>
                         <a
                             href="https://maps.app.goo.gl/nY7LxG3mhznkENVv6"
@@ -34,7 +34,6 @@ const Footer = () => {
                             className="block text-gray-400 font-montserrat text-sm leading-relaxed mb-4 hover:text-white transition-colors"
                         >
                             Poornima College of Engineering<br />
-                            Department of CSE & IT<br />
                             ISI-6, RIICO Institutional Area, Sitapura, Jaipur
                         </a>
                         <div className="flex items-center gap-2 text-accent-blue font-montserrat text-sm font-medium">
