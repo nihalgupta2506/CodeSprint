@@ -14,8 +14,8 @@ const Prizes = () => {
     return (
         <section id="prizes" className="py-12 md:py-24 bg-off-white relative overflow-hidden">
             {/* Decorative background elements */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-neon-blue/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent-blue/5 rounded-full blur-3xl" />
+            <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-neon-blue/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-36 h-36 md:w-72 md:h-72 bg-accent-blue/5 rounded-full blur-3xl" />
 
             <div className="container mx-auto px-6 relative z-10">
                 {/* Header */}

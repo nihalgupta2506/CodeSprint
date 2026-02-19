@@ -41,7 +41,7 @@ const PastGlimpses = () => {
                 <div className="absolute right-0 top-0 bottom-0 w-24 md:w-40 bg-gradient-to-l from-off-white to-transparent z-10 pointer-events-none" />
 
                 <div
-                    className="flex gap-6"
+                    className="flex gap-4 sm:gap-6"
                     style={{
                         animation: "marquee 30s linear infinite",
                         width: "max-content",
@@ -55,7 +55,7 @@ const PastGlimpses = () => {
                             transition={{ duration: 0.6, delay: (index % 5) * 0.1 }}
                             viewport={{ once: false, amount: 0.3 }}
                             whileHover={{ scale: 1.05, y: -8 }}
-                            className="flex-shrink-0 w-[300px] md:w-[380px] h-[220px] md:h-[260px] rounded-2xl overflow-hidden relative group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500"
+                            className="flex-shrink-0 w-[250px] sm:w-[300px] md:w-[380px] h-[180px] sm:h-[220px] md:h-[260px] rounded-2xl overflow-hidden relative group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500"
                         >
                             <img
                                 src={photo}

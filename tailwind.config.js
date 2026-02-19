@@ -5,6 +5,13 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '980px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         'primary-blue': '#0A3D91',
