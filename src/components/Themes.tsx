@@ -28,7 +28,7 @@ const Themes = () => {
                     <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
                         Hackathon Themes
                     </h2>
-                    <p className="text-xl text-accent-blue font-montserrat font-medium tracking-wide">Life in 2050</p>
+                    <p className="text-xl text-accent-blue font-montserrat font-medium tracking-wide">Sustainability in 2050</p>
                 </motion.div>
 
                 <div

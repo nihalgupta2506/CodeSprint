@@ -77,17 +77,17 @@ const About = () => {
                             <h4 className="text-lg font-bold text-gray-800 mb-4 font-exo uppercase tracking-wide">We Anticipate</h4>
                             <div className="flex justify-between items-center text-center gap-2">
                                 <div>
-                                    <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-blue">100+</span>
+                                    <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-blue">150+</span>
                                     <span className="text-sm text-gray-600 font-medium">Innovative Projects</span>
                                 </div>
                                 <div className="w-px h-12 bg-gray-300" />
                                 <div>
-                                    <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-blue">125+</span>
+                                    <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-blue">150+</span>
                                     <span className="text-sm text-gray-600 font-medium">Teams</span>
                                 </div>
                                 <div className="w-px h-12 bg-gray-300" />
                                 <div>
-                                    <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-blue">550</span>
+                                    <span className="block text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-blue">600+</span>
                                     <span className="text-sm text-gray-600 font-medium">Students</span>
                                 </div>
                             </div>

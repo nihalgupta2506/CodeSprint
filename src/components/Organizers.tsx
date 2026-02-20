@@ -35,6 +35,9 @@ const Organizers = () => {
                                 Department of Computer Engineering
                             </li>
                             <li className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-neon-blue font-montserrat font-semibold text-gray-800">
+                                Department of Information Technology
+                            </li>
+                            <li className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-accent-blue font-montserrat font-semibold text-gray-800">
                                 Department of Advance Computing
                             </li>
                         </ul>

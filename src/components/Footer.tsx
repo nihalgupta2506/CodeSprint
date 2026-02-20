@@ -34,6 +34,7 @@ const Footer = () => {
                             className="block text-gray-400 font-montserrat text-sm leading-relaxed mb-4 hover:text-white transition-colors"
                         >
                             Poornima College of Engineering<br />
+                            <span className="font-semibold text-white/90">Dept. of Computer Engineering <br />Dept. of Information Technology <br />Dept. of Advance Computing</span><br />
                             ISI-6, RIICO Institutional Area, Sitapura, Jaipur
                         </a>
                         <div className="flex items-center gap-2 text-accent-blue font-montserrat text-sm font-medium">

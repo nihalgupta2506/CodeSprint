@@ -36,7 +36,7 @@ const Hero = () => {
     const pad = (n: number) => String(n).padStart(2, "0");
 
     return (
-        <section ref={targetRef} id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 py-20">
+        <section ref={targetRef} id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 pt-40 pb-20">
 
             <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
 
@@ -73,22 +73,46 @@ const Hero = () => {
                         "Where Code Builds the <span className="text-accent-blue">Future of Earth</span>"
                     </p>
 
-                    {/* Highlighted Date Bar - Google Calendar Link */}
                     <div className="flex justify-center mb-6">
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 2.2, duration: 0.5 }}
+                            className="inline-flex items-center gap-2 px-6 py-2 bg-red-50 border border-red-200 rounded-full text-red-600 font-montserrat font-bold text-sm md:text-base shadow-sm"
+                        >
+                            <span className="text-lg">⏰</span>
+                            Registration Deadline: 11 March 2026
+                        </motion.div>
+                    </div>
+
+                    {/* Event Details Boxes */}
+                    <div className="flex flex-wrap justify-center gap-4 mb-8">
+                        {/* Date Box */}
                         <a
                             href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=CodeSprint+2026&dates=20260313T033000Z/20260314T033000Z&details=CodeSprint+Hackathon+-+24+Hour+Coding+Marathon+at+Poornima+College+of+Engineering&location=Poornima+College+of+Engineering,+Jaipur,+Rajasthan"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 md:gap-3 px-5 py-2.5 bg-accent-blue/10 border border-accent-blue/20 rounded-full hover:bg-accent-blue/20 transition-colors group cursor-pointer"
+                            className="flex items-center gap-2 px-6 py-3 bg-white/80 border border-accent-blue/20 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all group"
                         >
-                            <span className="text-lg group-hover:scale-110 transition-transform">📅</span>
-                            <span className="font-exo font-bold text-accent-blue text-sm md:text-base uppercase tracking-wide">
-                                13–14 March 2026
-                            </span>
-                            <span className="hidden sm:inline text-gray-400">|</span>
-                            <span className="hidden sm:inline font-montserrat text-gray-600 text-sm font-medium">
-                                Poornima College of Engineering
-                            </span>
+                            <span className="text-2xl">📅</span>
+                            <div className="text-left">
+                                <span className="block text-xs text-gray-500 font-bold uppercase tracking-wider">Event Date</span>
+                                <span className="font-exo font-bold text-accent-blue text-sm md:text-base">13–14 March 2026</span>
+                            </div>
+                        </a>
+
+                        {/* Venue Box */}
+                        <a
+                            href="https://maps.google.com/?q=Poornima+College+of+Engineering"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 bg-white/80 border border-accent-blue/20 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all group"
+                        >
+                            <span className="text-2xl">📍</span>
+                            <div className="text-left">
+                                <span className="block text-xs text-gray-500 font-bold uppercase tracking-wider">Venue</span>
+                                <span className="font-exo font-bold text-accent-blue text-sm md:text-base">Poornima College of Engineering</span>
+                            </div>
                         </a>
                     </div>
 

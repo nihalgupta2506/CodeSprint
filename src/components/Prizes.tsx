@@ -43,7 +43,7 @@ const Prizes = () => {
                     >
                         <p className="text-blue-100 font-montserrat text-sm uppercase tracking-widest mb-1 font-semibold">Total Prize Pool Worth</p>
                         <span className="text-4xl sm:text-5xl md:text-7xl font-black font-exo text-white tracking-tight drop-shadow-lg">
-                            ₹4,00,000
+                            ₹5,00,000
                         </span>
                     </motion.div>
 
