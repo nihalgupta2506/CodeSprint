@@ -5,7 +5,7 @@ import codeSprintLogo from "../assets/codesprint-logo.png";
 import pceLogo from "../assets/pce-logo.png";
 import h2sLogo from "../assets/Hack2skills_logo.jpeg";
 
-const NAVBAR_HEIGHT_MOBILE = 60;
+const NAVBAR_HEIGHT_MOBILE = 105;
 const NAVBAR_HEIGHT_DESKTOP = 120;
 
 const Navbar = () => {
@@ -64,96 +64,129 @@ const Navbar = () => {
                 className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-off-white/95 backdrop-blur-md shadow-lg" : "bg-off-white/80 backdrop-blur-sm"
                     }`}
             >
-                {/* Top Row: CodeSprint Logo (left) | PCE Logo + Name (center) | Platform Partner (right) */}
-                <div className="hidden lg:flex items-center justify-between px-6 xl:px-10 py-3 border-b border-gray-200/50">
-                    {/* Left: CodeSprint Logo */}
-                    <a
-                        href="#hero"
-                        onClick={(e) => scrollToSection(e, "#hero")}
-                        className="flex items-center cursor-pointer flex-shrink-0"
-                    >
-                        <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-12 xl:h-14 w-auto object-contain" />
-                    </a>
+                {/* Desktop Header */}
+                <div className="hidden lg:flex flex-col">
+                    {/* Top Row: CodeSprint Logo (left) | PCE Logo + Name (center) | Platform Partner (right) */}
+                    <div className="flex items-center justify-between px-6 xl:px-10 py-3 border-b border-gray-200/50">
+                        {/* Left: CodeSprint Logo */}
+                        <a
+                            href="#hero"
+                            onClick={(e) => scrollToSection(e, "#hero")}
+                            className="flex items-center cursor-pointer flex-shrink-0"
+                        >
+                            <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-12 xl:h-14 w-auto object-contain" />
+                        </a>
 
-                    {/* Center: PCE Logo + College Name */}
-                    <a
-                        href="#hero"
-                        onClick={(e) => scrollToSection(e, "#hero")}
-                        className="flex items-center gap-3 cursor-pointer"
-                    >
-                        <img src={pceLogo} alt="PCE Logo" className="h-12 xl:h-14 w-auto object-contain" />
-                        <div className="flex flex-col items-start">
-                            <span className="text-xl xl:text-2xl font-exo font-black text-gray-800 uppercase tracking-wider leading-tight">
+                        {/* Center: PCE Logo + College Name */}
+                        <a
+                            href="#hero"
+                            onClick={(e) => scrollToSection(e, "#hero")}
+                            className="flex items-center gap-3 cursor-pointer"
+                        >
+                            <img src={pceLogo} alt="PCE Logo" className="h-12 xl:h-14 w-auto object-contain" />
+                            <div className="flex flex-col items-start">
+                                <span className="text-xl xl:text-2xl font-exo font-black text-gray-800 uppercase tracking-wider leading-tight">
+                                    Poornima College of Engineering
+                                </span>
+                            </div>
+                        </a>
+
+                        {/* Right: Platform Partner */}
+                        <a
+                            href="https://hack2skill.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-col items-end hover:opacity-80 transition-opacity flex-shrink-0"
+                        >
+                            <span className="text-[10px] font-montserrat text-gray-500 font-medium uppercase tracking-wider leading-tight mb-1">
+                                Platform Partner
+                            </span>
+                            <img src={h2sLogo} alt="hack2skill" className="h-7 xl:h-8 w-auto object-contain" />
+                        </a>
+                    </div>
+
+                    {/* Bottom Row: Nav Links + Register Button */}
+                    <div className="flex items-center justify-center gap-1 xl:gap-2 py-2 px-6">
+                        {navLinks.map((link) => {
+                            const isActive = activeSection === link.href.replace("#", "");
+                            return (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={(e) => scrollToSection(e, link.href)}
+                                    className={`flex items-center gap-1.5 font-montserrat text-sm font-semibold px-4 py-2 rounded-md transition-all duration-200 ${isActive
+                                        ? "text-neon-blue bg-neon-blue/10 border-b-2 border-neon-blue"
+                                        : "text-gray-600 hover:text-neon-blue hover:bg-blue-50"
+                                        }`}
+                                >
+                                    {link.icon && link.icon}
+                                    {link.name}
+                                </a>
+                            );
+                        })}
+                        <a
+                            href="https://hack2skill.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-3 px-6 py-2 bg-neon-blue text-white rounded-md font-montserrat font-bold text-sm hover:bg-secondary-blue hover:shadow-lg transition-all duration-300"
+                        >
+                            Register
+                        </a>
+                    </div>
+                </div>
+
+                {/* Mobile Header (Two Rows) */}
+                <div className="lg:hidden flex flex-col">
+                    {/* Top Row: Logos and Menu */}
+                    <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200/50">
+                        <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-9 w-auto object-contain" />
+
+                        <div className="flex items-center gap-1.5 mx-2">
+                            <img src={pceLogo} alt="PCE Logo" className="h-8 w-auto object-contain" />
+                            <span className="text-[9px] sm:text-[10px] font-exo font-black text-gray-800 uppercase line-clamp-1 leading-tight text-center">
                                 Poornima College of Engineering
                             </span>
-
                         </div>
-                    </a>
 
-                    {/* Right: Platform Partner */}
-                    <a
-                        href="https://hack2skill.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-end hover:opacity-80 transition-opacity flex-shrink-0"
-                    >
-                        <span className="text-[10px] font-montserrat text-gray-500 font-medium uppercase tracking-wider leading-tight mb-1">
-                            Platform Partner
-                        </span>
-                        <img src={h2sLogo} alt="hack2skill" className="h-7 xl:h-8 w-auto object-contain" />
-                    </a>
-                </div>
+                        <button
+                            className="text-neon-blue text-2xl p-1"
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            {isOpen ? <FaTimes /> : <FaBars />}
+                        </button>
+                    </div>
 
-                {/* Bottom Row: Nav Links + Register Button (Desktop) */}
-                <div className="hidden lg:flex items-center justify-center gap-1 xl:gap-2 py-2 px-6">
-                    {navLinks.map((link) => {
-                        const isActive = activeSection === link.href.replace("#", "");
-                        return (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                onClick={(e) => scrollToSection(e, link.href)}
-                                className={`flex items-center gap-1.5 font-montserrat text-sm font-semibold px-4 py-2 rounded-md transition-all duration-200 ${isActive
-                                    ? "text-neon-blue bg-neon-blue/10 border-b-2 border-neon-blue"
-                                    : "text-gray-600 hover:text-neon-blue hover:bg-blue-50"
-                                    }`}
-                            >
-                                {link.icon && link.icon}
-                                {link.name}
-                            </a>
-                        );
-                    })}
-                    <a
-                        href="https://hack2skill.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="ml-3 px-6 py-2 bg-neon-blue text-white rounded-md font-montserrat font-bold text-sm hover:bg-secondary-blue hover:shadow-lg transition-all duration-300"
-                    >
-                        Register
-                    </a>
-                </div>
-
-                {/* Mobile Header */}
-                <div className="lg:hidden flex items-center justify-between px-4 py-2">
-                    <a
-                        href="#hero"
-                        onClick={(e) => scrollToSection(e, "#hero")}
-                        className="flex items-center gap-2 cursor-pointer"
-                    >
-                        <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-8 w-auto object-contain" />
-                        <div className="w-px h-6 bg-gray-300" />
-                        <img src={pceLogo} alt="PCE Logo" className="h-8 w-auto object-contain" />
-                    </a>
-                    <button
-                        className="text-neon-blue text-2xl z-20 p-2"
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        {isOpen ? <FaTimes /> : <FaBars />}
-                    </button>
+                    {/* Bottom Row: Scrollable Nav Links + Register */}
+                    <div className="flex items-center gap-2 px-3 py-2 overflow-x-auto no-scrollbar bg-white/40">
+                        {navLinks.map((link) => {
+                            const isActive = activeSection === link.href.replace("#", "");
+                            return (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={(e) => scrollToSection(e, link.href)}
+                                    className={`whitespace-nowrap px-4 py-1.5 rounded-full text-[11px] font-montserrat font-bold transition-all ${isActive
+                                        ? "bg-neon-blue text-white shadow-md shadow-neon-blue/20"
+                                        : "bg-gray-200/50 text-gray-600 active:bg-gray-300/50"
+                                        }`}
+                                >
+                                    {link.name}
+                                </a>
+                            );
+                        })}
+                        <a
+                            href="https://hack2skill.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="whitespace-nowrap px-5 py-1.5 bg-accent-blue text-white rounded-full text-[11px] font-montserrat font-bold shadow-sm active:bg-secondary-blue"
+                        >
+                            Register
+                        </a>
+                    </div>
                 </div>
             </motion.nav>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Sidebar Menu (for extra accessibility) */}
             <AnimatePresence>
                 {isOpen && (
                     <>
@@ -161,7 +194,7 @@ const Navbar = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="lg:hidden fixed inset-0 bg-black/30 z-[60]"
+                            className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-[60]"
                             onClick={() => setIsOpen(false)}
                         />
                         <motion.div
@@ -200,7 +233,7 @@ const Navbar = () => {
                                             onClick={(e) => scrollToSection(e, link.href)}
                                             className={`font-exo text-base font-medium px-6 py-3 transition-colors flex items-center gap-2 ${isActive
                                                 ? "text-neon-blue bg-blue-50 border-l-4 border-neon-blue"
-                                                : "text-gray-800 hover:text-neon-blue hover:bg-blue-50 active:bg-blue-100"
+                                                : "text-gray-800 hover:text-neon-blue hover:bg-blue-50"
                                                 }`}
                                         >
                                             {link.icon && link.icon}
@@ -217,7 +250,7 @@ const Navbar = () => {
                                     href="https://hack2skill.com/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-center px-6 py-3 bg-neon-blue text-white rounded-lg font-montserrat font-bold text-sm hover:bg-secondary-blue transition-colors"
+                                    className="block text-center px-6 py-3 bg-neon-blue text-white rounded-lg font-montserrat font-bold text-sm"
                                 >
                                     Register Now
                                 </a>

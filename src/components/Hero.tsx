@@ -36,7 +36,7 @@ const Hero = () => {
     const pad = (n: number) => String(n).padStart(2, "0");
 
     return (
-        <section ref={targetRef} id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 pt-40 pb-20">
+        <section ref={targetRef} id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 pt-32 md:pt-40 pb-20">
 
             <div className="relative z-10 text-center w-full max-w-4xl mx-auto">
 

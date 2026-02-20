@@ -24,7 +24,7 @@ export default {
         'neon-blue': '#1B3FAB',
       },
       fontFamily: {
-        exo: ['"Exo 2"', 'sans-serif'],
+        exo: ['Poppins', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
       backgroundImage: {
