@@ -15,7 +15,7 @@ const PastGlimpses = () => {
     const allPhotos = [...photos, ...photos];
 
     return (
-        <section id="past-glimpses" className="py-12 md:py-20 bg-off-white relative overflow-hidden">
+        <section id="past-glimpses" className="py-12 md:py-20 bg-off-white/70 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     ref={ref}

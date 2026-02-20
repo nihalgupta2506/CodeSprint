@@ -11,7 +11,7 @@ const Timeline = () => {
     ];
 
     return (
-        <section id="timeline" className="py-12 md:py-20 bg-beige relative overflow-hidden">
+        <section id="timeline" className="py-12 md:py-20 bg-beige/70 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

@@ -13,7 +13,7 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="relative py-12 md:py-20 bg-beige overflow-hidden">
+        <section id="about" className="relative py-12 md:py-20 bg-beige/70 overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-neon-blue/5 rounded-full filter blur-3xl -z-10 animate-float" />
 

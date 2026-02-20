@@ -20,7 +20,7 @@ const Guidelines = () => {
     ];
 
     return (
-        <section id="guidelines" className="py-12 md:py-20 bg-beige relative">
+        <section id="guidelines" className="py-12 md:py-20 bg-beige/70 relative">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
