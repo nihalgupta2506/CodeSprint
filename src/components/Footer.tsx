@@ -12,7 +12,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer id="footer" className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-10 md:py-16 relative overflow-hidden">
+        <footer id="footer" className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-10 md:pt-16 pb-4 md:pb-6 relative overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 left-0 w-36 h-36 md:w-72 md:h-72 bg-neon-blue/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-accent-blue/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -97,8 +97,8 @@ const Footer = () => {
                 </div>
 
                 {/* Divider */}
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-gray-500 font-montserrat text-xs text-center md:text-left">
+                <div className="border-t border-white/10 pt-6 flex items-center justify-center">
+                    <p className="text-gray-500 font-montserrat text-xs text-center">
                         © 2026 TechnoTarang. All Rights Reserved. Innovating Today for a Smarter Future.
                     </p>
                 </div>

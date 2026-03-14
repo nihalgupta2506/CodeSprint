@@ -5,8 +5,8 @@ import { FaUserTie, FaGavel, FaQuestionCircle } from "react-icons/fa";
 const MentorsJury = () => {
     const { ref, isInView } = useSectionInView();
 
-    const mentorCount = 10;
-    const juryCount = 10;
+    const mentorCount = 8;
+    const juryCount = 8;
 
     const RevealCard = ({ index, icon }: { index: number; icon: React.ReactNode }) => (
         <motion.div
@@ -53,7 +53,7 @@ const MentorsJury = () => {
                         <h3 className="text-xl md:text-2xl font-exo font-bold text-accent-blue mb-6 text-center normal-case tracking-normal">
                             🎓 Mentors
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
                             {Array.from({ length: mentorCount }).map((_, index) => (
                                 <RevealCard key={index} index={index} icon={<FaUserTie />} />
                             ))}
@@ -65,7 +65,7 @@ const MentorsJury = () => {
                         <h3 className="text-xl md:text-2xl font-exo font-bold text-accent-blue mb-6 text-center normal-case tracking-normal">
                             ⚖️ Jury Members
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
                             {Array.from({ length: juryCount }).map((_, index) => (
                                 <RevealCard key={index} index={index + 10} icon={<FaGavel />} />
                             ))}
