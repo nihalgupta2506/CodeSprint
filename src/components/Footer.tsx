@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     const contacts = [
@@ -7,8 +7,9 @@ const Footer = () => {
     ];
 
     const socialLinks = [
-        { icon: <FaInstagram />, href: "https://www.instagram.com/codesprint.pce?igsh=MWUxaHJocDR6Y2lwYg==", label: "Instagram" },
-        { icon: <FaLinkedin />, href: "https://www.linkedin.com/school/poornima-college-of-engineering-jaipur/", label: "LinkedIn" },
+        { icon: <FaInstagram />, href: "https://www.instagram.com/technotarang.pce/", label: "Instagram" },
+        { icon: <FaTwitter />, href: "https://x.com/PceTarang04", label: "Twitter" },
+        { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/techno-tarang-pce-62a6013b7/", label: "LinkedIn" },
     ];
 
     return (
