@@ -9,11 +9,11 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: "What is CodeSprint Hackathon?",
-            answer: "CodeSprint is a 24-hour national-level hackathon organized by Poornima College of Engineering. Participants form teams to build innovative solutions around the theme \"Innovating Today for a Smarter & Sustainable 2050.\"",
+            question: "What is TechnoTarang Hackathon?",
+            answer: "TechnoTarang is a 24-hour national-level hackathon organized by Poornima College of Engineering. Participants form teams to build innovative solutions around the theme \"Innovating Today for a Smarter & Sustainable 2050.\"",
         },
         {
-            question: "Who can participate in CodeSprint?",
+            question: "Who can participate in TechnoTarang?",
             answer: "Any undergraduate or postgraduate student from any recognized college or university can participate. Teams of 2–4 members are allowed, and cross-college teams are welcome.",
         },
         {
@@ -30,7 +30,7 @@ const FAQ = () => {
         },
         {
             question: "Will food and accommodation be provided?",
-            answer: "Food will not be provided by the organizers. However, a separate hall will be made available for participants to use during the event.",
+            answer: "Yes! One-time food will be provided to all participants during the event. A dedicated space will also be available for teams to relax and recharge throughout the hackathon.",
         },
         {
             question: "How will projects be judged?",
@@ -38,7 +38,7 @@ const FAQ = () => {
         },
         {
             question: "Can I participate remotely?",
-            answer: "CodeSprint is primarily an in-person event held at Poornima College of Engineering, Jaipur. However, check with the organizing team for any hybrid participation options.",
+            answer: "TechnoTarang is primarily an in-person event held at Poornima College of Engineering, Jaipur. However, check with the organizing team for any hybrid participation options.",
         },
     ];
 
@@ -57,7 +57,7 @@ const FAQ = () => {
                         </h2>
                         <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full mb-4" />
                         <p className="text-gray-600 max-w-2xl mx-auto font-montserrat">
-                            Got questions? We've got answers! Here are some common queries about CodeSprint.
+                            Got questions? We've got answers! Here are some common queries about TechnoTarang.
                         </p>
                     </motion.div>
 

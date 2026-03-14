@@ -29,7 +29,7 @@ const Guidelines = () => {
                     className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
-                        Guidelines of CodeSprint
+                        Guidelines of TechnoTarang
                     </h2>
                     <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full" />
                 </motion.div>

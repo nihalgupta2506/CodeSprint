@@ -5,9 +5,10 @@ const Timeline = () => {
     const { ref, isInView } = useSectionInView();
 
     const events = [
-        { date: "15 Feb 2026", title: "Registration Opens", desc: "Global registration begins" },
-        { date: "13 Mar 2026", title: "Hackathon Starts", desc: "Opening Ceremony & Hacking Begins" },
-        { date: "14 Mar 2026", title: "Hackathon Ends", desc: "Submission, Judging & Closing Ceremony" },
+        { date: "16 Mar 2026", title: "Registration Opens", desc: "Global registration begins on the official platform" },
+        { date: "25 Mar 2026", title: "Registration Closes", desc: "Last date to register your team" },
+        { date: "4 Apr 2026", title: "Hackathon Starts", desc: "Opening Ceremony & Hacking Begins" },
+        { date: "5 Apr 2026", title: "Hackathon Ends", desc: "Submission, Judging & Closing Ceremony" },
     ];
 
     return (

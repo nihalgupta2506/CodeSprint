@@ -25,7 +25,7 @@ const Footer = () => {
                     {/* Branding */}
                     <div>
                         <h2 className="text-2xl md:text-3xl font-exo font-bold text-white mb-2">
-                            Code<span className="text-accent-blue">Sprint</span> <span className="text-neon-blue/80 text-sm font-medium ml-2">hackathon 3.0</span>
+                            Techno<span className="text-accent-blue">Tarang</span> <span className="text-neon-blue/80 text-sm font-medium ml-2">hackathon 3.0</span>
                         </h2>
                         <a
                             href="https://maps.app.goo.gl/nY7LxG3mhznkENVv6"
@@ -39,8 +39,8 @@ const Footer = () => {
                         </a>
                         <div className="flex items-center gap-2 text-accent-blue font-montserrat text-sm font-medium">
                             <FaEnvelope className="text-xs" />
-                            <a href="https://mail.google.com/mail/?view=cm&to=codesprint.pce@poornima.org" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                                codesprint.pce@poornima.org
+                            <a href="https://mail.google.com/mail/?view=cm&to=technotarang.pce@poornima.org" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                                technotarang.pce@poornima.org
                             </a>
                         </div>
                     </div>
@@ -99,10 +99,7 @@ const Footer = () => {
                 {/* Divider */}
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-gray-500 font-montserrat text-xs text-center md:text-left">
-                        © 2026 CodeSprint. All Rights Reserved. Innovating Today for a Smarter Future.
-                    </p>
-                    <p className="text-gray-600 font-montserrat text-xs">
-                        Made by Nihal, Avika, Akshay, Nisha
+                        © 2026 TechnoTarang. All Rights Reserved. Innovating Today for a Smarter Future.
                     </p>
                 </div>
             </div>

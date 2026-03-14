@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes, FaHome } from "react-icons/fa";
-import codeSprintLogo from "../assets/codesprint-logo.png";
+import technoTarangLogo from "../assets/technotarang-logo.png";
 import pceLogo from "../assets/pce-logo.png";
-import h2sLogo from "../assets/Hack2skills_logo.jpeg";
+import h2sLogo from "../assets/coming_soon_partner.png";
 
 const NAVBAR_HEIGHT_MOBILE = 105;
 const NAVBAR_HEIGHT_DESKTOP = 120;
@@ -17,7 +18,7 @@ const Navbar = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
 
-            const sections = ["hero", "about", "overview", "themes", "timeline", "prizes", "sponsors"];
+            const sections = ["hero", "about", "overview", "themes", "timeline", "prizes", "guidelines", "sponsors", "mentors-jury", "faq"];
             for (const id of [...sections].reverse()) {
                 const el = document.getElementById(id);
                 if (el) {
@@ -40,7 +41,10 @@ const Navbar = () => {
         { name: "Themes", href: "#themes" },
         { name: "Timeline", href: "#timeline" },
         { name: "Prizes", href: "#prizes" },
+        { name: "Guidelines", href: "#guidelines" },
         { name: "Sponsors", href: "#sponsors" },
+        { name: "Mentors & Jury", href: "#mentors-jury" },
+        { name: "FAQ", href: "#faq" },
     ];
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -66,15 +70,15 @@ const Navbar = () => {
             >
                 {/* Desktop Header */}
                 <div className="hidden lg:flex flex-col">
-                    {/* Top Row: CodeSprint Logo (left) | PCE Logo + Name (center) | Platform Partner (right) */}
+                    {/* Top Row: TechnoTarang Logo (left) | PCE Logo + Name (center) | Platform Partner (right) */}
                     <div className="flex items-center justify-between px-6 xl:px-10 py-3 border-b border-gray-200/50">
-                        {/* Left: CodeSprint Logo */}
+                        {/* Left: TechnoTarang Logo */}
                         <a
                             href="#hero"
                             onClick={(e) => scrollToSection(e, "#hero")}
                             className="flex items-center cursor-pointer flex-shrink-0"
                         >
-                            <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-12 xl:h-14 w-auto object-contain" />
+                            <img src={technoTarangLogo} alt="TechnoTarang Logo" className="h-12 xl:h-14 w-auto object-contain" />
                         </a>
 
                         {/* Center: PCE Logo + College Name */}
@@ -92,17 +96,14 @@ const Navbar = () => {
                         </a>
 
                         {/* Right: Platform Partner */}
-                        <a
-                            href="https://hack2skill.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex flex-col items-end hover:opacity-80 transition-opacity flex-shrink-0"
+                        <div
+                            className="flex flex-col items-end flex-shrink-0 cursor-default"
                         >
-                            <span className="text-[10px] font-montserrat text-gray-500 font-medium uppercase tracking-wider leading-tight mb-1">
+                            <span className="text-[10px] sm:text-xs font-montserrat text-gray-500 font-bold uppercase tracking-wider mb-1">
                                 Platform Partner
                             </span>
-                            <img src={h2sLogo} alt="hack2skill" className="h-7 xl:h-8 w-auto object-contain" />
-                        </a>
+                            <img src={h2sLogo} alt="Coming Soon" className="h-10 sm:h-12 xl:h-14 w-auto object-contain" />
+                        </div>
                     </div>
 
                     {/* Bottom Row: Nav Links + Register Button */}
@@ -124,14 +125,12 @@ const Navbar = () => {
                                 </a>
                             );
                         })}
-                        <a
-                            href="https://hack2skill.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            to="/register"
                             className="ml-3 px-6 py-2 bg-neon-blue text-white rounded-md font-montserrat font-bold text-sm hover:bg-secondary-blue hover:shadow-lg transition-all duration-300"
                         >
                             Register
-                        </a>
+                        </Link>
                     </div>
                 </div>
 
@@ -139,7 +138,7 @@ const Navbar = () => {
                 <div className="lg:hidden flex flex-col">
                     {/* Top Row: Logos and Menu */}
                     <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200/50">
-                        <img src={codeSprintLogo} alt="CodeSprint Logo" className="h-9 w-auto object-contain" />
+                        <img src={technoTarangLogo} alt="TechnoTarang Logo" className="h-9 w-auto object-contain" />
 
                         <div className="flex items-center gap-1.5 mx-2">
                             <img src={pceLogo} alt="PCE Logo" className="h-8 w-auto object-contain" />
@@ -174,14 +173,12 @@ const Navbar = () => {
                                 </a>
                             );
                         })}
-                        <a
-                            href="https://hack2skill.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            to="/register"
                             className="whitespace-nowrap px-5 py-1.5 bg-accent-blue text-white rounded-full text-[11px] font-montserrat font-bold shadow-sm active:bg-secondary-blue"
                         >
                             Register
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </motion.nav>
@@ -246,14 +243,13 @@ const Navbar = () => {
                             <div className="border-t border-gray-200 mx-4" />
 
                             <div className="px-6 py-4">
-                                <a
-                                    href="https://hack2skill.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block text-center px-6 py-3 bg-neon-blue text-white rounded-lg font-montserrat font-bold text-sm"
+                                <Link
+                                    to="/register"
+                                    onClick={() => setIsOpen(false)}
+                                    className="block w-full text-center px-6 py-3 bg-neon-blue text-white rounded-lg font-montserrat font-bold text-sm"
                                 >
                                     Register Now
-                                </a>
+                                </Link>
                             </div>
                         </motion.div>
                     </>

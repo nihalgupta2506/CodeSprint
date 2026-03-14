@@ -1,4 +1,4 @@
-// React import removed
+import { Routes, Route } from 'react-router-dom';
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -15,15 +15,11 @@ import FAQ from "./components/FAQ";
 import ParticleNetwork from "./components/ParticleNetwork";
 import PastGlimpses from "./components/PastGlimpses";
 import Footer from "./components/Footer";
+import ComingSoon from "./components/ComingSoon";
 
-function App() {
+function Home() {
   return (
-    <div className="bg-off-white min-h-screen text-gray-800 selection:bg-accent-blue/30 selection:text-neon-blue w-full overflow-x-hidden relative">
-      {/* Animated Polygon Mesh Background */}
-      <ParticleNetwork />
-
-      {/* Site Content */}
-      <div className="relative z-10">
+    <>
         <Navbar />
         <Hero />
         <div className="relative">
@@ -40,6 +36,22 @@ function App() {
           <FAQ />
         </div>
         <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="bg-off-white min-h-screen text-gray-800 selection:bg-accent-blue/30 selection:text-neon-blue w-full overflow-x-hidden relative">
+      {/* Animated Polygon Mesh Background */}
+      <ParticleNetwork />
+
+      {/* Site Content */}
+      <div className="relative z-10">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<ComingSoon />} />
+        </Routes>
       </div>
     </div>
   );

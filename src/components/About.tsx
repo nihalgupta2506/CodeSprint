@@ -26,7 +26,7 @@ const About = () => {
                     className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-exo font-bold mb-4 text-neon-blue">
-                        About CodeSprint
+                        About TechnoTarang
                     </h2>
                     <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full" />
                 </motion.div>
@@ -39,13 +39,13 @@ const About = () => {
                         className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 font-montserrat leading-relaxed text-justify"
                     >
                         <p>
-                            <span className="font-bold text-secondary-blue">CodeSprint</span> builds upon the remarkable legacy of its previous editions and is envisioned to be an even more impactful <span className="font-semibold text-neon-blue">National Level Hackathon</span> in the technology ecosystem.
+                            <span className="font-bold text-secondary-blue">TechnoTarang</span> builds upon the remarkable legacy of its previous editions and is envisioned to be an even more impactful <span className="font-semibold text-neon-blue">National Level Hackathon</span> in the technology ecosystem.
                         </p>
                         <p>
-                            With participation expected from students across the country, the event aims to attract registrations from <span className="font-bold text-accent-blue">50+ colleges nationwide</span>, fostering a diverse and competitive environment. Leveraging strong digital outreach, CodeSprint is projected to achieve extensive online engagement through professional platforms such as LinkedIn and other social media channels.
+                            With participation expected from students across the country, the event aims to attract registrations from <span className="font-bold text-accent-blue">50+ colleges nationwide</span>, fostering a diverse and competitive environment. Leveraging strong digital outreach, TechnoTarang is projected to achieve extensive online engagement through professional platforms such as LinkedIn and other social media channels.
                         </p>
                         <p>
-                            CodeSprint is designed as a dynamic innovation platform where participants work intensively to develop creative and practical solutions.
+                            TechnoTarang is designed as a dynamic innovation platform where participants work intensively to develop creative and practical solutions.
                         </p>
                     </motion.div>
 
@@ -102,7 +102,7 @@ const About = () => {
                     className="mt-8 md:mt-16 text-center max-w-4xl mx-auto"
                 >
                     <p className="text-gray-700 mb-4 italic text-justify">
-                        Attractive prize opportunities and recognition will motivate teams to push their limits and deliver impactful outcomes. Through this edition, CodeSprint aims to strengthen collaboration, technical proficiency, and entrepreneurial thinking while creating a vibrant national community of innovators.
+                        Attractive prize opportunities and recognition will motivate teams to push their limits and deliver impactful outcomes. Through this edition, TechnoTarang aims to strengthen collaboration, technical proficiency, and entrepreneurial thinking while creating a vibrant national community of innovators.
                     </p>
                 </motion.div>
             </div>
