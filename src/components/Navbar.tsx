@@ -71,7 +71,7 @@ const Navbar = () => {
                 {/* Desktop Header */}
                 <div className="hidden lg:flex flex-col">
                     {/* Top Row: TechnoTarang Logo (left) | PCE Logo + Name (center) | Platform Partner (right) */}
-                    <div className="flex items-center justify-between px-6 xl:px-10 py-3 border-b border-gray-200/50">
+                    <div className="flex items-center justify-between px-8 xl:px-14 py-3 border-b border-gray-200/50">
                         {/* Left: TechnoTarang Logo */}
                         <a
                             href="#hero"
@@ -107,7 +107,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Bottom Row: Nav Links + Register Button */}
-                    <div className="flex items-center justify-center gap-1 xl:gap-2 py-2 px-6">
+                    <div className="flex items-center justify-center gap-0.5 xl:gap-1.5 py-2 px-4 xl:px-8">
                         {navLinks.map((link) => {
                             const isActive = activeSection === link.href.replace("#", "");
                             return (
@@ -115,7 +115,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.href)}
-                                    className={`flex items-center gap-1.5 font-montserrat text-sm font-semibold px-4 py-2 rounded-md transition-all duration-200 ${isActive
+                                    className={`flex items-center gap-1 font-montserrat text-[11px] xl:text-sm font-semibold px-2.5 xl:px-4 py-2 rounded-md transition-all duration-200 whitespace-nowrap ${isActive
                                         ? "text-neon-blue bg-neon-blue/10 border-b-2 border-neon-blue"
                                         : "text-gray-600 hover:text-neon-blue hover:bg-blue-50"
                                         }`}
@@ -127,7 +127,7 @@ const Navbar = () => {
                         })}
                         <Link
                             to="/register"
-                            className="ml-3 px-6 py-2 bg-neon-blue text-white rounded-md font-montserrat font-bold text-sm hover:bg-secondary-blue hover:shadow-lg transition-all duration-300"
+                            className="ml-2 xl:ml-3 px-4 xl:px-6 py-2 bg-neon-blue text-white rounded-md font-montserrat font-bold text-[11px] xl:text-sm hover:bg-secondary-blue hover:shadow-lg transition-all duration-300 whitespace-nowrap flex-shrink-0"
                         >
                             Register
                         </Link>
@@ -156,7 +156,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Bottom Row: Scrollable Nav Links + Register */}
-                    <div className="flex items-center gap-2 px-3 py-2 overflow-x-auto no-scrollbar bg-white/40">
+                    <div className="flex items-center gap-2 px-3 py-2 overflow-x-auto no-scrollbar bg-white/40" style={{WebkitOverflowScrolling: 'touch'}}>
                         {navLinks.map((link) => {
                             const isActive = activeSection === link.href.replace("#", "");
                             return (
@@ -175,10 +175,12 @@ const Navbar = () => {
                         })}
                         <Link
                             to="/register"
-                            className="whitespace-nowrap px-5 py-1.5 bg-accent-blue text-white rounded-full text-[11px] font-montserrat font-bold shadow-sm active:bg-secondary-blue"
+                            className="whitespace-nowrap px-5 py-1.5 bg-accent-blue text-white rounded-full text-[11px] font-montserrat font-bold shadow-sm active:bg-secondary-blue flex-shrink-0"
                         >
                             Register
                         </Link>
+                        {/* Trailing spacer so last item isn't hidden behind scroll edge */}
+                        <span className="pl-2 flex-shrink-0" aria-hidden="true" />
                     </div>
                 </div>
             </motion.nav>

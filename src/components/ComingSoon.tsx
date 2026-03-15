@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import technoTarangLogo from '../assets/technotarang-logo.png';
+import pceLogo from '../assets/pce-logo.png';
 import ParticleNetwork from './ParticleNetwork';
 
 const ComingSoon: React.FC = () => {
@@ -19,9 +20,11 @@ const ComingSoon: React.FC = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="mb-8"
+                    className="mb-8 flex items-center justify-center gap-6"
                 >
                     <img src={technoTarangLogo} alt="TechnoTarang Logo" className="h-16 md:h-24 w-auto drop-shadow-lg" />
+                    <div className="w-px h-12 md:h-16 bg-gray-300/60" />
+                    <img src={pceLogo} alt="Poornima College of Engineering" className="h-16 md:h-24 w-auto drop-shadow-lg" />
                 </motion.div>
 
                 {/* Main Text */}

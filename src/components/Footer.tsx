@@ -25,9 +25,10 @@ const Footer = () => {
 
                     {/* Branding */}
                     <div>
-                        <h2 className="text-2xl md:text-3xl font-exo font-bold text-white mb-2">
-                            Techno<span className="text-accent-blue">Tarang</span> <span className="text-neon-blue/80 text-sm font-medium ml-2">hackathon 3.0</span>
+                        <h2 className="text-2xl md:text-3xl font-exo font-bold text-white mb-1">
+                            Techno<span className="text-accent-blue">Tarang</span>
                         </h2>
+                        <p className="text-gray-400 text-sm font-medium font-montserrat mb-2 tracking-widest uppercase">Hackathon 3.0</p>
                         <a
                             href="https://maps.app.goo.gl/nY7LxG3mhznkENVv6"
                             target="_blank"

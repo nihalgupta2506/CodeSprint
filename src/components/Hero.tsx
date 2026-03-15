@@ -54,15 +54,21 @@ const Hero = () => {
                     </span>
                 </motion.div>
 
-                {/* Main Typing Text */}
-                <div className="flex justify-center mb-4">
-                    <motion.h1
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-exo font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-accent-blue tracking-tight md:animate-typing md:border-r-4 md:border-accent-blue md:pr-2"
-                    >
-                        TechnoTarang
-                    </motion.h1>
+                {/* Main Title with letter-by-letter animation */}
+                <div className="mb-4">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-exo font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-accent-blue tracking-tight leading-none">
+                        {"TechnoTarang".split("").map((char, i) => (
+                            <motion.span
+                                key={i}
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.05 * i, duration: 0.4, ease: "easeOut" }}
+                                style={{ display: "inline-block" }}
+                            >
+                                {char}
+                            </motion.span>
+                        ))}
+                    </h1>
                 </div>
 
                 <motion.div

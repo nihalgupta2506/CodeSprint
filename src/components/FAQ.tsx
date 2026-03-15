@@ -22,7 +22,7 @@ const FAQ = () => {
         },
         {
             question: "What are the themes for the hackathon?",
-            answer: "The themes revolve around building a smarter and sustainable future — including AI/ML, IoT, HealthTech, EdTech, FinTech, Sustainability, and Open Innovation. Teams can choose any track they are passionate about.",
+            answer: "The hackathon features 15 thematic innovation areas focused on environmental sustainability. These include Sustainable Development Goals, Climate Change & Action, Environment & Ecosystems, Clean & Green Technologies, Sustainability & Inclusive Development, Cyber Security, FinTech, Sustainable Tourism, Sports Tech, Web 3.0, EdTech, Healthcare, Blockchain, Space Tech, and Smart Mobility. Teams can choose any track they are passionate about.",
         },
         {
             question: "What should I bring to the hackathon?",
