@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { FaTrophy, FaMedal } from "react-icons/fa";
+import { FaTrophy } from "react-icons/fa";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
