@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes, FaHome } from "react-icons/fa";
+import LogoCarousel from "./LogoCarousel";
 import technoTarangLogo from "../assets/technotarang-logo.png";
-import pceLogo from "../assets/pce-logo.png";
-import h2sLogo from "../assets/coming_soon_partner.png";
+import pceLogo from "../assets/PCE Logo Only.png";
+import h2sLogo from "../assets/hack2skills logo.png";
 
 const NAVBAR_HEIGHT_MOBILE = 105;
 const NAVBAR_HEIGHT_DESKTOP = 120;
@@ -71,43 +72,41 @@ const Navbar = () => {
                 {/* Desktop Header */}
                 <div className="hidden lg:flex flex-col">
                     {/* Top Row: TechnoTarang Logo (left) | PCE Logo + Name (center) | Platform Partner (right) */}
-                    <div className="flex items-center justify-between px-8 xl:px-14 py-3 border-b border-gray-200/50">
+                    <div className={`transition-all duration-300 ease-in-out flex items-center justify-between px-8 xl:px-14 border-b border-gray-200/50 ${isScrolled ? 'py-1.5' : 'py-3'}`}>
                         {/* Left: TechnoTarang Logo */}
                         <a
                             href="#hero"
                             onClick={(e) => scrollToSection(e, "#hero")}
                             className="flex items-center cursor-pointer flex-shrink-0"
                         >
-                            <img src={technoTarangLogo} alt="TechnoTarang Logo" className="h-12 xl:h-14 w-auto object-contain" />
+                            <img src={technoTarangLogo} alt="TechnoTarang Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-10 xl:h-12' : 'h-16 xl:h-20'}`} />
                         </a>
 
-                        {/* Center: PCE Logo + College Name */}
+                        {/* Center: PCE Logo */}
                         <a
                             href="#hero"
                             onClick={(e) => scrollToSection(e, "#hero")}
                             className="flex items-center gap-3 cursor-pointer"
                         >
-                            <img src={pceLogo} alt="PCE Logo" className="h-12 xl:h-14 w-auto object-contain" />
-                            <div className="flex flex-col items-start">
-                                <span className="text-xl xl:text-2xl font-exo font-black text-gray-800 uppercase tracking-wider leading-tight">
-                                    Poornima College of Engineering
-                                </span>
-                            </div>
+                            <img src={pceLogo} alt="PCE Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-10 xl:h-12' : 'h-16 xl:h-20'}`} />
                         </a>
 
                         {/* Right: Platform Partner */}
-                        <div
-                            className="flex flex-col items-end flex-shrink-0 cursor-default"
+                        <a
+                            href="https://hack2skill.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-col items-end flex-shrink-0 cursor-pointer hover:opacity-80 transition-opacity"
                         >
-                            <span className="text-[10px] sm:text-xs font-montserrat text-gray-500 font-bold uppercase tracking-wider mb-1">
+                            <span className={`font-montserrat text-gray-500 font-bold uppercase tracking-wider transition-all duration-300 ${isScrolled ? 'text-[8px] sm:text-[10px] mb-0.5' : 'text-[10px] sm:text-xs mb-1'}`}>
                                 Platform Partner
                             </span>
-                            <img src={h2sLogo} alt="Coming Soon" className="h-10 sm:h-12 xl:h-14 w-auto object-contain" />
-                        </div>
+                            <img src={h2sLogo} alt="Hack2Skill" className={`w-auto object-contain rounded-sm transition-all duration-300 ${isScrolled ? 'h-6 sm:h-8 xl:h-10' : 'h-8 sm:h-10 xl:h-12'}`} />
+                        </a>
                     </div>
 
                     {/* Bottom Row: Nav Links + Register Button */}
-                    <div className="flex items-center justify-center gap-0.5 xl:gap-1.5 py-2 px-4 xl:px-8">
+                    <div className={`flex items-center justify-center gap-0.5 xl:gap-1.5 px-4 xl:px-8 transition-all duration-300 ${isScrolled ? 'py-1.5' : 'py-2'}`}>
                         {navLinks.map((link) => {
                             const isActive = activeSection === link.href.replace("#", "");
                             return (
@@ -137,18 +136,15 @@ const Navbar = () => {
                 {/* Mobile Header (Two Rows) */}
                 <div className="lg:hidden flex flex-col">
                     {/* Top Row: Logos and Menu */}
-                    <div className="flex items-center justify-between px-4 py-2 border-b border-gray-200/50">
-                        <img src={technoTarangLogo} alt="TechnoTarang Logo" className="h-9 w-auto object-contain" />
+                    <div className={`transition-all duration-300 ease-in-out flex items-center justify-between px-4 border-b border-gray-200/50 ${isScrolled ? 'py-1' : 'py-2'}`}>
+                        <img src={technoTarangLogo} alt="TechnoTarang Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8' : 'h-12'}`} />
 
-                        <div className="flex items-center gap-1.5 mx-2">
-                            <img src={pceLogo} alt="PCE Logo" className="h-8 w-auto object-contain" />
-                            <span className="text-[9px] sm:text-[10px] font-exo font-black text-gray-800 uppercase line-clamp-1 leading-tight text-center">
-                                Poornima College of Engineering
-                            </span>
+                        <div className="flex items-center mx-2">
+                            <img src={pceLogo} alt="PCE Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8' : 'h-12'}`} />
                         </div>
 
                         <button
-                            className="text-neon-blue text-2xl p-1"
+                            className={`text-neon-blue p-1 transition-all duration-300 ${isScrolled ? 'text-xl' : 'text-2xl'}`}
                             onClick={() => setIsOpen(!isOpen)}
                         >
                             {isOpen ? <FaTimes /> : <FaBars />}
@@ -156,7 +152,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Bottom Row: Scrollable Nav Links + Register */}
-                    <div className="flex items-center gap-2 px-3 py-2 overflow-x-auto no-scrollbar bg-white/40" style={{WebkitOverflowScrolling: 'touch'}}>
+                    <div className={`flex items-center gap-2 px-3 overflow-x-auto no-scrollbar bg-white/40 transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`} style={{WebkitOverflowScrolling: 'touch'}}>
                         {navLinks.map((link) => {
                             const isActive = activeSection === link.href.replace("#", "");
                             return (
@@ -182,6 +178,11 @@ const Navbar = () => {
                         {/* Trailing spacer so last item isn't hidden behind scroll edge */}
                         <span className="pl-2 flex-shrink-0" aria-hidden="true" />
                     </div>
+                </div>
+
+                {/* Logo Carousel Ticker embedded straight into the nav bar! */}
+                <div className={`w-full transition-all duration-500 ease-in-out overflow-hidden ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-[120px] opacity-100'}`}>
+                    <LogoCarousel />
                 </div>
             </motion.nav>
 
@@ -212,12 +213,8 @@ const Navbar = () => {
                                 </button>
                             </div>
 
-                            <div className="flex items-center gap-3 px-6 mb-4">
-                                <img src={pceLogo} alt="PCE Logo" className="h-10 w-auto object-contain" />
-                                <div className="flex flex-col">
-                                    <span className="text-sm font-bold text-gray-800">Poornima College</span>
-                                    <span className="text-xs text-gray-500 font-medium">of Engineering</span>
-                                </div>
+                            <div className="flex items-center justify-center px-6 mb-4">
+                                <img src={pceLogo} alt="PCE Logo" className="h-16 w-auto object-contain" />
                             </div>
 
                             <div className="border-t border-gray-200 mx-4" />

@@ -2,6 +2,7 @@ import { FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaTwitter } from "reac
 
 const Footer = () => {
     const contacts = [
+        { name: "Mr. Sachin Jain", phone: "+91 78910 27774", role: "Assistant Professor" },
         { name: "Mr. Amit Kumar", phone: "+91 76150 00100", role: "Assistant Professor" },
         { name: "Nayan Mathur", phone: "+91 70412 74329", role: "Student Coordinator" },
     ];

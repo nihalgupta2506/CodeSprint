@@ -12,7 +12,7 @@ const Prizes = () => {
     ];
 
     return (
-        <section id="prizes" className="py-12 md:py-24 bg-off-white/70 relative overflow-hidden">
+        <section id="prizes" className="pt-6 pb-12 md:pt-10 md:pb-24 bg-off-white/70 relative overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-0 right-0 w-48 h-48 md:w-96 md:h-96 bg-neon-blue/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-36 h-36 md:w-72 md:h-72 bg-accent-blue/5 rounded-full blur-3xl" />
@@ -43,7 +43,7 @@ const Prizes = () => {
                     >
                         <p className="text-blue-100 font-montserrat text-sm uppercase tracking-widest mb-1 font-semibold">Total Prize Pool Worth</p>
                         <span className="text-4xl sm:text-5xl md:text-7xl font-black font-exo text-white tracking-tight drop-shadow-lg">
-                            ₹5,00,000
+                            Coming Soon...
                         </span>
                     </motion.div>
 

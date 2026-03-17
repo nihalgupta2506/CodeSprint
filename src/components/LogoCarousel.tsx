@@ -1,0 +1,149 @@
+import { useEffect, useRef } from "react";
+import { FaTrophy, FaMedal } from "react-icons/fa";
+
+// ─── Prize items ──────────────────────────────────────────────────────────────
+const PRIZE_ITEMS = [
+    { label: "Prize Pool",       value: "Coming Soon", icon: <FaTrophy /> },
+    // { label: "1st Place",        value: "₹2,00,000", icon: <FaMedal />  },
+    // { label: "2nd Place",        value: "₹1,00,000", icon: <FaMedal />  },
+    // { label: "3rd Place",        value: "₹50,000",   icon: <FaMedal />  },
+    // { label: "Best Rookie",      value: "₹25,000",   icon: <FaMedal />  },
+];
+
+// ─── Sponsor placeholder slots ────────────────────────────────────────────────
+const SPONSOR_SLOTS = [
+    { name: "Title Sponsor",    tier: "TITLE"   },
+    { name: "Gold Sponsor",     tier: "GOLD"    },
+    { name: "Silver Sponsor",   tier: "SILVER"  },
+    { name: "Silver Sponsor",   tier: "SILVER"  },
+    { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill" },
+];
+
+const tierStyle: Record<string, string> = {
+    TITLE:   "border-yellow-400/70 text-yellow-600 bg-yellow-50",
+    GOLD:    "border-amber-400/70  text-amber-600  bg-amber-50",
+    SILVER:  "border-gray-400/70   text-gray-500   bg-gray-100",
+    PARTNER: "border-blue-400/70   text-blue-600   bg-blue-50",
+};
+
+// ─── Small helpers ────────────────────────────────────────────────────────────
+const Dot = () => (
+    <span className="mx-3 md:mx-5 text-neon-blue/25 text-xs select-none">●</span>
+);
+
+const PrizePill = ({ label, value, icon }: { label: string; value: string; icon: React.ReactNode }) => (
+    <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
+        <span className="text-neon-blue text-[11px]">{icon}</span>
+        <span className="font-montserrat text-[10px] md:text-[11px] text-gray-400 uppercase tracking-wide">{label}:</span>
+        <span className="font-exo font-black text-[12px] md:text-[13px] text-neon-blue">{value}</span>
+    </span>
+);
+
+const SponsorChip = ({ name, tier, partnerName }: { name: string; tier: string; partnerName?: string }) => (
+    <span
+        className={`inline-flex items-center gap-1.5 whitespace-nowrap border rounded-full px-2.5 py-0.5 text-[10px] md:text-[11px] font-montserrat font-bold uppercase tracking-wide ${tierStyle[tier] ?? ""}`}
+    >
+        <span className="w-3.5 h-3.5 rounded-full border border-current/40 flex items-center justify-center text-[7px] font-black opacity-70 flex-shrink-0">
+            {tier[0]}
+        </span>
+        {name}
+        <span className={`ml-0.5 text-[8px] tracking-normal ${partnerName ? "font-bold text-current uppercase opacity-90" : "opacity-40 normal-case font-normal"}`}>
+            {partnerName || "TBD"}
+        </span>
+    </span>
+);
+
+// ─── One content strip (duplicated for seamless loop) ─────────────────────────
+const Strip = () => (
+    <div className="flex items-center gap-0 pr-0">
+        {PRIZE_ITEMS.map((p, i) => (
+            <span key={`p-${i}`} className="flex items-center">
+                <PrizePill {...p} />
+                <Dot />
+            </span>
+        ))}
+
+        {/* Sponsor label */}
+        <span className="font-montserrat text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest whitespace-nowrap mr-3">
+            Sponsors
+        </span>
+
+        {SPONSOR_SLOTS.map((s, i) => (
+            <span key={`s-${i}`} className="flex items-center">
+                <SponsorChip {...s} />
+                {i < SPONSOR_SLOTS.length - 1 ? <Dot /> : <span className="mr-12 md:mr-20" />}
+            </span>
+        ))}
+    </div>
+);
+
+// ─── Main Carousel ────────────────────────────────────────────────────────────
+/**
+ * Rendered as a FIXED bar sitting directly below the fixed Navbar.
+ * Navbar heights: mobile ≈ 105 px, desktop ≈ 120 px.
+ * `top` is set to match those values via the inline style.
+ */
+const LogoCarousel = () => {
+    const trackRef = useRef<HTMLDivElement>(null);
+    const rafRef   = useRef<number>(0);
+    const posRef   = useRef<number>(0);
+    const paused   = useRef(false);
+
+    useEffect(() => {
+        const el = trackRef.current;
+        if (!el) return;
+
+        const speed = 0.55; // px per frame
+
+        const tick = () => {
+            if (!paused.current) {
+                posRef.current += speed;
+                const half = el.scrollWidth / 2;
+                if (posRef.current >= half) posRef.current -= half;
+                el.style.transform = `translateX(-${posRef.current}px)`;
+            }
+            rafRef.current = requestAnimationFrame(tick);
+        };
+
+        rafRef.current = requestAnimationFrame(tick);
+
+        const container = el.parentElement!;
+        const pauseFn  = () => { paused.current = true;  };
+        const resumeFn = () => { paused.current = false; };
+        container.addEventListener("mouseenter", pauseFn);
+        container.addEventListener("mouseleave", resumeFn);
+
+        return () => {
+            cancelAnimationFrame(rafRef.current);
+            container.removeEventListener("mouseenter", pauseFn);
+            container.removeEventListener("mouseleave", resumeFn);
+        };
+    }, []);
+
+    return (
+        <div
+            className="relative left-0 w-full overflow-hidden bg-white border-b border-neon-blue/10 shadow-sm"
+            style={{
+                height: "36px",
+            }}
+            aria-label="Prize pool and sponsors ticker"
+        >
+            {/* left fade */}
+            <div className="absolute left-0 top-0 h-full w-10 md:w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+
+            <div
+                ref={trackRef}
+                className="flex items-center will-change-transform h-full"
+                style={{ whiteSpace: "nowrap" }}
+            >
+                <Strip />
+                <Strip />
+            </div>
+
+            {/* right fade */}
+            <div className="absolute right-0 top-0 h-full w-10 md:w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+        </div>
+    );
+};
+
+export default LogoCarousel;

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import technoTarangLogo from '../assets/technotarang-logo.png';
-import pceLogo from '../assets/pce-logo.png';
+import pceLogo from '../assets/PCE Logo Only.png';
 import ParticleNetwork from './ParticleNetwork';
 
 const ComingSoon: React.FC = () => {

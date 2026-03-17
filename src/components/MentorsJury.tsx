@@ -30,7 +30,7 @@ const MentorsJury = () => {
     );
 
     return (
-        <section id="mentors-jury" className="py-12 md:py-20 bg-off-white/70 relative">
+        <section id="mentors-jury" className="pt-6 pb-12 md:pt-10 md:pb-20 bg-off-white/70 relative">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}

@@ -5,14 +5,14 @@ const Timeline = () => {
     const { ref, isInView } = useSectionInView();
 
     const events = [
-        { date: "16 Mar 2026", title: "Registration Opens", desc: "Global registration begins on the official platform" },
+        { date: "17 Mar 2026", title: "Registration Opens", desc: "Global registration begins on the official platform" },
         { date: "25 Mar 2026", title: "Registration Closes", desc: "Last date to register your team" },
         { date: "4 Apr 2026", title: "Hackathon Starts", desc: "Opening Ceremony & Hacking Begins" },
         { date: "5 Apr 2026", title: "Hackathon Ends", desc: "Submission, Judging & Closing Ceremony" },
     ];
 
     return (
-        <section id="timeline" className="py-12 md:py-20 bg-beige/70 relative overflow-hidden">
+        <section id="timeline" className="pt-6 pb-12 md:pt-10 md:pb-20 bg-beige/70 relative overflow-hidden">
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
