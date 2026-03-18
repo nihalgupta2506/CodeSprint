@@ -4,6 +4,7 @@ import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import technoTarangLogo from '../assets/technotarang-logo.png';
 import pceLogo from '../assets/PCE Logo Only.png';
+import hack2SkillLogo from '../assets/hack2skills logo.png';
 import ParticleNetwork from './ParticleNetwork';
 
 const RegistrationPage: React.FC = () => {
@@ -41,23 +42,26 @@ const RegistrationPage: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="glass-card mb-10 w-full max-w-2xl mx-auto border-neon-blue/20"
+                    className="glass-card mb-10 w-full max-w-xl mx-auto border-neon-blue/20"
                 >
-                    <div className="p-8 md:p-12 flex flex-col items-center">
-                        <div className="mb-6 flex justify-center">
-                             <div className="w-16 h-16 rounded-full bg-neon-blue/10 flex items-center justify-center mb-4">
-                                <span className="text-3xl">🎟️</span>
-                             </div>
+                    <div className="p-6 md:p-8 flex flex-col items-center">
+                        <div className="mb-4 flex justify-center">
+                             <img src={hack2SkillLogo} alt="Hack2Skill Logo" className="h-12 md:h-16 w-auto drop-shadow-md" />
                         </div>
-                        <h2 className="text-2xl md:text-3xl font-exo font-bold text-gray-800 mb-2">
+                        <h2 className="text-xl md:text-2xl font-exo font-bold text-gray-800 mb-2">
                              Team Registration Fee
                         </h2>
-                        <div className="flex items-baseline justify-center gap-1 mb-8">
-                             <span className="text-4xl md:text-5xl font-black text-neon-blue">₹800</span>
-                             <span className="text-gray-500 font-montserrat font-medium">/ team</span>
+                        <div className="flex items-baseline justify-center gap-1 mb-6">
+                             <span className="text-3xl md:text-4xl font-black text-neon-blue">₹800</span>
+                             <span className="text-gray-500 font-montserrat font-medium text-sm">/ team</span>
+                        </div>
+
+                        <div className="flex items-center gap-2 mb-6 px-4 py-2 bg-blue-50/50 border border-blue-100 rounded-full">
+                            <span className="text-accent-blue font-bold">👥</span>
+                            <span className="text-sm md:text-base font-montserrat font-bold text-gray-700">Team Size: 2-4 Members</span>
                         </div>
                         
-                        <p className="text-gray-600 font-montserrat text-lg md:text-xl mb-8 leading-relaxed max-w-lg mx-auto">
+                        <p className="text-gray-600 font-montserrat text-base md:text-lg mb-6 leading-relaxed max-w-lg mx-auto">
                             Join us for 24 hours of intensive coding, innovation, and networking.
                         </p>
 
