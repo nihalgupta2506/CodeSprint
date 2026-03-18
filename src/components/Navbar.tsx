@@ -94,7 +94,7 @@ const Navbar = () => {
 
                         {/* Right: Technical Partner + Platform Partner */}
                         <div className="flex items-center gap-4 xl:gap-6 flex-shrink-0">
-                            {/* ACM - Technical Partner */}
+                            {/* ACM - Technical Partner
                             <a
                                 href="https://jaipur.acm.org/#/"
                                 target="_blank"
@@ -105,7 +105,7 @@ const Navbar = () => {
                                     Technical Partner
                                 </span>
                                 <img src={acmLogo} alt="ACM" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8 sm:h-10 xl:h-12' : 'h-10 sm:h-12 xl:h-14'}`} />
-                            </a>
+                            </a> */}
                             {/* Hack2Skill - Platform Partner */}
                             <a
                                 href="https://hack2skill.com"
