@@ -14,11 +14,11 @@ const PRIZE_ITEMS = [
 
 // ─── Sponsor placeholder slots ────────────────────────────────────────────────
 const SPONSOR_SLOTS = [
+    { name: "Platform Partner",   tier: "PARTNER",    partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
+    { name: "Technical Partner",  tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
     { name: "Title Sponsor",      tier: "TITLE"      },
     { name: "Gold Sponsor",       tier: "GOLD"       },
     { name: "Silver Sponsor",     tier: "SILVER"     },
-    { name: "Technical Partner",  tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
-    { name: "Platform Partner",   tier: "PARTNER",    partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
 ];
 
 const tierStyle: Record<string, string> = {
@@ -105,7 +105,7 @@ const LogoCarousel = () => {
         const el = trackRef.current;
         if (!el) return;
 
-        const speed = 0.55; // px per frame
+        const speed = 1.2; // px per frame
 
         const tick = () => {
             if (!paused.current) {
