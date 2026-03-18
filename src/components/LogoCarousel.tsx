@@ -5,7 +5,7 @@ import acmLogo from "../assets/acm logo.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
-    { label: "Prize Pool", value: "₹5,00,000", icon: <FaTrophy /> },
+    { label: "Prize Pool Worth", value: "₹5,00,000", icon: <FaTrophy /> },
     // { label: "1st Place",        value: "₹2,00,000", icon: <FaMedal />  },
     // { label: "2nd Place",        value: "₹1,00,000", icon: <FaMedal />  },
     // { label: "3rd Place",        value: "₹50,000",   icon: <FaMedal />  },
@@ -16,13 +16,15 @@ const PRIZE_ITEMS = [
 const SPONSOR_SLOTS = [
     { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
-    { name: "Title Sponsor", tier: "TITLE" },
+    { name: "Powered By", tier: "TITLE" },
+    { name: "Co-Powered By", tier: "COPOWERED" },
     { name: "Gold Sponsor", tier: "GOLD" },
     { name: "Silver Sponsor", tier: "SILVER" },
 ];
 
 const tierStyle: Record<string, string> = {
     TITLE: "border-yellow-400/70 text-yellow-600 bg-yellow-50",
+    COPOWERED: "border-orange-400/70 text-orange-600 bg-orange-50",
     GOLD: "border-amber-400/70  text-amber-600  bg-amber-50",
     SILVER: "border-gray-400/70   text-gray-500   bg-gray-100",
     PARTNER: "border-blue-400/70   text-blue-600   bg-blue-50",
@@ -51,7 +53,15 @@ const SponsorChip = ({ name, tier, partnerName, logo }: { name: string; tier: st
         </span>
         {name}
         {logo ? (
-            <img src={logo} alt={partnerName} className="h-5 md:h-6 w-auto max-w-[64px] object-contain ml-1 opacity-95" />
+            <img
+                src={logo}
+                alt={partnerName}
+                className={`w-auto object-contain ml-1 opacity-95 ${
+                    partnerName === "ACM"
+                        ? "h-6 md:h-8 max-w-[56px]"
+                        : "h-4 md:h-5 max-w-[60px]"
+                }`}
+            />
         ) : (
             <span className={`ml-0.5 text-[8px] tracking-normal ${partnerName ? "font-bold text-current uppercase opacity-90" : "opacity-40 normal-case font-normal"}`}>
                 {partnerName || "TBD"}

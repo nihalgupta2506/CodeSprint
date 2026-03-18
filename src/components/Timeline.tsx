@@ -1,14 +1,21 @@
 import { motion } from "framer-motion";
 import { useSectionInView } from "../hooks/useSectionInView";
 
+// Renders "17th Mar 2026" => 17<sup>th</sup> Mar 2026
+const FormatDate = ({ date }: { date: string }) => {
+    const match = date.match(/^(\d+)(st|nd|rd|th)(.*)$/);
+    if (!match) return <>{date}</>;
+    return <>{match[1]}<sup className="text-[0.6em] leading-none" style={{ marginLeft: 0 }}>{match[2]}</sup>{match[3]}</>;
+};
+
 const Timeline = () => {
     const { ref, isInView } = useSectionInView();
 
     const events = [
-        { date: "17 Mar 2026", title: "Registration Opens", desc: "Global registration begins on the official platform" },
-        { date: "27 Mar 2026", title: "Registration Closes", desc: "Last date to register your team" },
-        { date: "4 Apr 2026", title: "Hackathon Starts", desc: "Opening Ceremony & Hacking Begins" },
-        { date: "5 Apr 2026", title: "Hackathon Ends", desc: "Submission, Judging & Closing Ceremony" },
+        { date: "17th Mar 2026", title: "Registration Opens", desc: "Global registration begins on the official platform" },
+        { date: "27th Mar 2026", title: "Registration Closes", desc: "Last date to register your team" },
+        { date: "4th Apr 2026", title: "Hackathon Starts", desc: "Opening Ceremony & Hacking Begins" },
+        { date: "5th Apr 2026", title: "Hackathon Ends", desc: "Submission, Judging & Closing Ceremony" },
     ];
 
     return (
@@ -45,7 +52,7 @@ const Timeline = () => {
                             const content = (
                                 <div>
                                     <h3 className="text-2xl font-exo font-bold text-neon-blue mb-1">{event.title}</h3>
-                                    <p className="text-accent-blue font-montserrat font-semibold mb-2">{event.date}</p>
+                                    <p className="text-accent-blue font-montserrat font-semibold mb-2"><FormatDate date={event.date} /></p>
                                     <p className="text-gray-600 font-montserrat text-sm">{event.desc}</p>
                                 </div>
                             );
