@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { FaTrophy } from "react-icons/fa";
 import h2sLogo from "../assets/hack2skills logo.png";
+import acmLogo from "../assets/acm logo.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -13,18 +14,19 @@ const PRIZE_ITEMS = [
 
 // ─── Sponsor placeholder slots ────────────────────────────────────────────────
 const SPONSOR_SLOTS = [
-    { name: "Title Sponsor",    tier: "TITLE"   },
-    { name: "Gold Sponsor",     tier: "GOLD"    },
-    { name: "Silver Sponsor",   tier: "SILVER"  },
-    { name: "Silver Sponsor",   tier: "SILVER"  },
-    { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill", logo: h2sLogo },
+    { name: "Title Sponsor",      tier: "TITLE"      },
+    { name: "Gold Sponsor",       tier: "GOLD"       },
+    { name: "Silver Sponsor",     tier: "SILVER"     },
+    { name: "Technical Partner",  tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
+    { name: "Platform Partner",   tier: "PARTNER",    partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
 ];
 
 const tierStyle: Record<string, string> = {
-    TITLE:   "border-yellow-400/70 text-yellow-600 bg-yellow-50",
-    GOLD:    "border-amber-400/70  text-amber-600  bg-amber-50",
-    SILVER:  "border-gray-400/70   text-gray-500   bg-gray-100",
-    PARTNER: "border-blue-400/70   text-blue-600   bg-blue-50",
+    TITLE:       "border-yellow-400/70 text-yellow-600 bg-yellow-50",
+    GOLD:        "border-amber-400/70  text-amber-600  bg-amber-50",
+    SILVER:      "border-gray-400/70   text-gray-500   bg-gray-100",
+    PARTNER:     "border-blue-400/70   text-blue-600   bg-blue-50",
+    TECHPARTNER: "border-purple-400/70 text-purple-600 bg-purple-50",
 };
 
 // ─── Small helpers ────────────────────────────────────────────────────────────
@@ -72,12 +74,17 @@ const Strip = () => (
         <span className="font-montserrat text-[9px] md:text-[10px] text-gray-400 uppercase tracking-widest whitespace-nowrap mr-3">
             Sponsors
         </span>
-
-        {SPONSOR_SLOTS.map((s, i) => (
-            <span key={`s-${i}`} className="flex items-center">
-                <SponsorChip {...s} />
-                {i < SPONSOR_SLOTS.length - 1 ? <Dot /> : <span className="mr-12 md:mr-20" />}
-            </span>
+        {SPONSOR_SLOTS.map((slot, index) => (
+            <div key={`sponsor-1-${index}`} className="flex items-center">
+                {slot.href ? (
+                    <a href={slot.href} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                        <SponsorChip {...slot} />
+                    </a>
+                ) : (
+                    <SponsorChip {...slot} />
+                )}
+                <Dot />
+            </div>
         ))}
     </div>
 );

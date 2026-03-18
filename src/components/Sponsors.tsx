@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useSectionInView } from "../hooks/useSectionInView";
+import h2sLogo from "../assets/hack2skills logo.png";
+import acmLogo from "../assets/acm logo.png";
 
 const Sponsors = () => {
     const { ref, isInView } = useSectionInView();
@@ -19,24 +21,61 @@ const Sponsors = () => {
                     <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full" />
                 </motion.div>
 
-                <div
-                    ref={ref}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
-                >
-                    {[...Array(4)].map((_, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                            transition={{ delay: index * 0.1, duration: 0.4 }}
-                            className="h-32 md:h-40 bg-white border border-neon-blue/20 rounded-xl flex flex-col items-center justify-center p-3 md:p-6 hover:border-neon-blue hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                        >
-                            <span className="text-gray-300 font-bold mb-2 text-xs md:text-sm">Sponsor Logo</span>
-                            <span className="font-montserrat text-neon-blue font-semibold text-sm bg-blue-50 px-3 py-1 rounded-full">
-                                Coming Soon
-                            </span>
-                        </motion.div>
-                    ))}
+                <div ref={ref} className="space-y-10 md:space-y-14">
+
+                    {/* Single Row 4-Column Grid for all Sponsors */}
+                    <div>
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                            
+                            {/* Platform Partner */}
+                            <motion.a
+                                href="https://hack2skill.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.1, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-blue-200 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-neon-blue hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-blue-500">Platform Partner</span>
+                                <img src={h2sLogo} alt="Hack2Skill" className="h-14 md:h-16 w-auto object-contain mt-4 mb-2 group-hover:scale-105 transition-transform duration-300" />
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Hack2Skill</span>
+                            </motion.a>
+
+                            {/* Technical Partner */}
+                            <motion.a
+                                href="https://jaipur.acm.org/#/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.2, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-purple-200 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-purple-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partner</span>
+                                <img src={acmLogo} alt="ACM Jaipur Chapter" className="h-20 md:h-24 w-auto object-contain mt-4 mb-1 group-hover:scale-105 transition-transform duration-300" />
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">ACM Jaipur Chapter</span>
+                            </motion.a>
+
+                            {/* Remaining Sponsor Slots */}
+                            {[...Array(2)].map((_, index) => (
+                                <motion.div
+                                    key={`sponsor-slot-${index}`}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                    transition={{ delay: 0.3 + index * 0.1, duration: 0.4 }}
+                                    className="h-40 md:h-48 w-full bg-white border border-dashed border-gray-300 rounded-2xl flex flex-col items-center justify-center p-4 hover:border-neon-blue hover:shadow-md transition-all duration-300 relative"
+                                >
+                                    <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-gray-400">Sponsor</span>
+                                    <span className="text-gray-300 font-bold mb-2 text-xs md:text-sm mt-4">Sponsor Logo</span>
+                                    <span className="font-montserrat text-neon-blue font-semibold text-xs bg-blue-50 px-3 py-1 rounded-full">
+                                        Coming Soon
+                                    </span>
+                                </motion.div>
+                            ))}
+
+                        </div>
+                    </div>
                 </div>
 
                 {/* CTA */}
