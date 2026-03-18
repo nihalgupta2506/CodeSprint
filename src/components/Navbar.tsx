@@ -6,7 +6,6 @@ import LogoCarousel from "./LogoCarousel";
 import technoTarangLogo from "../assets/technotarang-logo.png";
 import pceLogo from "../assets/PCE Logo Only.png";
 import h2sLogo from "../assets/hack2skills logo.png";
-import acmLogo from "../assets/acm logo.png";
 
 const NAVBAR_HEIGHT_MOBILE = 105;
 const NAVBAR_HEIGHT_DESKTOP = 120;
@@ -94,18 +93,6 @@ const Navbar = () => {
 
                         {/* Right: Technical Partner + Platform Partner */}
                         <div className="flex items-center gap-4 xl:gap-6 flex-shrink-0">
-                            {/* ACM - Technical Partner
-                            <a
-                                href="https://jaipur.acm.org/#/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex flex-col items-center cursor-pointer hover:opacity-80 transition-opacity"
-                            >
-                                <span className={`font-montserrat text-gray-500 font-bold uppercase tracking-wider transition-all duration-300 ${isScrolled ? 'text-[8px] sm:text-[10px] mb-0.5' : 'text-[10px] sm:text-xs mb-1'}`}>
-                                    Technical Partner
-                                </span>
-                                <img src={acmLogo} alt="ACM" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8 sm:h-10 xl:h-12' : 'h-10 sm:h-12 xl:h-14'}`} />
-                            </a> */}
                             {/* Hack2Skill - Platform Partner */}
                             <a
                                 href="https://hack2skill.com"

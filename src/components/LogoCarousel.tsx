@@ -5,7 +5,7 @@ import acmLogo from "../assets/acm logo.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
-    { label: "Prize Pool",       value: "₹5,00,000", icon: <FaTrophy /> },
+    { label: "Prize Pool", value: "₹5,00,000", icon: <FaTrophy /> },
     // { label: "1st Place",        value: "₹2,00,000", icon: <FaMedal />  },
     // { label: "2nd Place",        value: "₹1,00,000", icon: <FaMedal />  },
     // { label: "3rd Place",        value: "₹50,000",   icon: <FaMedal />  },
@@ -14,18 +14,18 @@ const PRIZE_ITEMS = [
 
 // ─── Sponsor placeholder slots ────────────────────────────────────────────────
 const SPONSOR_SLOTS = [
-    { name: "Platform Partner",   tier: "PARTNER",    partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
-    { name: "Technical Partner",  tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
-    { name: "Title Sponsor",      tier: "TITLE"      },
-    { name: "Gold Sponsor",       tier: "GOLD"       },
-    { name: "Silver Sponsor",     tier: "SILVER"     },
+    { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
+    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
+    { name: "Title Sponsor", tier: "TITLE" },
+    { name: "Gold Sponsor", tier: "GOLD" },
+    { name: "Silver Sponsor", tier: "SILVER" },
 ];
 
 const tierStyle: Record<string, string> = {
-    TITLE:       "border-yellow-400/70 text-yellow-600 bg-yellow-50",
-    GOLD:        "border-amber-400/70  text-amber-600  bg-amber-50",
-    SILVER:      "border-gray-400/70   text-gray-500   bg-gray-100",
-    PARTNER:     "border-blue-400/70   text-blue-600   bg-blue-50",
+    TITLE: "border-yellow-400/70 text-yellow-600 bg-yellow-50",
+    GOLD: "border-amber-400/70  text-amber-600  bg-amber-50",
+    SILVER: "border-gray-400/70   text-gray-500   bg-gray-100",
+    PARTNER: "border-blue-400/70   text-blue-600   bg-blue-50",
     TECHPARTNER: "border-purple-400/70 text-purple-600 bg-purple-50",
 };
 
@@ -97,9 +97,9 @@ const Strip = () => (
  */
 const LogoCarousel = () => {
     const trackRef = useRef<HTMLDivElement>(null);
-    const rafRef   = useRef<number>(0);
-    const posRef   = useRef<number>(0);
-    const paused   = useRef(false);
+    const rafRef = useRef<number>(0);
+    const posRef = useRef<number>(0);
+    const paused = useRef(false);
 
     useEffect(() => {
         const el = trackRef.current;
@@ -120,7 +120,7 @@ const LogoCarousel = () => {
         rafRef.current = requestAnimationFrame(tick);
 
         const container = el.parentElement!;
-        const pauseFn  = () => { paused.current = true;  };
+        const pauseFn = () => { paused.current = true; };
         const resumeFn = () => { paused.current = false; };
         container.addEventListener("mouseenter", pauseFn);
         container.addEventListener("mouseleave", resumeFn);
