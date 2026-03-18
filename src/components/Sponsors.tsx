@@ -21,9 +21,9 @@ const Sponsors = () => {
 
                 <div
                     ref={ref}
-                    className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
                 >
-                    {[...Array(5)].map((_, index) => (
+                    {[...Array(4)].map((_, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}

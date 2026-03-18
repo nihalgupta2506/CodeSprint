@@ -10,7 +10,7 @@ const FAQ = () => {
     const faqs = [
         {
             question: "What is TechnoTarang Hackathon?",
-            answer: "TechnoTarang is a 24-hour national-level hackathon organized by Poornima College of Engineering. Participants form teams to build innovative solutions around the theme \"Innovating Today for a Smarter & Sustainable 2050.\"",
+            answer: "TechnoTarang is a 24-hour national-level hackathon organized by Poornima College of Engineering, Jaipur (Rajasthan). Participants form teams to build innovative solutions around the theme \"Innovating Today for a Smarter & Sustainable 2050.\"",
         },
         {
             question: "Who can participate in TechnoTarang?",
@@ -22,7 +22,7 @@ const FAQ = () => {
         },
         {
             question: "What are the themes for the hackathon?",
-            answer: "The hackathon features 15 thematic innovation areas focused on environmental sustainability. These include Sustainable Development Goals, Climate Change & Action, Environment & Ecosystems, Clean & Green Technologies, Sustainability & Inclusive Development, Cyber Security, FinTech, Sustainable Tourism, Sports Tech, Web 3.0, EdTech, Healthcare, Blockchain, Space Tech, and Smart Mobility. Teams can choose any track they are passionate about.",
+            answer: "The hackathon features 15 thematic innovation areas: Web 3.0, EdTech, FinTech, Space & Energy, Bitcoin, Heritage, Healthcare, Ecosystems, Cybersecurity, Transportation, Clean & Green, Robotics & Drones, Sports, Tourism, and Sustainability & Development. Teams can choose any track they are passionate about.",
         },
         {
             question: "What should I bring to the hackathon?",
@@ -94,7 +94,7 @@ const FAQ = () => {
                                             transition={{ duration: 0.3 }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="px-6 pb-5 text-gray-600 font-montserrat text-sm md:text-base leading-relaxed border-t border-gray-100 pt-4">
+                                            <div className="px-6 pb-5 text-gray-600 font-montserrat text-sm md:text-base leading-relaxed border-t border-gray-100 pt-4 text-justify">
                                                 {faq.answer}
                                             </div>
                                         </motion.div>

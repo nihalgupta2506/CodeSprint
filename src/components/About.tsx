@@ -6,10 +6,10 @@ const About = () => {
     const { ref, isInView } = useSectionInView();
 
     const features = [
-        { icon: <FaMicrophoneAlt />, text: "Renowned technical speakers" },
-        { icon: <FaUserTie />, text: "Industry experts" },
-        { icon: <FaChalkboardTeacher />, text: "Experienced mentors" },
-        { icon: <FaBalanceScale />, text: "Jury members" },
+        { icon: <FaMicrophoneAlt />, text: "Renowned Technical Speakers" },
+        { icon: <FaUserTie />, text: "Industry Experts" },
+        { icon: <FaChalkboardTeacher />, text: "Experienced Mentors" },
+        { icon: <FaBalanceScale />, text: "Jury Members" },
     ];
 
     return (
@@ -39,13 +39,16 @@ const About = () => {
                         className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 font-montserrat leading-relaxed text-justify"
                     >
                         <p>
-                            <span className="font-bold text-secondary-blue">TechnoTarang</span> builds upon the remarkable legacy of its previous editions and is envisioned to be an even more impactful <span className="font-semibold text-neon-blue">National Level Hackathon</span> in the technology ecosystem.
+                            <span className="font-bold text-secondary-blue">TechnoTarang</span> is a <span className="font-semibold text-neon-blue">National Level Hackathon</span> built on the legacy of its successful predecessor  <span className="font-semibold">HIS (Hackathon Innovation Series)</span>  organized by Poornima College of Engineering, Jaipur (Rajasthan).
                         </p>
                         <p>
-                            With participation expected from students across the country, the event aims to attract registrations from <span className="font-bold text-accent-blue">50+ colleges nationwide</span>, fostering a diverse and competitive environment. Leveraging strong digital outreach, TechnoTarang is projected to achieve extensive online engagement through professional platforms such as LinkedIn and other social media channels.
+                            <span className="font-semibold text-accent-blue">HIS 1.0</span> (April 2023) was a 36-hour offline hackathon covering themes like Web 3.0, AI/ML, AR/VR &amp; Cybersecurity, conducted in collaboration with Lightning &amp; HackQuest  won by Team <em>ENCRYPTORS</em> with project <em>"SURAKSHAK"</em>.
                         </p>
                         <p>
-                            TechnoTarang is designed as a dynamic innovation platform where participants work intensively to develop creative and practical solutions.
+                            <span className="font-semibold text-accent-blue">HIS 2.0</span> (March 2024) offered a prize pool of <span className="font-bold">₹1.2 Lakh</span>, with Team <em>ECOHUSTLERS</em> emerging as champions, further cementing the institution's reputation for hosting high-impact innovation events.
+                        </p>
+                        <p>
+                            The upcoming edition  <span className="font-bold text-secondary-blue">TechnoTarang</span>  aims to attract registrations from <span className="font-bold text-accent-blue">100+ colleges nationwide</span>, offering a dynamic platform for creative, technology-driven innovation across 15 thematic tracks.
                         </p>
                     </motion.div>
 

@@ -13,7 +13,7 @@ const Prizes = () => {
                 <>
                     Attractive cash rewards for top performing teams
                     <br />
-                    <span className="text-neon-blue font-bold tracking-wide text-xs md:text-sm mt-1 inline-block">(Grant up to Rs.60,000)</span>
+                    <span className="text-neon-blue font-bold tracking-wide text-xs md:text-sm mt-1 inline-block">(Rs.60,000)</span>
                 </>
             )
         },
@@ -57,7 +57,7 @@ const Prizes = () => {
                         </span>
                     </motion.div>
 
-                    <p className="mt-4 text-gray-600 font-montserrat text-base md:text-lg max-w-2xl mx-auto text-justify">
+                    <p className="mt-4 text-gray-600 font-montserrat text-base md:text-lg max-w-2xl mx-auto text-center">
                         Compete for exciting prizes, goodies, and industry recognition. Every participant goes home with something special!
                     </p>
                 </motion.div>

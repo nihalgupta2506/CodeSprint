@@ -1,9 +1,10 @@
 import { useEffect, useRef } from "react";
 import { FaTrophy } from "react-icons/fa";
+import h2sLogo from "../assets/hack2skills logo.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
-    { label: "Prize Pool",       value: "Coming Soon", icon: <FaTrophy /> },
+    { label: "Prize Pool",       value: "₹5,00,000", icon: <FaTrophy /> },
     // { label: "1st Place",        value: "₹2,00,000", icon: <FaMedal />  },
     // { label: "2nd Place",        value: "₹1,00,000", icon: <FaMedal />  },
     // { label: "3rd Place",        value: "₹50,000",   icon: <FaMedal />  },
@@ -16,7 +17,7 @@ const SPONSOR_SLOTS = [
     { name: "Gold Sponsor",     tier: "GOLD"    },
     { name: "Silver Sponsor",   tier: "SILVER"  },
     { name: "Silver Sponsor",   tier: "SILVER"  },
-    { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill" },
+    { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill", logo: h2sLogo },
 ];
 
 const tierStyle: Record<string, string> = {
@@ -39,7 +40,7 @@ const PrizePill = ({ label, value, icon }: { label: string; value: string; icon:
     </span>
 );
 
-const SponsorChip = ({ name, tier, partnerName }: { name: string; tier: string; partnerName?: string }) => (
+const SponsorChip = ({ name, tier, partnerName, logo }: { name: string; tier: string; partnerName?: string; logo?: string }) => (
     <span
         className={`inline-flex items-center gap-1.5 whitespace-nowrap border rounded-full px-2.5 py-0.5 text-[10px] md:text-[11px] font-montserrat font-bold uppercase tracking-wide ${tierStyle[tier] ?? ""}`}
     >
@@ -47,9 +48,13 @@ const SponsorChip = ({ name, tier, partnerName }: { name: string; tier: string; 
             {tier[0]}
         </span>
         {name}
-        <span className={`ml-0.5 text-[8px] tracking-normal ${partnerName ? "font-bold text-current uppercase opacity-90" : "opacity-40 normal-case font-normal"}`}>
-            {partnerName || "TBD"}
-        </span>
+        {logo ? (
+            <img src={logo} alt={partnerName} className="h-5 md:h-6 w-auto max-w-[64px] object-contain ml-1 opacity-95" />
+        ) : (
+            <span className={`ml-0.5 text-[8px] tracking-normal ${partnerName ? "font-bold text-current uppercase opacity-90" : "opacity-40 normal-case font-normal"}`}>
+                {partnerName || "TBD"}
+            </span>
+        )}
     </span>
 );
 
@@ -124,7 +129,7 @@ const LogoCarousel = () => {
         <div
             className="relative left-0 w-full overflow-hidden bg-white border-b border-neon-blue/10 shadow-sm"
             style={{
-                height: "36px",
+                height: "42px",
             }}
             aria-label="Prize pool and sponsors ticker"
         >

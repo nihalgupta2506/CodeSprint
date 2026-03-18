@@ -46,42 +46,28 @@ const Organizers = () => {
                                 In Association with PIIC
                             </p>
                             <p className="text-gray-600 font-montserrat italic">
-                                By Poornima College of Engineering
+                                By Poornima College of Engineering, Jaipur (Rajasthan)
                             </p>
                         </div>
                     </motion.div>
 
-                    <div className="space-y-8">
-                        <motion.div
-                            initial={{ opacity: 0, x: 30 }}
-                            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                            className="bg-white border-2 border-neon-blue/10 p-8 rounded-2xl shadow-lg"
-                        >
-                            <h3 className="text-xl font-bold text-gray-800 mb-4 font-exo">This collaborative initiative provides a platform to:</h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-montserrat text-gray-600">
-                                <span className="flex items-center gap-2"><FaLayerGroup className="text-accent-blue" /> Apply technical knowledge</span>
-                                <span className="flex items-center gap-2"><FaLightbulb className="text-accent-blue" /> Enhance problem-solving</span>
-                                <span className="flex items-center gap-2"><FaUserTie className="text-accent-blue" /> Foster innovation</span>
-                                <span className="flex items-center gap-2"><FaLayerGroup className="text-accent-blue" /> Promote teamwork</span>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            className="bg-blue-50 border border-blue-100 p-6 md:p-8 rounded-2xl text-center"
-                        >
-                            <h4 className="font-bold font-exo text-xl text-neon-blue mb-2">Faculty Contribution</h4>
-                            <p className="text-gray-700 font-montserrat mb-4">
-                                Planning • Mentoring • Evaluation
-                            </p>
-                            <p className="text-sm text-gray-500 border-t border-blue-100 pt-4 mt-2">
-                                The objective is to promote industry-relevant skills and research-driven innovation.
-                            </p>
-                        </motion.div>
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="bg-white border-2 border-neon-blue/10 p-8 rounded-2xl shadow-lg flex flex-col justify-center"
+                    >
+                        <h3 className="text-xl font-bold text-gray-800 mb-6 font-exo">This collaborative initiative provides a platform to:</h3>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-montserrat text-gray-600">
+                            <span className="flex items-center gap-2"><FaLayerGroup className="text-accent-blue" /> Apply technical knowledge</span>
+                            <span className="flex items-center gap-2"><FaLightbulb className="text-accent-blue" /> Enhance problem-solving</span>
+                            <span className="flex items-center gap-2"><FaUserTie className="text-accent-blue" /> Foster innovation</span>
+                            <span className="flex items-center gap-2"><FaLayerGroup className="text-accent-blue" /> Promote teamwork</span>
+                        </div>
+                        <p className="text-sm text-gray-500 border-t border-blue-100 pt-4 mt-6">
+                            The objective is to promote industry-relevant skills and research-driven innovation.
+                        </p>
+                    </motion.div>
                 </div>
             </div>
         </section>

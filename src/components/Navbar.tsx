@@ -44,7 +44,7 @@ const Navbar = () => {
         { name: "Prizes", href: "#prizes" },
         { name: "Guidelines", href: "#guidelines" },
         { name: "Sponsors", href: "#sponsors" },
-        { name: "Mentors & Jury", href: "#mentors-jury" },
+        { name: "Mentors & Jury Members", href: "#mentors-jury" },
         { name: "FAQ", href: "#faq" },
     ];
 

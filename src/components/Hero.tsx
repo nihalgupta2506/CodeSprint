@@ -37,9 +37,9 @@ const Hero = () => {
     const pad = (n: number) => String(n).padStart(2, "0");
 
     return (
-        <section ref={targetRef} id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 pt-48 md:pt-56 lg:pt-[200px] pb-4">
+        <section ref={targetRef} id="hero" className="relative w-full min-h-screen overflow-hidden flex items-center justify-center px-4 pt-52 md:pt-48 lg:pt-[200px] pb-4">
 
-            <div className="relative z-10 text-center w-full max-w-4xl lg:max-w-5xl mx-auto mt-4 md:mt-6 lg:mt-0 flex flex-col items-center justify-center h-full">
+            <div className="relative z-10 text-center w-full max-w-4xl lg:max-w-5xl mx-auto mt-6 md:mt-8 lg:mt-2 flex flex-col items-center justify-center h-full">
 
                 {/* Hackathon 3.0 Badge */}
                 <motion.div
@@ -119,7 +119,7 @@ const Hero = () => {
                             <span className="text-xl md:text-2xl">📍</span>
                             <div className="text-left">
                                 <span className="block text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider">Venue</span>
-                                <span className="font-exo font-bold text-accent-blue text-xs md:text-sm lg:text-base">Poornima College of Engineering</span>
+                                <span className="font-exo font-bold text-accent-blue text-xs md:text-sm lg:text-base">Poornima College of Engineering, Jaipur (Rajasthan)</span>
                             </div>
                         </a>
                     </div>

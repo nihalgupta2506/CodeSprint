@@ -9,7 +9,13 @@ import glimpse5 from "../assets/glimpse5.jpg";
 const PastGlimpses = () => {
     const { ref, isInView } = useSectionInView();
 
-    const photos = [glimpse1, glimpse2, glimpse3, glimpse4, glimpse5];
+    const photos = [
+        { src: glimpse1, edition: "HACKATHON 1.0" },
+        { src: glimpse2, edition: "HACKATHON 1.0" },
+        { src: glimpse3, edition: "HACKATHON 2.0" },
+        { src: glimpse4, edition: "HACKATHON 2.0" },
+        { src: glimpse5, edition: "HACKATHON 2.0" },
+    ];
 
     // Duplicate for seamless infinite loop
     const allPhotos = [...photos, ...photos];
@@ -58,15 +64,19 @@ const PastGlimpses = () => {
                             className="flex-shrink-0 w-[250px] sm:w-[300px] md:w-[380px] h-[180px] sm:h-[220px] md:h-[260px] rounded-2xl overflow-hidden relative group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-500"
                         >
                             <img
-                                src={photo}
-                                alt={`Hackathon 2.0 Glimpse ${(index % 5) + 1}`}
+                                src={photo.src}
+                                alt={`${photo.edition} Glimpse ${(index % 5) + 1}`}
                                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                             />
                             {/* Hover glow overlay */}
                             <div className="absolute inset-0 bg-neon-blue/0 group-hover:bg-neon-blue/10 transition-colors duration-500" />
-                            {/* CodeSprint watermark */}
-                            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm px-4 py-1.5 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300">
-                                <span className="text-white text-xs font-bold font-exo tracking-wider">HACKATHON 2.0</span>
+                            {/* Edition watermark */}
+                            <div className={`absolute bottom-3 left-1/2 -translate-x-1/2 backdrop-blur-sm px-4 py-1.5 rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300 ${
+                                photo.edition === "HACKATHON 1.0"
+                                    ? "bg-amber-500/70"
+                                    : "bg-black/50"
+                            }`}>
+                                <span className="text-white text-xs font-bold font-exo tracking-wider">{photo.edition}</span>
                             </div>
                         </motion.div>
                     ))}

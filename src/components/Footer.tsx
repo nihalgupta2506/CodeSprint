@@ -37,7 +37,7 @@ const Footer = () => {
                             rel="noopener noreferrer"
                             className="block text-gray-400 font-montserrat text-sm leading-relaxed mb-4 hover:text-white transition-colors"
                         >
-                            Poornima College of Engineering<br />
+                            Poornima College of Engineering, Jaipur (Rajasthan)<br />
                             <span className="font-semibold text-white/90">Dept. of Computer Engineering <br />Dept. of Information Technology <br />Dept. of Advance Computing</span><br />
                             ISI-6, RIICO Institutional Area, Sitapura, Jaipur
                         </a>

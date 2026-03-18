@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useSectionInView } from "../hooks/useSectionInView";
-import { FaCheckCircle, FaExclamationCircle, FaUserFriends, FaLaptop, FaChalkboardTeacher, FaSignOutAlt, FaWifi, FaBan } from "react-icons/fa";
+import { FaCheckCircle, FaExclamationCircle, FaUserFriends, FaLaptop, FaChalkboardTeacher, FaSignOutAlt, FaWifi, FaBan, FaMoneyBillWave } from "react-icons/fa";
 
 const Guidelines = () => {
     const { ref, isInView } = useSectionInView();
@@ -17,6 +17,7 @@ const Guidelines = () => {
         { icon: <FaExclamationCircle />, text: "Organizers not responsible for technical failures" },
         { icon: <FaBan />, text: "Unauthorized intervention = disqualification" },
         { icon: <FaBan />, text: "Damage caused via platform may lead to action/disqualification" },
+        { icon: <FaMoneyBillWave />, text: "No refund in case of withdrawal" },
     ];
 
     return (

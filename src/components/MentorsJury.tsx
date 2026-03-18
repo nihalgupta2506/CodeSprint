@@ -6,7 +6,6 @@ const MentorsJury = () => {
     const { ref, isInView } = useSectionInView();
 
     const mentorCount = 8;
-    const juryCount = 8;
 
     const RevealCard = ({ index, icon }: { index: number; icon: React.ReactNode }) => (
         <motion.div
@@ -39,7 +38,7 @@ const MentorsJury = () => {
                     className="text-center mb-8 md:mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-4">
-                        Mentors & Jury
+                        Mentors & Jury Members
                     </h2>
                     <div className="w-24 h-1 bg-accent-blue mx-auto rounded-full mb-4" />
                     <p className="text-gray-600 font-montserrat max-w-2xl mx-auto">
@@ -65,8 +64,9 @@ const MentorsJury = () => {
                         <h3 className="text-xl md:text-2xl font-exo font-bold text-accent-blue mb-6 text-center normal-case tracking-normal">
                             ⚖️ Jury Members
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-                            {Array.from({ length: juryCount }).map((_, index) => (
+                        {/* 2 rows × 3 columns */}
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-5">
+                            {Array.from({ length: 6 }).map((_, index) => (
                                 <RevealCard key={index} index={index + 10} icon={<FaGavel />} />
                             ))}
                         </div>
