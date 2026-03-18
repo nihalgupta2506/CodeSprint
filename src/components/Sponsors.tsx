@@ -38,6 +38,27 @@ const Sponsors = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* CTA */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ delay: 0.5, duration: 0.6 }}
+                    className="mt-10 md:mt-14 text-center"
+                >
+                    <p className="text-gray-500 font-montserrat text-sm mb-5">
+                        Interested in being part of TechnoTarang? Reach out to us!
+                    </p>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&to=technotarang.pce@poornima.org&su=Sponsorship%20Inquiry%20-%20TechnoTarang%202026&body=Hi%20TechnoTarang%20Team%2C%0A%0AI%20am%20interested%20in%20sponsoring%20TechnoTarang%202026.%20Please%20share%20the%20sponsorship%20details.%0A%0ARegards%2C"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-neon-blue text-white rounded-full font-exo font-bold text-sm md:text-base shadow-lg hover:shadow-neon-blue/30 hover:bg-secondary-blue transition-all duration-300 hover:-translate-y-1"
+                    >
+                        <span>✉️</span>
+                        Join Us as a Sponsor
+                    </a>
+                </motion.div>
             </div>
         </section>
     );
