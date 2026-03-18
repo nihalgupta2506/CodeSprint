@@ -6,7 +6,17 @@ const Prizes = () => {
     const { ref, isInView } = useSectionInView();
 
     const rewards = [
-        { icon: <FaTrophy />, title: "Cash Prizes", desc: "Attractive cash rewards for top performing teams" },
+        { 
+            icon: <FaTrophy />, 
+            title: "Cash Prizes", 
+            desc: (
+                <>
+                    Attractive cash rewards for top performing teams
+                    <br />
+                    <span className="text-neon-blue font-bold tracking-wide text-xs md:text-sm mt-1 inline-block">(Grant up to Rs.50,000)</span>
+                </>
+            )
+        },
         { icon: <FaGift />, title: "Goodies & Swag Kits", desc: "Exciting goodies and swag kits for top performers" },
         { icon: <FaCertificate />, title: "Participation Certificates", desc: "Official certificates for all participating teams" },
     ];
