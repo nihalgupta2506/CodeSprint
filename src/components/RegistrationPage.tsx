@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaArrowLeft, FaExternalLinkAlt, FaChevronDown, FaChevronUp, FaCopy, FaCheck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import technoTarangLogo from '../assets/technotarang-logo.png';
 import pceLogo from '../assets/PCE Logo Only.png';
@@ -8,6 +8,25 @@ import hack2SkillLogo from '../assets/hack2skills logo.png';
 import ParticleNetwork from './ParticleNetwork';
 
 const RegistrationPage: React.FC = () => {
+    const [showBankDetails, setShowBankDetails] = useState(false);
+    const [copiedContent, setCopiedContent] = useState<string | null>(null);
+
+    const bankDetails = [
+        { label: "A/C Name", value: "POORNIMA COLLEGE OF ENGINEERING" },
+        { label: "Bank Name", value: "HDFC BANK LTD" },
+        { label: "Bank A/C No.", value: "50200024936188" },
+        { label: "IFSC Code", value: "HDFC0003873" },
+        { label: "Bank MICR Code", value: "302240028" },
+        { label: "Bank Code", value: "3873" },
+        { label: "Branch Name", value: "SITAPURA, JAIPUR" },
+    ];
+
+    const handleCopy = (text: string) => {
+        navigator.clipboard.writeText(text);
+        setCopiedContent(text);
+        setTimeout(() => setCopiedContent(null), 2000);
+    };
+
     return (
         <div className="bg-off-white min-h-screen text-gray-800 w-full overflow-hidden relative flex flex-col items-center justify-center py-20 px-4">
             {/* Animated Background */}
@@ -64,6 +83,59 @@ const RegistrationPage: React.FC = () => {
                         <p className="text-gray-600 font-montserrat text-base md:text-lg mb-6 leading-relaxed max-w-lg mx-auto">
                             Join us for 24 hours of intensive coding, innovation, and networking.
                         </p>
+
+                        {/* Bank Details Section */}
+                        <div className="w-full max-w-md mx-auto mb-8 sm:mb-10 text-left">
+                            <button
+                                onClick={() => setShowBankDetails(!showBankDetails)}
+                                className="w-full flex items-center justify-between px-6 py-4 bg-white border border-neon-blue/20 rounded-xl font-montserrat font-bold text-gray-800 hover:bg-blue-50/50 hover:border-neon-blue/40 transition-all shadow-sm"
+                            >
+                                <span className="flex items-center gap-2">
+                                    <span className="text-accent-blue text-xl">🏦</span>
+                                    Click to view NEFT Account Details
+                                </span>
+                                {showBankDetails ? <FaChevronUp className="text-gray-500" /> : <FaChevronDown className="text-gray-500" />}
+                            </button>
+
+                            <AnimatePresence>
+                                {showBankDetails && (
+                                    <motion.div
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="overflow-hidden"
+                                    >
+                                        <div className="mt-3 p-5 md:p-6 bg-white border border-gray-200 rounded-xl shadow-inner divide-y divide-gray-100">
+                                            {bankDetails.map((detail, idx) => (
+                                                <div key={idx} className="py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between group gap-2 sm:gap-4">
+                                                    <span className="text-xs md:text-sm text-gray-500 font-bold uppercase tracking-wider min-w-[120px] shrink-0">
+                                                        {detail.label}
+                                                    </span>
+                                                    <div className="flex items-center justify-between w-full sm:w-auto flex-1 gap-2 min-w-0">
+                                                        <span className="text-xs sm:text-sm md:text-base font-exo font-bold text-gray-800 break-words sm:text-right w-full">
+                                                            {detail.value}
+                                                        </span>
+                                                        <button 
+                                                            onClick={e => { e.stopPropagation(); handleCopy(detail.value); }}
+                                                            className="p-2 text-gray-400 hover:text-neon-blue hover:bg-neon-blue/10 rounded-lg transition-colors focus:outline-none flex-shrink-0"
+                                                            title={`Copy ${detail.label}`}
+                                                        >
+                                                            {copiedContent === detail.value ? <FaCheck className="text-green-500 text-xs md:text-sm" /> : <FaCopy className="text-xs md:text-sm" />}
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                            <div className="pt-4 mt-2">
+                                                <p className="text-xs md:text-sm text-center font-montserrat text-gray-500 italic">
+                                                    Please save the transaction ID/screenshot after successful payment for the registration.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </div>
 
                         <a 
                             href="https://vision.hack2skill.com/event/technotarang/?utm_source=hack2skill&utm_medium=homepage"
