@@ -40,11 +40,11 @@ const RegistrationPage: React.FC = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="mb-8 flex items-center justify-center gap-6"
+                    className="mb-6 md:mb-8 flex items-center justify-center gap-3 sm:gap-6 w-full"
                 >
-                    <img src={technoTarangLogo} alt="TechnoTarang Logo" className="h-16 md:h-24 w-auto drop-shadow-lg" />
-                    <div className="w-px h-12 md:h-16 bg-gray-300/60" />
-                    <img src={pceLogo} alt="Poornima College of Engineering" className="h-16 md:h-24 w-auto drop-shadow-lg" />
+                    <img src={technoTarangLogo} alt="TechnoTarang Logo" className="h-10 sm:h-16 md:h-24 w-auto drop-shadow-lg object-contain max-w-[45%]" />
+                    <div className="w-px h-8 sm:h-12 md:h-16 bg-gray-300/60 flex-shrink-0" />
+                    <img src={pceLogo} alt="Poornima College of Engineering" className="h-10 sm:h-16 md:h-24 w-auto drop-shadow-lg object-contain max-w-[45%]" />
                 </motion.div>
 
                 {/* Main Text */}
@@ -52,7 +52,7 @@ const RegistrationPage: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="text-4xl md:text-6xl lg:text-7xl font-exo font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-accent-blue tracking-tight mb-8"
+                    className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-exo font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-accent-blue tracking-tight mb-8"
                 >
                     REGISTER NOW
                 </motion.h1>
