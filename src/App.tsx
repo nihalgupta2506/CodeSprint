@@ -15,7 +15,7 @@ import FAQ from "./components/FAQ";
 import ParticleNetwork from "./components/ParticleNetwork";
 import PastGlimpses from "./components/PastGlimpses";
 import Footer from "./components/Footer";
-import ComingSoon from "./components/ComingSoon";
+import RegistrationPage from "./components/RegistrationPage";
 
 function Home() {
   return (
@@ -50,7 +50,7 @@ function App() {
       <div className="relative z-10">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/register" element={<ComingSoon />} />
+          <Route path="/register" element={<RegistrationPage />} />
         </Routes>
       </div>
     </div>
