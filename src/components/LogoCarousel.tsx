@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { FaTrophy } from "react-icons/fa";
 import h2sLogo from "../assets/hack2skills logo.png";
 import acmLogo from "../assets/acm logo.png";
+import xyzLogo from "../assets/xyz_logo.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -16,6 +17,7 @@ const PRIZE_ITEMS = [
 const SPONSOR_SLOTS = [
     { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
+    { name: "Domain Partner", tier: "DOMAIN", partnerName: ".xyz", logo: xyzLogo, href: "https://gen.xyz" },
     { name: "Powered By", tier: "TITLE" },
     { name: "Co-Powered By", tier: "COPOWERED" },
     { name: "Gold Sponsor", tier: "GOLD" },
@@ -29,6 +31,7 @@ const tierStyle: Record<string, string> = {
     SILVER: "border-gray-400/70   text-gray-500   bg-gray-100",
     PARTNER: "border-blue-400/70   text-blue-600   bg-blue-50",
     TECHPARTNER: "border-purple-400/70 text-purple-600 bg-purple-50",
+    DOMAIN: "border-violet-400/70 text-violet-600 bg-violet-50",
 };
 
 // ─── Small helpers ────────────────────────────────────────────────────────────
