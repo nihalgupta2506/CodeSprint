@@ -45,6 +45,22 @@ const Sponsors = () => {
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Hack2Skill</span>
                             </motion.a>
 
+                             {/* Domain Partner - .xyz */}
+                            <motion.a
+                                href="https://gen.xyz"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.3, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-violet-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-violet-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-violet-500">Domain Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={xyzLogo} alt=".xyz Domain" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">.xyz</span>
+                            </motion.a>
                             {/* Technical Partner */}
                             <motion.a
                                 href="https://jaipur.acm.org/#/"
@@ -62,22 +78,6 @@ const Sponsors = () => {
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">ACM Jaipur Chapter</span>
                             </motion.a>
 
-                             {/* Domain Partner - .xyz */}
-                            <motion.a
-                                href="https://gen.xyz"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                                transition={{ delay: 0.3, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-white border-2 border-violet-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-violet-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
-                            >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-violet-500">Domain Partner</span>
-                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={xyzLogo} alt=".xyz Domain" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
-                                </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">.xyz</span>
-                            </motion.a>
 
                              {/* Remaining Sponsor Slots */}
                             {[...Array(1)].map((_, index) => (
