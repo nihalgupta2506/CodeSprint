@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowLeft, FaExternalLinkAlt, FaChevronDown, FaChevronUp, FaCopy, FaCheck } from 'react-icons/fa';
+import { FaArrowLeft, FaExternalLinkAlt, FaChevronDown, FaChevronUp, FaCopy, FaCheck, FaInstagram, FaLinkedin, FaDiscord, FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import technoTarangLogo from '../assets/technotarang-logo.png';
 import pceLogo from '../assets/PCE Logo Only.png';
 import hack2SkillLogo from '../assets/hack2skills logo.png';
 import ParticleNetwork from './ParticleNetwork';
+
+const socialLinks = [
+    { icon: <FaInstagram />, href: "https://www.instagram.com/technotarang.pce/", label: "Instagram" },
+    { icon: <FaXTwitter />, href: "https://x.com/PceTarang04", label: "Twitter (X)" },
+    { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/techno-tarang-pce-62a6013b7/", label: "LinkedIn" },
+    { icon: <FaDiscord />, href: "https://discord.gg/93MfSEp2", label: "Discord" },
+    { icon: <FaWhatsapp />, href: "https://chat.whatsapp.com/DKhHzgB7gbj8HT1wOHTBW1", label: "WhatsApp" },
+];
 
 const RegistrationPage: React.FC = () => {
     const [showBankDetails, setShowBankDetails] = useState(false);
@@ -137,15 +146,35 @@ const RegistrationPage: React.FC = () => {
                             </AnimatePresence>
                         </div>
 
-                        <a 
-                            href="https://vision.hack2skill.com/event/technotarang/?utm_source=hack2skill&utm_medium=homepage"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-neon-blue to-accent-blue text-white rounded-xl font-bold text-lg md:text-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 transform"
-                        >
-                             Register on Hack2Skill
-                             <FaExternalLinkAlt className="text-sm" />
-                        </a>
+                        <div className="flex flex-col items-center gap-6 mt-2 w-full">
+                            <a 
+                                href="https://vision.hack2skill.com/event/technotarang/?utm_source=hack2skill&utm_medium=homepage"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-neon-blue to-accent-blue text-white rounded-xl font-bold text-lg md:text-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 transform shadow-neon-blue/20"
+                            >
+                                 Register on Hack2Skill
+                                 <FaExternalLinkAlt className="text-sm" />
+                            </a>
+
+                            <div className="flex flex-col items-center gap-4 w-full border-t border-gray-200/60 pt-6 mt-2">
+                                <p className="text-gray-500 font-montserrat text-sm font-bold uppercase tracking-wide">Join Our Community</p>
+                                <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                                    {socialLinks.map((social, index) => (
+                                        <a
+                                            key={index}
+                                            href={social.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            aria-label={social.label}
+                                            className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 hover:bg-neon-blue hover:text-white hover:border-neon-blue hover:scale-110 hover:shadow-md transition-all duration-300 text-lg sm:text-xl"
+                                        >
+                                            {social.icon}
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
 

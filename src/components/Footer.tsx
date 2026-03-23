@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaDiscord } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaPhoneAlt, FaEnvelope, FaDiscord, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
     const contacts = [
@@ -12,6 +12,7 @@ const Footer = () => {
         { icon: <FaXTwitter />, href: "https://x.com/PceTarang04", label: "Twitter (X)" },
         { icon: <FaLinkedin />, href: "https://www.linkedin.com/in/techno-tarang-pce-62a6013b7/", label: "LinkedIn" },
         { icon: <FaDiscord />, href: "https://discord.gg/93MfSEp2", label: "Discord" },
+        { icon: <FaWhatsapp />, href: "https://chat.whatsapp.com/DKhHzgB7gbj8HT1wOHTBW1", label: "WhatsApp" },
     ];
 
     return (
