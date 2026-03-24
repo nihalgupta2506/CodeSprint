@@ -4,6 +4,7 @@ import h2sLogo from "../assets/hack2skills logo.png";
 import acmLogo from "../assets/acm logo.png";
 import xyzLogo from "../assets/xyz_logo.png";
 import interviewBuddyLogo from "../assets/InterviewBuddy.png";
+import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
 
 const Sponsors = () => {
     const { ref, isInView } = useSectionInView();
@@ -96,8 +97,25 @@ const Sponsors = () => {
                             </motion.a>
 
 
+                            {/* Media Partner */}
+                            <motion.a
+                                href="https://startupnews.fyi/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.4, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-orange-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-orange-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-orange-500 text-center px-2">Media Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={startupNewsLogo} alt="Startup News" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Startup News</span>
+                            </motion.a>
+
                              {/* Remaining Sponsor Slots */}
-                            {[...Array(4)].map((_, index) => (
+                            {[...Array(3)].map((_, index) => (
                                 <motion.div
                                     key={`sponsor-slot-${index}`}
                                     initial={{ opacity: 0, scale: 0.9 }}

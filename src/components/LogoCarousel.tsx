@@ -2,8 +2,10 @@ import { useEffect, useRef } from "react";
 import { FaTrophy } from "react-icons/fa";
 import h2sLogo from "../assets/hack2skills logo.png";
 import acmLogo from "../assets/acm logo.png";
+
 import xyzLogo from "../assets/xyz_logo.png";
 import interviewBuddyLogo from "../assets/InterviewBuddy2.png";
+import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -20,6 +22,7 @@ const SPONSOR_SLOTS = [
     { name: "Domain Partner", tier: "DOMAIN", partnerName: ".xyz", logo: xyzLogo, href: "https://gen.xyz" },
     { name: "Interview Prep Partner", tier: "PARTNER", partnerName: "Interview Buddy", logo: interviewBuddyLogo, href: "https://interviewbuddy.net/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
+    { name: "Media Partner", tier: "PARTNER", partnerName: "Startup News", logo: startupNewsLogo, href: "https://startupnews.fyi/" },
     { name: "Powered By", tier: "TITLE" },
     { name: "Co-Powered By", tier: "COPOWERED" },
     { name: "Gold Sponsor", tier: "GOLD" },
