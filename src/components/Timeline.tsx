@@ -22,9 +22,9 @@ const Timeline = () => {
 
     const events: TimelineEvent[] = [
         { date: "17th Mar 2026", title: "Registration Opens", desc: "Global registration begins on the official platform" },
-        { date: "27th Mar 2026", title: "Registration Closes", desc: "Last date to register your team" },
+        { date: "5th Apr 2026", title: "Registration Closes", desc: "Last date to register your team" },
         {
-            date: "4th Apr 2026",
+            date: "18th Apr 2026",
             title: "Day 1 – Hackathon Begins",
             desc: "Opening Ceremony, Inauguration & Hacking Starts",
             schedule: [
@@ -45,7 +45,7 @@ const Timeline = () => {
             ],
         },
         {
-            date: "5th Apr 2026",
+            date: "19th Apr 2026",
             title: "Day 2 – Finale & Closing",
             desc: "Final Pitches, Judging & Award Ceremony",
             schedule: [

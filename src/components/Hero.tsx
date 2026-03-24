@@ -7,8 +7,8 @@ const Hero = () => {
     const { scrollY } = useScroll();
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
-    // Countdown to April 4, 2026 09:00 AM IST
-    const targetDate = new Date("2026-04-04T09:00:00+05:30").getTime();
+    // Countdown to April 18, 2026 09:00 AM IST
+    const targetDate = new Date("2026-04-18T09:00:00+05:30").getTime();
 
     const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
@@ -89,7 +89,7 @@ const Hero = () => {
                             className="inline-flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-red-50 border border-red-200 rounded-full text-red-600 font-montserrat font-bold text-xs md:text-sm lg:text-base shadow-sm"
                         >
                             <span className="text-base md:text-lg">⏰</span>
-                            Registration Deadline: 27<sup className="text-[0.6em]">th</sup> March 2026
+                            Registration Deadline: 5<sup className="text-[0.6em]">th</sup> April 2026
                         </motion.div>
                     </div>
 
@@ -97,7 +97,7 @@ const Hero = () => {
                     <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-5 md:mb-8">
                         {/* Date Box */}
                         <a
-                            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=TechnoTarang+2026&dates=20260404T033000Z/20260405T180000Z&details=TechnoTarang+Hackathon+-+National+Level+Hackathon+at+Poornima+College+of+Engineering&location=Poornima+College+of+Engineering,+Jaipur,+Rajasthan"
+                            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=TechnoTarang+2026&dates=20260418T033000Z/20260419T180000Z&details=TechnoTarang+Hackathon+-+National+Level+Hackathon+at+Poornima+College+of+Engineering&location=Poornima+College+of+Engineering,+Jaipur,+Rajasthan"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-white/80 border border-accent-blue/20 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all group"
@@ -105,7 +105,7 @@ const Hero = () => {
                             <span className="text-xl md:text-2xl">📅</span>
                             <div className="text-left">
                                 <span className="block text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-wider">Event Date</span>
-                                <span className="font-exo font-bold text-accent-blue text-xs md:text-sm lg:text-base">4–5 April 2026</span>
+                                <span className="font-exo font-bold text-accent-blue text-xs md:text-sm lg:text-base">18–19 April 2026</span>
                             </div>
                         </a>
 
