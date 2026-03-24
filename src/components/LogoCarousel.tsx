@@ -3,6 +3,7 @@ import { FaTrophy } from "react-icons/fa";
 import h2sLogo from "../assets/hack2skills logo.png";
 import acmLogo from "../assets/acm logo.png";
 import xyzLogo from "../assets/xyz_logo.png";
+import interviewBuddyLogo from "../assets/InterviewBuddy.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -17,6 +18,7 @@ const PRIZE_ITEMS = [
 const SPONSOR_SLOTS = [
     { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
     { name: "Domain Partner", tier: "DOMAIN", partnerName: ".xyz", logo: xyzLogo, href: "https://gen.xyz" },
+    { name: "Interview Prep Partner", tier: "PARTNER", partnerName: "Interview Buddy", logo: interviewBuddyLogo, href: "https://interviewbuddy.net/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
     { name: "Powered By", tier: "TITLE" },
     { name: "Co-Powered By", tier: "COPOWERED" },
