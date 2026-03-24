@@ -79,23 +79,6 @@ const Sponsors = () => {
                                 </div>
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Interview Buddy</span>
                             </motion.a>
-                            {/* Technical Partner */}
-                            <motion.a
-                                href="https://jaipur.acm.org/#/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                                transition={{ delay: 0.2, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-white border-2 border-purple-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-purple-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
-                            >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partner</span>
-                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={acmLogo} alt="ACM Jaipur Chapter" className="max-h-20 md:max-h-27 scale-110 md:scale-125 w-auto object-contain group-hover:scale-[1.2] md:group-hover:scale-[1.35] transition-transform duration-300" />
-                                </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">ACM Jaipur Chapter</span>
-                            </motion.a>
-
 
                             {/* Media Partner */}
                             <motion.a
@@ -113,6 +96,23 @@ const Sponsors = () => {
                                 </div>
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Startup News</span>
                             </motion.a>
+                            {/* Technical Partner */}
+                            <motion.a
+                                href="https://jaipur.acm.org/#/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.2, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-purple-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-purple-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={acmLogo} alt="ACM Jaipur Chapter" className="max-h-20 md:max-h-27 scale-110 md:scale-125 w-auto object-contain group-hover:scale-[1.2] md:group-hover:scale-[1.35] transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">ACM Jaipur Chapter</span>
+                            </motion.a>
+
 
                              {/* Remaining Sponsor Slots */}
                             {[...Array(3)].map((_, index) => (
