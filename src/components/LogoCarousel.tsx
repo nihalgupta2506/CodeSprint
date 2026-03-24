@@ -3,7 +3,7 @@ import { FaTrophy } from "react-icons/fa";
 import h2sLogo from "../assets/hack2skills logo.png";
 import acmLogo from "../assets/acm logo.png";
 import xyzLogo from "../assets/xyz_logo.png";
-import interviewBuddyLogo from "../assets/InterviewBuddy.png";
+import interviewBuddyLogo from "../assets/InterviewBuddy2.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
