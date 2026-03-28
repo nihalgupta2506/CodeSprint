@@ -5,6 +5,8 @@ import acmLogo from "../assets/acm logo.png";
 import xyzLogo from "../assets/xyz_logo.png";
 import interviewBuddyLogo from "../assets/InterviewBuddy.png";
 import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
+import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
+import regexLogo from "../assets/regex.png";
 
 const Sponsors = () => {
     const { ref, isInView } = useSectionInView();
@@ -96,6 +98,38 @@ const Sponsors = () => {
                                 </div>
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Startup News</span>
                             </motion.a>
+                            {/* Certificate Partner - GiveMyCertificate */}
+                            <motion.a
+                                href="https://givemycertificate.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.3, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-emerald-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-emerald-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-emerald-500 text-center px-1">Certificate Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={giveMyCertificateLogo} alt="GiveMyCertificate" className="max-h-16 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">GiveMyCertificate</span>
+                            </motion.a>
+                            {/* Technical Partner - REGex */}
+                            <motion.a
+                                href="https://regexsoftware.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.25, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-purple-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-purple-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={regexLogo} alt="REGex" className="max-h-16 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">REGex</span>
+                            </motion.a>
                             {/* Technical Partner */}
                             <motion.a
                                 href="https://jaipur.acm.org/#/"
@@ -114,8 +148,10 @@ const Sponsors = () => {
                             </motion.a>
 
 
+
+
                              {/* Remaining Sponsor Slots */}
-                            {[...Array(3)].map((_, index) => (
+                            {[...Array(1)].map((_, index) => (
                                 <motion.div
                                     key={`sponsor-slot-${index}`}
                                     initial={{ opacity: 0, scale: 0.9 }}

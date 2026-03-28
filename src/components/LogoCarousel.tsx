@@ -6,6 +6,8 @@ import acmLogo from "../assets/acm logo.png";
 import xyzLogo from "../assets/xyz_logo.png";
 import interviewBuddyLogo from "../assets/InterviewBuddy2.png";
 import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
+import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
+import regexLogo from "../assets/regex.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -22,6 +24,8 @@ const SPONSOR_SLOTS = [
     { name: "Domain Partner", tier: "DOMAIN", partnerName: ".xyz", logo: xyzLogo, href: "https://gen.xyz" },
     { name: "Interview Prep Partner", tier: "PARTNER", partnerName: "Interview Buddy", logo: interviewBuddyLogo, href: "https://interviewbuddy.net/" },
     { name: "Media Partner", tier: "PARTNER", partnerName: "Startup News", logo: startupNewsLogo, href: "https://startupnews.fyi/" },
+    { name: "Certificate Partner", tier: "PARTNER", partnerName: "GiveMyCertificate", logo: giveMyCertificateLogo, href: "https://givemycertificate.com/" },
+    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "REGex", logo: regexLogo, href: "https://regexsoftware.com/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
     { name: "Powered By", tier: "TITLE" },
     { name: "Co-Powered By", tier: "COPOWERED" },
