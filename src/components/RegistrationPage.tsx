@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowLeft, FaExternalLinkAlt, FaChevronDown, FaChevronUp, FaCopy, FaCheck, FaInstagram, FaLinkedin, FaDiscord, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -19,6 +19,10 @@ const socialLinks = [
 const RegistrationPage: React.FC = () => {
     const [showBankDetails, setShowBankDetails] = useState(false);
     const [copiedContent, setCopiedContent] = useState<string | null>(null);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const bankDetails = [
         { label: "A/C Name", value: "POORNIMA COLLEGE OF ENGINEERING" },

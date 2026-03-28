@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -16,6 +17,16 @@ import ParticleNetwork from "./components/ParticleNetwork";
 import PastGlimpses from "./components/PastGlimpses";
 import Footer from "./components/Footer";
 import RegistrationPage from "./components/RegistrationPage";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function Home() {
   return (
@@ -43,6 +54,7 @@ function Home() {
 function App() {
   return (
     <div className="bg-off-white min-h-screen text-gray-800 selection:bg-accent-blue/30 selection:text-neon-blue w-full overflow-x-hidden relative">
+      <ScrollToTop />
       {/* Animated Polygon Mesh Background */}
       <ParticleNetwork />
 
