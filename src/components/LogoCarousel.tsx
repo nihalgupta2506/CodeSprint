@@ -6,7 +6,7 @@ import acmLogo from "../assets/acm logo.png";
 import xyzLogo from "../assets/xyz_logo.png";
 import interviewBuddyLogo from "../assets/InterviewBuddy2.png";
 import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
-import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
+// import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
 import regexLogo from "../assets/regex.png";
 import grrasLogo from "../assets/grras logo.jpg";
 import engineersAcademyLogo from "../assets/Engineering_aca_logo.png";

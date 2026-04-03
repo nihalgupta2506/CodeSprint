@@ -5,7 +5,7 @@ import acmLogo from "../assets/acm logo.png";
 import xyzLogo from "../assets/xyz_logo.png";
 import interviewBuddyLogo from "../assets/InterviewBuddy.png";
 import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
-import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
+// import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
 import regexLogo from "../assets/regex.png";
 import grrasLogo from "../assets/grras logo.jpg";
 import engineersAcademyLogo from "../assets/Engineering_aca_logo.png";
@@ -34,7 +34,7 @@ const Sponsors = () => {
                     {/* Single Row 4-Column Grid for all Sponsors */}
                     <div>
                         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-                            
+
                             {/* Platform Partner */}
                             <motion.a
                                 href="https://hack2skill.com"
@@ -52,7 +52,7 @@ const Sponsors = () => {
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Hack2Skill</span>
                             </motion.a>
 
-                             {/* Domain Partner - .xyz */}
+                            {/* Domain Partner - .xyz */}
                             <motion.a
                                 href="https://gen.xyz"
                                 target="_blank"
@@ -101,7 +101,7 @@ const Sponsors = () => {
                                 </div>
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Startup News</span>
                             </motion.a>
-                                {/* Certificate Partner - GiveMyCertificate
+                            {/* Certificate Partner - GiveMyCertificate
                                 <motion.a
                                     href="https://givemycertificate.com/"
                                     target="_blank"
@@ -204,7 +204,7 @@ const Sponsors = () => {
 
 
 
-                             {/* Remaining Sponsor Slots */}
+                            {/* Remaining Sponsor Slots */}
                             {[...Array(1)].map((_, index) => (
                                 <motion.div
                                     key={`sponsor-slot-${index}`}
