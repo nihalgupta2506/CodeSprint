@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes, FaHome } from "react-icons/fa";
 import LogoCarousel from "./LogoCarousel";
 import technoTarangLogo from "../assets/technotarang-logo.png";
-import piicLogo from "../assets/PIIC Logo.png";
-import pceLogo from "../assets/PCE Logo Only.png";
 import ideaLabLogo from "../assets/Idea_Lab_Logo.png";
+import pceLogo from "../assets/PCE Logo Only.png";
+import piicLogo from "../assets/PIIC Logo.png";
 import h2sLogo from "../assets/hack2skills logo.png";
 
 const NAVBAR_HEIGHT_MOBILE = 105;
@@ -84,9 +84,9 @@ const Navbar = () => {
                             <img src={technoTarangLogo} alt="TechnoTarang Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-10 xl:h-12' : 'h-16 xl:h-20'}`} />
                         </a>
 
-                        {/* 2: PIIC Logo */}
+                        {/* 2: Idea Lab Logo */}
                         <div className="flex items-center flex-shrink-0">
-                            <img src={piicLogo} alt="PIIC Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8 xl:h-10' : 'h-12 xl:h-16'}`} />
+                            <img src={ideaLabLogo} alt="Idea Lab" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8 xl:h-10' : 'h-12 xl:h-16'}`} />
                         </div>
 
                         {/* 3: PCE Logo (center) */}
@@ -98,9 +98,9 @@ const Navbar = () => {
                             <img src={pceLogo} alt="PCE Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-10 xl:h-12' : 'h-16 xl:h-20'}`} />
                         </a>
 
-                        {/* 4: Idea Lab Logo */}
+                        {/* 4: PIIC Logo */}
                         <div className="flex items-center flex-shrink-0">
-                            <img src={ideaLabLogo} alt="Idea Lab" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8 xl:h-10' : 'h-12 xl:h-16'}`} />
+                            <img src={piicLogo} alt="PIIC Logo" className={`w-auto object-contain transition-all duration-300 ${isScrolled ? 'h-8 xl:h-10' : 'h-12 xl:h-16'}`} />
                         </div>
 
                         {/* 5: Hack2Skill - Platform Partner */}

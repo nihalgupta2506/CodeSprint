@@ -27,16 +27,16 @@ const SPONSOR_SLOTS = [
     { name: "Domain Partner", tier: "DOMAIN", partnerName: ".xyz", logo: xyzLogo, href: "https://gen.xyz" },
     { name: "Interview Prep Partner", tier: "PARTNER", partnerName: "Interview Buddy", logo: interviewBuddyLogo, href: "https://interviewbuddy.net/" },
     { name: "Media Partner", tier: "PARTNER", partnerName: "Startup News", logo: startupNewsLogo, href: "https://startupnews.fyi/" },
-    { name: "Certificate Partner", tier: "PARTNER", partnerName: "GiveMyCertificate", logo: giveMyCertificateLogo, href: "https://givemycertificate.com/" },
+    // { name: "Certificate Partner", tier: "PARTNER", partnerName: "GiveMyCertificate", logo: giveMyCertificateLogo, href: "https://givemycertificate.com/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "REGex", logo: regexLogo, href: "https://regexsoftware.com/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Grras Solutions", logo: grrasLogo, href: "https://grras.com/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Engineers Academy", logo: engineersAcademyLogo, href: "https://www.engineersacademy.org/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Ducat", logo: ducatLogo, href: "https://www.ducatindia.com/school-of-ai" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
-    { name: "Powered By", tier: "TITLE" },
-    { name: "Co-Powered By", tier: "COPOWERED" },
-    { name: "Gold Sponsor", tier: "GOLD" },
-    { name: "Silver Sponsor", tier: "SILVER" },
+    // { name: "Powered By", tier: "TITLE" },
+    // { name: "Co-Powered By", tier: "COPOWERED" },
+    // { name: "Gold Sponsor", tier: "GOLD" },
+    // { name: "Silver Sponsor", tier: "SILVER" },
 ];
 
 const tierStyle: Record<string, string> = {
