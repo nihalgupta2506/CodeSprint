@@ -17,6 +17,7 @@ import ParticleNetwork from "./components/ParticleNetwork";
 import PastGlimpses from "./components/PastGlimpses";
 import Footer from "./components/Footer";
 import RegistrationPage from "./components/RegistrationPage";
+import QRCodeRegister from "./components/QRCodeRegister";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<RegistrationPage />} />
+          <Route path="/qr-register" element={<QRCodeRegister />} />
         </Routes>
       </div>
     </div>
