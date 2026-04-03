@@ -7,6 +7,9 @@ import interviewBuddyLogo from "../assets/InterviewBuddy.png";
 import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
 import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
 import regexLogo from "../assets/regex.png";
+import grrasLogo from "../assets/grras logo.jpg";
+import engineersAcademyLogo from "../assets/Engineering_aca_logo.png";
+import ducatLogo from "../assets/Ducat_logo_sponsor.jpeg";
 
 const Sponsors = () => {
     const { ref, isInView } = useSectionInView();
@@ -130,6 +133,57 @@ const Sponsors = () => {
                                 </div>
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">REGex</span>
                             </motion.a>
+                            {/* Technical Partner - GRRAS */}
+                            <motion.a
+                                href="https://grras.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.3, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-purple-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-purple-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={grrasLogo} alt="GRRAS" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Grras Solutions</span>
+                            </motion.a>
+
+                            {/* Technical Partner - Engineers Academy */}
+                            <motion.a
+                                href="https://www.engineersacademy.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.35, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-purple-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-purple-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={engineersAcademyLogo} alt="Engineers Academy" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Engineers Academy</span>
+                            </motion.a>
+
+                            {/* Technical Partner - Ducat */}
+                            <motion.a
+                                href="https://www.ducatindia.com/school-of-ai"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.4, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-purple-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-purple-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={ducatLogo} alt="Ducat" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Ducat</span>
+                            </motion.a>
+
                             {/* Technical Partner */}
                             <motion.a
                                 href="https://jaipur.acm.org/#/"

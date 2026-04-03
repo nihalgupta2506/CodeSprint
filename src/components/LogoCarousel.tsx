@@ -8,6 +8,9 @@ import interviewBuddyLogo from "../assets/InterviewBuddy2.png";
 import startupNewsLogo from "../assets/startupnewsLogo.jpeg";
 import giveMyCertificateLogo from "../assets/givemycertificate.jpg";
 import regexLogo from "../assets/regex.png";
+import grrasLogo from "../assets/grras logo.jpg";
+import engineersAcademyLogo from "../assets/Engineering_aca_logo.png";
+import ducatLogo from "../assets/Ducat_logo_sponsor.jpeg";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -26,6 +29,9 @@ const SPONSOR_SLOTS = [
     { name: "Media Partner", tier: "PARTNER", partnerName: "Startup News", logo: startupNewsLogo, href: "https://startupnews.fyi/" },
     { name: "Certificate Partner", tier: "PARTNER", partnerName: "GiveMyCertificate", logo: giveMyCertificateLogo, href: "https://givemycertificate.com/" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "REGex", logo: regexLogo, href: "https://regexsoftware.com/" },
+    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Grras Solutions", logo: grrasLogo, href: "https://grras.com/" },
+    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Engineers Academy", logo: engineersAcademyLogo, href: "https://www.engineersacademy.org/" },
+    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Ducat", logo: ducatLogo, href: "https://www.ducatindia.com/school-of-ai" },
     { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
     { name: "Powered By", tier: "TITLE" },
     { name: "Co-Powered By", tier: "COPOWERED" },
