@@ -89,7 +89,7 @@ const Hero = () => {
                             className="inline-flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-red-50 border border-red-200 rounded-full text-red-600 font-montserrat font-bold text-xs md:text-sm lg:text-base shadow-sm"
                         >
                             <span className="text-base md:text-lg">⏰</span>
-                            Registration Deadline: 5<sup className="text-[0.6em]">th</sup> April 2026
+                            Registration Deadline: 10<sup className="text-[0.6em]">th</sup> April 2026
                         </motion.div>
                     </div>
 
