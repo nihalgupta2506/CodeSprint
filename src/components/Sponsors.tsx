@@ -88,56 +88,6 @@ const Sponsors = () => {
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Interview Buddy</span>
                             </motion.a>
 
-                            {/* Learning Partner - DockerHoL */}
-                            <motion.a
-                                href="https://dockerhol.com/branding"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                                transition={{ delay: 0.38, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-white border-2 border-cyan-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-cyan-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
-                            >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-cyan-600 text-center px-2">Learning Partner</span>
-                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={dockerHoLLogo} alt="DockerHoL" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
-                                </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">DockerHoL</span>
-                            </motion.a>
-
-                            {/* Meal Partner - McDonald's */}
-                            <motion.a
-                                href="https://mcdindia.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                                transition={{ delay: 0.42, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-white border-2 border-yellow-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-yellow-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
-                            >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-yellow-600 text-center px-2">Meal Partners</span>
-                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={mcdonaldsLogo} alt="McDonald's" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
-                                </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">McDonald's</span>
-                            </motion.a>
-
-                            {/* Meal Partner - Hypedin */}
-                            <motion.a
-                                href="https://www.hypedin.co/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                                transition={{ delay: 0.44, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-white border-2 border-yellow-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-yellow-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
-                            >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-yellow-600 text-center px-2">Meal Partners</span>
-                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={hypedInLogo} alt="Hypedin" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
-                                </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Hypedin</span>
-                            </motion.a>
 
                             {/* Media Partners */}
                             <motion.a
@@ -253,9 +203,56 @@ const Sponsors = () => {
                                     <img src={acmLogo} alt="ACM Jaipur Chapter" className="max-h-20 md:max-h-27 scale-110 md:scale-125 w-auto object-contain group-hover:scale-[1.2] md:group-hover:scale-[1.35] transition-transform duration-300" />
                                 </div>
                                 <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">ACM Jaipur Chapter</span>
+                            </motion.a>                            {/* Meal Partner - Hypedin */}
+                            <motion.a
+                                href="https://www.hypedin.co/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.25, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-yellow-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-yellow-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-yellow-600 text-center px-2">Meal Partners</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={hypedInLogo} alt="Hypedin" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Hypedin</span>
                             </motion.a>
 
+                            {/* Meal Partner - McDonald's */}
+                            <motion.a
+                                href="https://mcdindia.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.3, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-yellow-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-yellow-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-yellow-600 text-center px-2">Meal Partners</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={mcdonaldsLogo} alt="McDonald's" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">McDonald's</span>
+                            </motion.a>
 
+                            {/* Learning Partner - DockerHoL */}
+                            <motion.a
+                                href="https://dockerhol.com/branding"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.35, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-white border-2 border-cyan-200 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-cyan-500 hover:shadow-xl transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-cyan-600 text-center px-2">Learning Partner</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={dockerHoLLogo} alt="DockerHoL" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">DockerHoL</span>
+                            </motion.a>
 
 
                             {/* Remaining Sponsor Slots */}
