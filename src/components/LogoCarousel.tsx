@@ -11,6 +11,9 @@ import regexLogo from "../assets/regex.png";
 import grrasLogo from "../assets/grras logo.jpg";
 import engineersAcademyLogo from "../assets/Engineering_aca_logo.png";
 import ducatLogo from "../assets/Ducat_logo_sponsor.jpeg";
+import mcdonaldsLogo from "../assets/McDonald's_logo.png";
+import hypedInLogo from "../assets/HYPEDIN_Logo.png";
+import dockerHoLLogo from "../assets/dockerhol-logo-light.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -26,13 +29,16 @@ const SPONSOR_SLOTS = [
     { name: "Platform Partner", tier: "PARTNER", partnerName: "Hack2Skill", logo: h2sLogo, href: "https://hack2skill.com" },
     { name: "Domain Partner", tier: "DOMAIN", partnerName: ".xyz", logo: xyzLogo, href: "https://gen.xyz" },
     { name: "Interview Prep Partner", tier: "PARTNER", partnerName: "Interview Buddy", logo: interviewBuddyLogo, href: "https://interviewbuddy.net/" },
-    { name: "Media Partner", tier: "PARTNER", partnerName: "Startup News", logo: startupNewsLogo, href: "https://startupnews.fyi/" },
+    { name: "Learning Partner", tier: "LEARNINGPARTNER", partnerName: "DockerHoL", logo: dockerHoLLogo, href: "https://dockerhol.com/branding" },
+    { name: "Meal Partners", tier: "MEALPARTNER", partnerName: "McDonald's", logo: mcdonaldsLogo, href: "https://mcdindia.com/" },
+    { name: "Meal Partners", tier: "MEALPARTNER", partnerName: "Hypedin", logo: hypedInLogo, href: "https://www.hypedin.co/" },
+    { name: "Media Partners", tier: "PARTNER", partnerName: "Startup News", logo: startupNewsLogo, href: "https://startupnews.fyi/" },
     // { name: "Certificate Partner", tier: "PARTNER", partnerName: "GiveMyCertificate", logo: giveMyCertificateLogo, href: "https://givemycertificate.com/" },
-    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "REGex", logo: regexLogo, href: "https://regexsoftware.com/" },
-    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Grras Solutions", logo: grrasLogo, href: "https://grras.com/" },
-    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Engineers Academy", logo: engineersAcademyLogo, href: "https://www.engineersacademy.org/" },
-    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "Ducat", logo: ducatLogo, href: "https://www.ducatindia.com/school-of-ai" },
-    { name: "Technical Partner", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "REGex", logo: regexLogo, href: "https://regexsoftware.com/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Grras Solutions", logo: grrasLogo, href: "https://grras.com/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Engineers Academy", logo: engineersAcademyLogo, href: "https://www.engineersacademy.org/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Ducat", logo: ducatLogo, href: "https://www.ducatindia.com/school-of-ai" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
     // { name: "Powered By", tier: "TITLE" },
     // { name: "Co-Powered By", tier: "COPOWERED" },
     // { name: "Gold Sponsor", tier: "GOLD" },
@@ -47,6 +53,8 @@ const tierStyle: Record<string, string> = {
     PARTNER: "border-blue-400/70   text-blue-600   bg-blue-50",
     TECHPARTNER: "border-purple-400/70 text-purple-600 bg-purple-50",
     DOMAIN: "border-violet-400/70 text-violet-600 bg-violet-50",
+    MEALPARTNER: "border-yellow-500/70 text-yellow-700 bg-yellow-50",
+    LEARNINGPARTNER: "border-cyan-400/70 text-cyan-700 bg-cyan-50",
 };
 
 // ─── Small helpers ────────────────────────────────────────────────────────────
