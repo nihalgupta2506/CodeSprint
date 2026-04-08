@@ -52,7 +52,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={h2sLogo} alt="Hack2Skill" className="max-h-14 md:max-h-27 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Hack2Skill</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">Hack2Skill</span>
                             </motion.a>
 
                             {/* Domain Partner - .xyz */}
@@ -69,7 +69,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={xyzLogo} alt=".xyz Domain" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">.xyz</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">.xyz</span>
                             </motion.a>
                             {/* Interview Buddy */}
                             <motion.a
@@ -85,7 +85,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={interviewBuddyLogo} alt="Interview Buddy" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Interview Buddy</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">Interview Buddy</span>
                             </motion.a>
 
 
@@ -103,7 +103,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={startupNewsLogo} alt="Startup News" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Startup News</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">Startup News</span>
                             </motion.a>
                             {/* Certificate Partner - GiveMyCertificate
                                 <motion.a
@@ -119,7 +119,7 @@ const Sponsors = () => {
                                     <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                         <img src={giveMyCertificateLogo} alt="GiveMyCertificate" className="max-h-16 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                     </div>
-                                    <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">GiveMyCertificate</span>
+                                    <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">GiveMyCertificate</span>
                                 </motion.a> */}
                             {/* Technical Partner - REGex */}
                             <motion.a
@@ -135,7 +135,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={regexLogo} alt="REGex" className="max-h-16 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">REGex</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">REGex</span>
                             </motion.a>
                             {/* Technical Partner - GRRAS */}
                             <motion.a
@@ -151,7 +151,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={grrasLogo} alt="GRRAS" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Grras Solutions</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">Grras Solutions</span>
                             </motion.a>
 
                             {/* Technical Partner - Engineers Academy */}
@@ -168,7 +168,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={engineersAcademyLogo} alt="Engineers Academy" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Engineers Academy</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">Engineers Academy</span>
                             </motion.a>
 
                             {/* Technical Partner - Ducat */}
@@ -185,7 +185,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={ducatLogo} alt="Ducat" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Ducat</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">Ducat</span>
                             </motion.a>
 
                             {/* Technical Partner */}
@@ -200,9 +200,9 @@ const Sponsors = () => {
                             >
                                 <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-purple-500">Technical Partners</span>
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={acmLogo} alt="ACM Jaipur Chapter" className="max-h-20 md:max-h-27 scale-110 md:scale-125 w-auto object-contain group-hover:scale-[1.2] md:group-hover:scale-[1.35] transition-transform duration-300" />
+                                    <img src={acmLogo} alt="ACM Jaipur Chapter" className="max-h-16 md:max-h-24 md:scale-110 w-auto object-contain group-hover:scale-105 md:group-hover:scale-[1.15] transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">ACM Jaipur Chapter</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">ACM Jaipur Chapter</span>
                             </motion.a>                            {/* Meal Partner - Hypedin */}
                             <motion.a
                                 href="https://www.hypedin.co/"
@@ -217,7 +217,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={hypedInLogo} alt="Hypedin" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">Hypedin</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">Hypedin</span>
                             </motion.a>
 
                             {/* Meal Partner - McDonald's */}
@@ -234,7 +234,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={mcdonaldsLogo} alt="McDonald's" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">McDonald's</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">McDonald's</span>
                             </motion.a>
 
                             {/* Learning Partner - DockerHoL */}
@@ -251,7 +251,7 @@ const Sponsors = () => {
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={dockerHoLLogo} alt="DockerHoL" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm">DockerHoL</span>
+                                <span className="font-exo font-bold text-gray-700 text-xs md:text-sm text-center">DockerHoL</span>
                             </motion.a>
 
 
