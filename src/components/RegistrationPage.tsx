@@ -76,107 +76,36 @@ const RegistrationPage: React.FC = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="glass-card mb-10 w-full max-w-xl mx-auto border-neon-blue/20"
                 >
-                    <div className="p-6 md:p-8 flex flex-col items-center">
-                        <div className="mb-4 flex justify-center">
-                             <img src={hack2SkillLogo} alt="Hack2Skill Logo" className="h-12 md:h-16 w-auto drop-shadow-md" />
-                        </div>
-                        <h2 className="text-xl md:text-2xl font-exo font-bold text-gray-800 mb-2">
-                             Team Registration Fee
-                        </h2>
-                        <div className="flex items-baseline justify-center gap-1 mb-6">
-                             <span className="text-3xl md:text-4xl font-black text-neon-blue">₹800</span>
-                             <span className="text-gray-500 font-montserrat font-medium text-sm">/ team</span>
+                    <div className="p-8 md:p-12 flex flex-col items-center">
+                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-red-500/10 flex items-center justify-center mb-6 shadow-lg shadow-red-500/20 border border-red-500/30">
+                            <span className="text-4xl md:text-5xl">🔒</span>
                         </div>
 
-                        <div className="flex items-center gap-2 mb-6 px-4 py-2 bg-blue-50/50 border border-blue-100 rounded-full">
-                            <span className="text-accent-blue font-bold">👥</span>
-                            <span className="text-sm md:text-base font-montserrat font-bold text-gray-700">Team Size: 2-4 Members</span>
-                        </div>
+                        <h2 className="text-2xl md:text-3xl font-exo font-bold text-gray-800 mb-4 text-center">
+                            REGISTRATION <span className="text-red-500">CLOSED</span>
+                        </h2>
                         
-                        <p className="text-gray-600 font-montserrat text-base md:text-lg mb-6 leading-relaxed max-w-lg mx-auto">
-                            Join us for 24 hours of intensive coding, innovation, and networking.
+                        <p className="text-gray-600 font-montserrat text-sm md:text-base mb-8 text-center leading-relaxed">
+                            Thank you for the overwhelming response! Registrations for TechnoTarang are now officially closed.
+                            <br/><br/>
+                            We look forward to seeing all registered participants at the event. Stay tuned for updates!
                         </p>
 
-                        {/* Bank Details Section */}
-                        <div className="w-full max-w-md mx-auto mb-8 sm:mb-10 text-left">
-                            <button
-                                onClick={() => setShowBankDetails(!showBankDetails)}
-                                className="w-full flex items-center justify-between px-6 py-4 bg-white border border-neon-blue/20 rounded-xl font-montserrat font-bold text-gray-800 hover:bg-blue-50/50 hover:border-neon-blue/40 transition-all shadow-sm"
-                            >
-                                <span className="flex items-center gap-2">
-                                    <span className="text-accent-blue text-xl">🏦</span>
-                                    Click to view NEFT Account Details
-                                </span>
-                                {showBankDetails ? <FaChevronUp className="text-gray-500" /> : <FaChevronDown className="text-gray-500" />}
-                            </button>
-
-                            <AnimatePresence>
-                                {showBankDetails && (
-                                    <motion.div
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: "auto" }}
-                                        exit={{ opacity: 0, height: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="overflow-hidden"
+                        <div className="flex flex-col items-center gap-4 w-full border-t border-gray-200/60 pt-6 mt-2">
+                            <p className="text-gray-500 font-montserrat text-sm font-bold uppercase tracking-wide">Stay Connected</p>
+                            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                                {socialLinks.map((social, index) => (
+                                    <a
+                                        key={index}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={social.label}
+                                        className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 hover:bg-neon-blue hover:text-white hover:border-neon-blue hover:scale-110 hover:shadow-md transition-all duration-300 text-lg sm:text-xl"
                                     >
-                                        <div className="mt-3 p-5 md:p-6 bg-white border border-gray-200 rounded-xl shadow-inner divide-y divide-gray-100">
-                                            {bankDetails.map((detail, idx) => (
-                                                <div key={idx} className="py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between group gap-2 sm:gap-4">
-                                                    <span className="text-xs md:text-sm text-gray-500 font-bold uppercase tracking-wider min-w-[120px] shrink-0">
-                                                        {detail.label}
-                                                    </span>
-                                                    <div className="flex items-center justify-between w-full sm:w-auto flex-1 gap-2 min-w-0">
-                                                        <span className="text-xs sm:text-sm md:text-base font-exo font-bold text-gray-800 break-words sm:text-right w-full">
-                                                            {detail.value}
-                                                        </span>
-                                                        <button 
-                                                            onClick={e => { e.stopPropagation(); handleCopy(detail.value); }}
-                                                            className="p-2 text-gray-400 hover:text-neon-blue hover:bg-neon-blue/10 rounded-lg transition-colors focus:outline-none flex-shrink-0"
-                                                            title={`Copy ${detail.label}`}
-                                                        >
-                                                            {copiedContent === detail.value ? <FaCheck className="text-green-500 text-xs md:text-sm" /> : <FaCopy className="text-xs md:text-sm" />}
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                            <div className="pt-4 mt-2">
-                                                <p className="text-xs md:text-sm text-center font-montserrat text-gray-500 italic">
-                                                    Please save the transaction ID/screenshot after successful payment for the registration.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
-
-                        <div className="flex flex-col items-center gap-6 mt-2 w-full">
-                            <a 
-                                href="https://vision.hack2skill.com/event/technotarang/?utm_source=hack2skill&utm_medium=homepage"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-neon-blue to-accent-blue text-white rounded-xl font-bold text-lg md:text-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 transform shadow-neon-blue/20"
-                            >
-                                 Register on Hack2Skill
-                                 <FaExternalLinkAlt className="text-sm" />
-                            </a>
-
-                            <div className="flex flex-col items-center gap-4 w-full border-t border-gray-200/60 pt-6 mt-2">
-                                <p className="text-gray-500 font-montserrat text-sm font-bold uppercase tracking-wide">Join Our Community</p>
-                                <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                                    {socialLinks.map((social, index) => (
-                                        <a
-                                            key={index}
-                                            href={social.href}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            aria-label={social.label}
-                                            className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center text-gray-500 hover:bg-neon-blue hover:text-white hover:border-neon-blue hover:scale-110 hover:shadow-md transition-all duration-300 text-lg sm:text-xl"
-                                        >
-                                            {social.icon}
-                                        </a>
-                                    ))}
-                                </div>
+                                        {social.icon}
+                                    </a>
+                                ))}
                             </div>
                         </div>
                     </div>

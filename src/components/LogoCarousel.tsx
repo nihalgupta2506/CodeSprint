@@ -14,6 +14,13 @@ import ducatLogo from "../assets/Ducat_logo_sponsor.jpeg";
 import mcdonaldsLogo from "../assets/McDonald's_logo.png";
 import hypedInLogo from "../assets/HYPEDIN_Logo.png";
 import dockerHoLLogo from "../assets/dockerhol-logo-light.png";
+import redBullLogo from "../assets/red bull.png";
+import edviseLogo from "../assets/edvise logo.jpg";
+import codeupLogo from "../assets/code-up.webp";
+import youngIndiansLogo from "../assets/young-indians-logo.png";
+import aurigaLogo from "../assets/Auriga Logo.png";
+import thinkvibesLogo from "../assets/thinkvibes-logo.png";
+import wuwbLogo from "../assets/WUWB.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -38,7 +45,14 @@ const SPONSOR_SLOTS = [
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
     { name: "Meal Partners", tier: "MEALPARTNER", partnerName: "Hypedin", logo: hypedInLogo, href: "https://www.hypedin.co/" },
     { name: "Meal Partners", tier: "MEALPARTNER", partnerName: "McDonald's", logo: mcdonaldsLogo, href: "https://mcdindia.com/" },
-    { name: "Learning Partner", tier: "LEARNINGPARTNER", partnerName: "DockerHoL", logo: dockerHoLLogo, href: "https://dockerhol.com/branding" },
+    { name: "Learning Partner", tier: "COMMUNITYPARTNER", partnerName: "DockerHoL", logo: dockerHoLLogo, href: "https://dockerhol.com/" },
+    { name: "Beverage Partner", tier: "BEVERAGEPARTNER", partnerName: "Red Bull", logo: redBullLogo, href: "http://redbull.com/in-en" },
+    { name: "Recruiting Partner", tier: "RECRUITINGPARTNER", partnerName: "Edwise International", logo: edviseLogo, href: "https://www.edwiseinternational.com/" },
+    { name: "Certificate Partner", tier: "CERTPARTNER", partnerName: "Codeup", logo: codeupLogo, href: "https://codeup.in/" },
+    { name: "Support Partners", tier: "SUPPORTPARTNER", partnerName: "Young Indians", logo: youngIndiansLogo, href: "https://youngindians.net/" },
+    { name: "Support Partners", tier: "SUPPORTPARTNER", partnerName: "Auriga IT", logo: aurigaLogo, href: "https://aurigait.com/" },
+    { name: "Support Partners", tier: "SUPPORTPARTNER", partnerName: "Thinkvibes", logo: thinkvibesLogo, href: "https://thinkvibes.com/" },
+    { name: "Support Partners", tier: "SUPPORTPARTNER", partnerName: "WUWB", logo: wuwbLogo, href: "https://wuwb.in/" },
     // { name: "Powered By", tier: "TITLE" },
     // { name: "Gold Sponsor", tier: "GOLD" },
     // { name: "Silver Sponsor", tier: "SILVER" },
@@ -54,6 +68,11 @@ const tierStyle: Record<string, string> = {
     DOMAIN: "border-violet-400/70 text-violet-600 bg-violet-50",
     MEALPARTNER: "border-yellow-500/70 text-yellow-700 bg-yellow-50",
     LEARNINGPARTNER: "border-cyan-400/70 text-cyan-700 bg-cyan-50",
+    COMMUNITYPARTNER: "border-cyan-400/70 text-cyan-700 bg-cyan-50",
+    BEVERAGEPARTNER: "border-red-400/70 text-red-600 bg-red-50",
+    RECRUITINGPARTNER: "border-indigo-400/70 text-indigo-600 bg-indigo-50",
+    CERTPARTNER: "border-emerald-400/70 text-emerald-600 bg-emerald-50",
+    SUPPORTPARTNER: "border-green-400/70 text-green-600 bg-green-50",
 };
 
 // ─── Small helpers ────────────────────────────────────────────────────────────

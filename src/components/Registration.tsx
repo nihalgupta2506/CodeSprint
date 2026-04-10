@@ -14,7 +14,7 @@ const Registration = () => {
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                     className="text-4xl md:text-5xl font-orbitron font-bold text-center mb-16 text-white"
                 >
-                    <span className="text-neon-green">JOIN THE</span> NETWORK
+                    <span className="text-neon-green">REGISTRATION</span> STATUS
                 </motion.h2>
 
                 <motion.div
@@ -28,49 +28,19 @@ const Registration = () => {
                     <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-neon-green rounded-tl-2xl opacity-50"></div>
                     <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-neon-green rounded-br-2xl opacity-50"></div>
 
-                    <form className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <label className="text-sm font-exo text-cyber-blue uppercase tracking-wider">Codename / Name</label>
-                                <input type="text" className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none transition-colors" placeholder="Enter your name" />
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-exo text-cyber-blue uppercase tracking-wider">Email Protocol</label>
-                                <input type="email" className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none transition-colors" placeholder="Enter your email" />
-                            </div>
+                    <div className="text-center py-10">
+                        <div className="w-24 h-24 mx-auto mb-6 bg-red-500/10 rounded-full flex items-center justify-center border border-red-500/30">
+                            <span className="text-5xl">🔒</span>
                         </div>
-
-                        <div className="space-y-2">
-                            <label className="text-sm font-exo text-cyber-blue uppercase tracking-wider">Base Station / College</label>
-                            <input type="text" className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none transition-colors" placeholder="University Name" />
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <label className="text-sm font-exo text-cyber-blue uppercase tracking-wider">Squad ID / Team Name</label>
-                                <input type="text" className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none transition-colors" placeholder="Team Name" />
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-exo text-cyber-blue uppercase tracking-wider">Mission Track</label>
-                                <select className="w-full bg-dark-bg/50 border border-gray-700 rounded p-3 text-white focus:border-neon-green focus:outline-none transition-colors">
-                                    <option>Select Track...</option>
-                                    <option>AI & ML</option>
-                                    <option>Smart Cities</option>
-                                    <option>Clean Energy</option>
-                                    <option>BioTech</option>
-                                    <option>Cyber Defense</option>
-                                    <option>Space Tech</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <button
-                            type="button"
-                            className="w-full py-4 mt-8 bg-neon-green/10 border border-neon-green text-neon-green font-orbitron font-bold text-xl rounded hover:bg-neon-green hover:text-dark-bg transition-all duration-300 shadow-[0_0_15px_rgba(0,255,136,0.3)] hover:shadow-[0_0_30px_rgba(0,255,136,0.6)]"
-                        >
-                            DEPLOY INNOVATION
-                        </button>
-                    </form>
+                        <h3 className="text-3xl md:text-4xl font-orbitron font-bold text-white mb-6 tracking-wider">
+                            REGISTRATION <span className="text-red-500">CLOSED</span>
+                        </h3>
+                        <p className="text-gray-400 font-exo text-lg max-w-lg mx-auto leading-relaxed">
+                            Thank you for the overwhelming response! Registrations for TechnoTarang are now officially closed. 
+                            <br/><br/>
+                            Prepare yourselves for an incredible coding experience. We'll see you at the event!
+                        </p>
+                    </div>
                 </motion.div>
             </div>
         </section>
