@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaArrowLeft, FaExternalLinkAlt, FaChevronDown, FaChevronUp, FaCopy, FaCheck, FaInstagram, FaLinkedin, FaDiscord, FaWhatsapp } from 'react-icons/fa';
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { FaArrowLeft, FaInstagram, FaLinkedin, FaDiscord, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import technoTarangLogo from '../assets/technotarang-logo.png';
 import pceLogo from '../assets/PCE Logo Only.png';
-import hack2SkillLogo from '../assets/hack2skills logo.png';
 import ParticleNetwork from './ParticleNetwork';
 
 const socialLinks = [
@@ -17,29 +16,10 @@ const socialLinks = [
 ];
 
 const RegistrationPage: React.FC = () => {
-    const [showBankDetails, setShowBankDetails] = useState(false);
-    const [copiedContent, setCopiedContent] = useState<string | null>(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    const bankDetails = [
-        { label: "A/C Name", value: "POORNIMA COLLEGE OF ENGINEERING" },
-        { label: "Bank Name", value: "HDFC BANK LTD" },
-        { label: "Bank A/C No.", value: "50200024936188" },
-        { label: "IFSC Code", value: "HDFC0003873" },
-        { label: "Bank MICR Code", value: "302240028" },
-        { label: "Bank Code", value: "3873" },
-        { label: "Branch Name", value: "SITAPURA, JAIPUR" },
-    ];
-
-    const handleCopy = (text: string) => {
-        navigator.clipboard.writeText(text);
-        setCopiedContent(text);
-        setTimeout(() => setCopiedContent(null), 2000);
-    };
-
     return (
         <div className="bg-off-white min-h-screen text-gray-800 w-full overflow-hidden relative flex flex-col items-center justify-center py-20 px-4">
             {/* Animated Background */}
