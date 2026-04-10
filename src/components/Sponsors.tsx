@@ -252,13 +252,13 @@ const Sponsors = () => {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                                 transition={{ delay: 0.35, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-gradient-to-br from-slate-800 to-gray-900 border-2 border-red-400 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-red-300 hover:shadow-xl hover:shadow-red-500/30 transition-all duration-300 group cursor-pointer relative"
+                                className="h-40 md:h-48 w-full bg-gradient-to-br from-rose-50 to-red-100 border-2 border-red-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-red-500 hover:shadow-xl hover:shadow-red-200/50 transition-all duration-300 group cursor-pointer relative"
                             >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-red-400 text-center px-2">Beverage Partner</span>
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-red-700 text-center px-2">Beverage Partner</span>
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
                                     <img src={redBullLogo} alt="Red Bull" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-200 text-xs md:text-sm text-center">Red Bull</span>
+                                <span className="font-exo font-bold text-red-900 text-xs md:text-sm text-center">Red Bull</span>
                             </motion.a>
 
                             {/* Community & Technical Partner - DockerHoL */}
@@ -303,13 +303,13 @@ const Sponsors = () => {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                                 transition={{ delay: 0.45, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-gradient-to-br from-slate-800 to-gray-900 border-2 border-emerald-400 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-emerald-300 hover:shadow-xl hover:shadow-emerald-500/30 transition-all duration-300 group cursor-pointer relative"
+                                className="h-40 md:h-48 w-full bg-gradient-to-br from-indigo-50 to-blue-100 border-2 border-indigo-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-200/50 transition-all duration-300 group cursor-pointer relative"
                             >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-emerald-400 text-center px-2">Certificate Partner</span>
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-indigo-700 text-center px-2">Certificate Partner</span>
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={codeupLogo} alt="Codeup" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300" />
+                                    <img src={codeupLogo} alt="Codeup" className="max-h-12 md:max-h-16 w-auto object-contain px-2 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-200 text-xs md:text-sm text-center">Codeup</span>
+                                <span className="font-exo font-bold text-indigo-900 text-xs md:text-sm text-center">Codeup</span>
                             </motion.a>
 
                             {/* Support Partner - Young Indians */}
@@ -354,13 +354,13 @@ const Sponsors = () => {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                                 transition={{ delay: 0.65, duration: 0.4 }}
-                                className="h-40 md:h-48 w-full bg-gradient-to-br from-slate-900 via-gray-900 to-black border-2 border-orange-500/50 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-orange-400 hover:shadow-xl hover:shadow-orange-500/30 transition-all duration-300 group cursor-pointer relative"
+                                className="h-40 md:h-48 w-full bg-gradient-to-br from-amber-50 to-orange-100 border-2 border-amber-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-200/50 transition-all duration-300 group cursor-pointer relative"
                             >
-                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-orange-400 text-center px-2">Support Partners</span>
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-amber-700 text-center px-2">Support Partners</span>
                                 <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                    <img src={wuwbLogo} alt="WUWB" className="max-h-16 md:max-h-20 md:scale-110 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,165,0,0.2)] group-hover:drop-shadow-[0_0_15px_rgba(255,165,0,0.5)] group-hover:scale-105 transition-all duration-300" />
+                                    <img src={wuwbLogo} alt="WUWB" className="max-h-16 md:max-h-20 md:scale-110 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
-                                <span className="font-exo font-bold text-gray-100 text-xs md:text-sm text-center">WUWB</span>
+                                <span className="font-exo font-bold text-amber-900 text-xs md:text-sm text-center">WUWB</span>
                             </motion.a>
                             {/* Support Partner - Thinkvibes */}
                             <motion.a
