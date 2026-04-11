@@ -196,7 +196,7 @@ const Themes = () => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-8 md:mb-14"
+                    className="text-center mb-5 md:mb-6"
                 >
                     <h2 className="text-3xl md:text-5xl font-exo font-bold text-neon-blue mb-3">
                         Hackathon Themes
@@ -209,6 +209,30 @@ const Themes = () => {
                         <span className="text-neon-blue font-semibold">environmental sustainability</span>{" "}
                         will remain the central guiding principle of this edition.
                     </p>
+                </motion.div>
+
+                {/* Problem Statements Button */}
+                <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                    transition={{ duration: 0.5, delay: 0.15 }}
+                    className="flex justify-center mb-5 md:mb-6"
+                >
+                    <motion.a
+                        href="https://technotarangps.vercel.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        animate={{ boxShadow: ["0 0 0px rgba(30,136,229,0)", "0 0 10px rgba(30,136,229,0.35)", "0 0 0px rgba(30,136,229,0)"] }}
+                        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.97 }}
+                        className="inline-flex items-center gap-2 px-7 py-2.5 rounded-full font-exo font-bold text-sm md:text-base border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-white transition-all duration-300"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Problem Statements
+                    </motion.a>
                 </motion.div>
 
                 <div
