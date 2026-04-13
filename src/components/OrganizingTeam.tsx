@@ -2,21 +2,21 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "../hooks/useSectionInView";
 import { FaCrown, FaUserShield, FaChalkboardTeacher, FaUsers, FaLinkedin } from "react-icons/fa";
 
-import imgRahul from "../assets/organizing team/Rahul sir.webp";
-import imgMahesh from "../assets/organizing team/Mahesh_Bundele sir.jpg";
-import imgPankaj from "../assets/organizing team/Pankaj Dhemla Sir.jpg";
-import imgNikita from "../assets/organizing team/Nikita Ma'am.jpeg";
-import imgGajendra from "../assets/organizing team/Gajendra Sir.jpg";
-import imgAmol from "../assets/organizing team/Amol Saxena Sir.jpg";
-import imgAmitGupta from "../assets/organizing team/amit gupta sir.jpg";
-import imgAmitKumar from "../assets/organizing team/Amit Kumar sir.jpeg";
-import imgSachin from "../assets/organizing team/Sachin Jain sir.jpeg";
-import imgUpma from "../assets/organizing team/Upma Kumari ma'am.jpg";
-import imgApoorva from "../assets/organizing team/Apoorva Bansal.jpeg";
-import imgNayan from "../assets/organizing team/Nayan Mathur.jpg";
-import imgDev from "../assets/organizing team/Dev Sharma.jpeg";
-import imgPrakhar from "../assets/organizing team/Prakhar Mathur.jpg";
-import imgNihal from "../assets/organizing team/Nihal Gupta.jpg";
+import imgRahul from "../assets/Organizing team/Rahul sir.webp";
+import imgMahesh from "../assets/Organizing team/Mahesh_Bundele sir.jpg";
+import imgPankaj from "../assets/Organizing team/Pankaj Dhemla Sir.jpg";
+import imgNikita from "../assets/Organizing team/Nikita Ma'am.jpeg";
+import imgGajendra from "../assets/Organizing team/Gajendra Sir.jpg";
+import imgAmol from "../assets/Organizing team/Amol Saxena Sir.jpg";
+import imgAmitGupta from "../assets/Organizing team/amit gupta sir.jpg";
+import imgAmitKumar from "../assets/Organizing team/Amit Kumar sir.jpeg";
+import imgSachin from "../assets/Organizing team/Sachin Jain sir.jpeg";
+import imgUpma from "../assets/Organizing team/Upma Kumari ma'am.jpg";
+import imgApoorva from "../assets/Organizing team/Apoorva Bansal.jpeg";
+import imgNayan from "../assets/Organizing team/Nayan Mathur.jpg";
+import imgDev from "../assets/Organizing team/Dev Sharma.jpeg";
+import imgPrakhar from "../assets/Organizing team/Prakhar Mathur.jpg";
+import imgNihal from "../assets/Organizing team/Nihal Gupta.jpg";
 
 interface TeamMember {
     name: string;
