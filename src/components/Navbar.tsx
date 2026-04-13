@@ -21,7 +21,7 @@ const Navbar = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
 
-            const sections = ["hero", "about", "overview", "themes", "timeline", "prizes", "guidelines", "sponsors", "mentors-jury", "faq"];
+            const sections = ["hero", "about", "overview", "themes", "timeline", "prizes", "guidelines", "organizing-team", "sponsors", "mentors-jury", "faq"];
             for (const id of [...sections].reverse()) {
                 const el = document.getElementById(id);
                 if (el) {
@@ -45,6 +45,7 @@ const Navbar = () => {
         { name: "Timeline", href: "#timeline" },
         { name: "Prizes", href: "#prizes" },
         { name: "Guidelines", href: "#guidelines" },
+        { name: "Organizing Team", href: "#organizing-team" },
         { name: "Sponsors", href: "#sponsors" },
         { name: "Mentors & Jury Members", href: "#mentors-jury" },
         { name: "FAQ", href: "#faq" },

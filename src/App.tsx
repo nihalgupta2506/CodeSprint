@@ -10,6 +10,7 @@ import Timeline from "./components/Timeline";
 import Prizes from "./components/Prizes";
 import Guidelines from "./components/Guidelines";
 import Organizers from "./components/Organizers";
+import OrganizingTeam from "./components/OrganizingTeam";
 import Sponsors from "./components/Sponsors";
 import MentorsJury from "./components/MentorsJury";
 import FAQ from "./components/FAQ";
@@ -42,6 +43,7 @@ function Home() {
           <Prizes />
           <Guidelines />
           <Organizers />
+          <OrganizingTeam />
           <Sponsors />
           <MentorsJury />
           <FAQ />

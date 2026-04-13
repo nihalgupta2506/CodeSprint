@@ -21,6 +21,8 @@ import youngIndiansLogo from "../assets/young-indians-logo.png";
 import aurigaLogo from "../assets/Auriga Logo.png";
 import thinkvibesLogo from "../assets/thinkvibes-logo.png";
 import wuwbLogo from "../assets/WUWB.png";
+import grastechLogo from "../assets/grastech.png";
+import brightHubLogo from "../assets/Bright Hub Logo.png";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -52,6 +54,8 @@ const SPONSOR_SLOTS = [
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Grras Solutions", logo: grrasLogo, href: "https://grras.com/" },
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Engineers Academy", logo: engineersAcademyLogo, href: "https://www.engineersacademy.org/" },
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Ducat", logo: ducatLogo, href: "https://www.ducatindia.com/school-of-ai" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Grastech", logo: grastechLogo, href: "https://www.grastech.in/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "BrightHub", logo: brightHubLogo, href: "https://brighthubpvtltd.com/" },
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
     // { name: "Powered By", tier: "TITLE" },
     // { name: "Gold Sponsor", tier: "GOLD" },

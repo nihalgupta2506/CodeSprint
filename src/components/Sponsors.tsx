@@ -20,6 +20,8 @@ import youngIndiansLogo from "../assets/young-indians-logo.png";
 import aurigaLogo from "../assets/Auriga Logo.png";
 import thinkvibesLogo from "../assets/thinkvibes-logo.png";
 import wuwbLogo from "../assets/WUWB.png";
+import grastechLogo from "../assets/grastech.png";
+import brightHubLogo from "../assets/Bright Hub Logo.png";
 
 const Sponsors = () => {
     const { ref, isInView } = useSectionInView();
@@ -362,6 +364,40 @@ const Sponsors = () => {
                                     <img src={ducatLogo} alt="Ducat" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
                                 </div>
                                 <span className="font-exo font-bold text-amber-900 text-xs md:text-sm text-center">Ducat</span>
+                            </motion.a>
+
+                            {/* Technical Partner - Grastech */}
+                            <motion.a
+                                href="https://www.grastech.in/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.45, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-gradient-to-br from-teal-50 to-emerald-100 border-2 border-teal-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-teal-500 hover:shadow-xl hover:shadow-teal-200/50 transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-teal-600 text-center px-2">Technical Partners</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={grastechLogo} alt="Grastech" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-teal-900 text-xs md:text-sm text-center">Grastech</span>
+                            </motion.a>
+
+                            {/* Technical Partner - BrightHub */}
+                            <motion.a
+                                href="https://brighthubpvtltd.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                                transition={{ delay: 0.5, duration: 0.4 }}
+                                className="h-40 md:h-48 w-full bg-gradient-to-br from-indigo-50 to-blue-100 border-2 border-indigo-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-indigo-500 hover:shadow-xl hover:shadow-indigo-200/50 transition-all duration-300 group cursor-pointer relative"
+                            >
+                                <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-indigo-600 text-center px-2">Technical Partners</span>
+                                <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
+                                    <img src={brightHubLogo} alt="BrightHub" className="max-h-14 md:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300" />
+                                </div>
+                                <span className="font-exo font-bold text-indigo-900 text-xs md:text-sm text-center">BrightHub</span>
                             </motion.a>
 
                             {/* Technical Partner */}
