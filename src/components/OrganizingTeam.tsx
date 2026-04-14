@@ -195,7 +195,7 @@ const OrganizingTeam = () => {
     const { ref, isInView } = useSectionInView();
 
     return (
-        <section id="organizing-team" className="py-12 md:py-20 bg-off-white/70 relative overflow-hidden">
+        <section id="organizing-team" className="pt-6 pb-12 md:pt-10 md:pb-20 bg-off-white/70 relative overflow-hidden">
             {/* Subtle background decorations */}
             <div className="absolute top-10 left-10 w-72 h-72 bg-neon-blue/5 rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-blue/5 rounded-full blur-3xl pointer-events-none" />

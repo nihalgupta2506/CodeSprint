@@ -6,7 +6,7 @@ const Organizers = () => {
     const { ref, isInView } = useSectionInView();
 
     return (
-        <section id="organizers" className="py-12 md:py-20 bg-off-white/70 relative">
+        <section id="organizers" className="pt-12 pb-6 md:pt-20 md:pb-10 bg-off-white/70 relative">
             <div className="container mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
