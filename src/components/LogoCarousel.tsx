@@ -14,7 +14,6 @@ import ducatLogo from "../assets/Ducat_logo_sponsor.jpeg";
 import mcdonaldsLogo from "../assets/McDonald's_logo.png";
 import hypedInLogo from "../assets/HYPEDIN_Logo.png";
 import dockerHoLLogo from "../assets/dockerhol-logo-light.png";
-import redBullLogo from "../assets/red bull.png";
 import edviseLogo from "../assets/edvise logo.jpg";
 import codeupLogo from "../assets/code-up.webp";
 import youngIndiansLogo from "../assets/young-indians-logo.png";
@@ -42,7 +41,6 @@ const SPONSOR_SLOTS = [
     // { name: "Certificate Partner", tier: "PARTNER", partnerName: "GiveMyCertificate", logo: giveMyCertificateLogo, href: "https://givemycertificate.com/" },
     { name: "Meal Partners", tier: "MEALPARTNER", partnerName: "Hypedin", logo: hypedInLogo, href: "https://www.hypedin.co/" },
     { name: "Meal Partners", tier: "MEALPARTNER", partnerName: "McDonald's", logo: mcdonaldsLogo, href: "https://mcdindia.com/" },
-    { name: "Beverage Partner", tier: "BEVERAGEPARTNER", partnerName: "Red Bull", logo: redBullLogo, href: "http://redbull.com/in-en" },
     { name: "Community & Technical Partner", tier: "COMMUNITYPARTNER", partnerName: "DockerHoL", logo: dockerHoLLogo, href: "https://dockerhol.com/" },
     { name: "Recruiting Partner", tier: "RECRUITINGPARTNER", partnerName: "Edwise International", logo: edviseLogo, href: "https://www.edwiseinternational.com/" },
     { name: "Support Partner", tier: "SUPPORTPARTNER", partnerName: "Young Indians", logo: youngIndiansLogo, href: "https://youngindians.net/" },
