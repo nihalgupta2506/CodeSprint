@@ -415,50 +415,13 @@ const Sponsors = () => {
                                     <img src={acmLogo} alt="ACM Jaipur Chapter" className="max-h-16 md:max-h-24 md:scale-110 w-auto object-contain group-hover:scale-105 md:group-hover:scale-[1.15] transition-transform duration-300" />
                                 </div>
                                 <span className="font-exo font-bold text-indigo-900 text-xs md:text-sm text-center">ACM Jaipur Chapter</span>
-                            </motion.a>                            {/* Meal Partner - Hypedin */}
-                            {/* Remaining Sponsor Slots */}
-                            {[...Array(1)].map((_, index) => (
-                                <motion.div
-                                    key={`sponsor-slot-${index}`}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                                    transition={{ delay: 0.4 + index * 0.1, duration: 0.4 }}
-                                    className="h-40 md:h-48 w-full bg-white border border-dashed border-gray-300 rounded-2xl flex flex-col items-center justify-between p-4 hover:border-neon-blue hover:shadow-md transition-all duration-300 relative"
-                                >
-                                    <span className="absolute top-3 text-[10px] md:text-xs font-montserrat font-bold uppercase tracking-widest text-gray-400">Sponsor</span>
-                                    <div className="flex-1 flex items-center justify-center mt-6 mb-2 w-full">
-                                        <span className="text-gray-300 font-bold text-xs md:text-sm">Sponsor Logo</span>
-                                    </div>
-                                    <span className="font-montserrat text-neon-blue font-semibold text-xs bg-blue-50 px-3 py-1 rounded-full">
-                                        Coming Soon
-                                    </span>
-                                </motion.div>
-                            ))}
+                            </motion.a>
 
                         </div>
                     </div>
                 </div>
 
-                {/* CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                    className="mt-10 md:mt-14 text-center"
-                >
-                    <p className="text-gray-500 font-montserrat text-sm mb-5">
-                        Interested in being part of TechnoTarang? Reach out to us!
-                    </p>
-                    <a
-                        href="https://mail.google.com/mail/?view=cm&to=technotarang.pce@poornima.org&su=Sponsorship%20Inquiry%20-%20TechnoTarang%202026&body=Hi%20TechnoTarang%20Team%2C%0A%0AI%20am%20interested%20in%20sponsoring%20TechnoTarang%202026.%20Please%20share%20the%20sponsorship%20details.%0A%0ARegards%2C"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-8 py-3.5 bg-neon-blue text-white rounded-full font-exo font-bold text-sm md:text-base shadow-lg hover:shadow-neon-blue/30 hover:bg-secondary-blue transition-all duration-300 hover:-translate-y-1"
-                    >
-                        <span>✉️</span>
-                        Join Us as a Sponsor
-                    </a>
-                </motion.div>
+
             </div>
         </section>
     );
