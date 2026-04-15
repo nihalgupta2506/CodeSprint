@@ -22,6 +22,8 @@ import thinkvibesLogo from "../assets/thinkvibes-logo.png";
 import wuwbLogo from "../assets/WUWB.png";
 import grastechLogo from "../assets/grastech.png";
 import brightHubLogo from "../assets/Bright Hub Logo.png";
+import primathixAiLogo from "../assets/logo_primathixai.jpeg";
+import cyntexaLogo from "../assets/cyntexa_logo.jpg";
 
 // ─── Prize items ──────────────────────────────────────────────────────────────
 const PRIZE_ITEMS = [
@@ -44,17 +46,21 @@ const SPONSOR_SLOTS = [
     { name: "Community & Technical Partner", tier: "COMMUNITYPARTNER", partnerName: "DockerHoL", logo: dockerHoLLogo, href: "https://dockerhol.com/" },
     { name: "Recruiting Partner", tier: "RECRUITINGPARTNER", partnerName: "Edwise International", logo: edviseLogo, href: "https://www.edwiseinternational.com/" },
     { name: "Support Partner", tier: "SUPPORTPARTNER", partnerName: "Young Indians", logo: youngIndiansLogo, href: "https://youngindians.net/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Grastech", logo: grastechLogo, href: "https://www.grastech.in/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Grras Solutions", logo: grrasLogo, href: "https://grras.com/" },
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Codeup", logo: codeupLogo, href: "https://codeup.in/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Engineers Academy", logo: engineersAcademyLogo, href: "https://www.engineersacademy.org/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "BrightHub", logo: brightHubLogo, href: "https://brighthubpvtltd.com/" },
+    { name: "Community & Technical Partner", tier: "COMMUNITYPARTNER", partnerName: "DockerHoL", logo: dockerHoLLogo, href: "https://dockerhol.com/" },
+    { name: "Recruiting Partner", tier: "RECRUITINGPARTNER", partnerName: "Edwise International", logo: edviseLogo, href: "https://www.edwiseinternational.com/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "PrimathixAI", logo: primathixAiLogo, href: "https://www.primathixai.com/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Ducat", logo: ducatLogo, href: "https://www.ducatindia.com/school-of-ai" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "REGex", logo: regexLogo, href: "https://regexsoftware.com/" },
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Auriga IT", logo: aurigaLogo, href: "https://aurigait.com/" },
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "WUWB", logo: wuwbLogo, href: "https://wuwb.in/" },
     { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Thinkvibes", logo: thinkvibesLogo, href: "https://thinkvibes.com/" },
-    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "REGex", logo: regexLogo, href: "https://regexsoftware.com/" },
-    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Grras Solutions", logo: grrasLogo, href: "https://grras.com/" },
-    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Engineers Academy", logo: engineersAcademyLogo, href: "https://www.engineersacademy.org/" },
-    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Ducat", logo: ducatLogo, href: "https://www.ducatindia.com/school-of-ai" },
-    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Grastech", logo: grastechLogo, href: "https://www.grastech.in/" },
-    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "BrightHub", logo: brightHubLogo, href: "https://brighthubpvtltd.com/" },
-    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "ACM", logo: acmLogo, href: "https://jaipur.acm.org/#/" },
+    { name: "Technical Partners", tier: "TECHPARTNER", partnerName: "Cyntexa", logo: cyntexaLogo, href: "https://cyntexa.com/" },
     // { name: "Powered By", tier: "TITLE" },
     // { name: "Gold Sponsor", tier: "GOLD" },
     // { name: "Silver Sponsor", tier: "SILVER" },
