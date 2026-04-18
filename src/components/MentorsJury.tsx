@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useSectionInView } from "../hooks/useSectionInView";
-import { FaUserTie, FaGavel, FaLinkedin } from "react-icons/fa";
+import { FaUserTie, FaLinkedin } from "react-icons/fa";
 
 interface Mentor {
     name: string;
